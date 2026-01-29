@@ -2,7 +2,7 @@
   <defs>
     <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" style="stop-color:#1a4d3e"/>
-      <stop offset="100%" style="stop-color:#6b2d7b"/>
+      <stop offset="100%" style="stop-color:#2541b2"/>
     </linearGradient>
   </defs>
 
@@ -13,7 +13,7 @@
     <!-- Tent peak decoration -->
     <path d="M25 10 L25 5" stroke="url(#logoGradient)" stroke-width="2.5" stroke-linecap="round"/>
     <!-- Flag at top -->
-    <path d="M25 5 Q32 8 25 12" fill="#6b2d7b" opacity="0.8"/>
+    <path d="M25 5 Q32 8 25 12" fill="#2541b2" opacity="0.8"/>
     <!-- Tent draping lines -->
     <path d="M15 27.5 L25 10 L35 27.5" fill="none" stroke="url(#logoGradient)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
   </g>
@@ -22,7 +22,7 @@
   <text x="55" y="28" font-family="Georgia, 'Playfair Display', serif" font-size="22" font-weight="600" fill="#1a4d3e">
     TASTEFUL
   </text>
-  <text x="55" y="48" font-family="Georgia, 'Playfair Display', serif" font-size="14" font-weight="400" fill="#6b2d7b" letter-spacing="3">
+  <text x="55" y="48" font-family="Georgia, 'Playfair Display', serif" font-size="14" font-weight="400" fill="#2541b2" letter-spacing="3">
     EVENT RENTALS
   </text>
 

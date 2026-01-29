@@ -1,6 +1,6 @@
 /* =============================================
    Tasteful Event Rentals - Main Stylesheet
-   Color Palette: Dark Green, Purple, White, Black
+   Color Palette: Dark Green, Navy/Royal Blue, White, Black
    ============================================= */
 
 /* CSS Variables */
@@ -10,10 +10,10 @@
   --color-green-medium: #2d6a4f;
   --color-green-light: #40916c;
 
-  /* Accent Colors */
-  --color-purple-dark: #4a1259;
-  --color-purple-medium: #6b2d7b;
-  --color-purple-light: #8b4a9c;
+  /* Accent Colors - Navy/Royal Blue */
+  --color-purple-dark: #1a2a5e;
+  --color-purple-medium: #2541b2;
+  --color-purple-light: #4169e1;
 
   /* Neutrals */
   --color-white: #ffffff;
