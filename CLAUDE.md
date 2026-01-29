@@ -1,15 +1,15 @@
 # CLAUDE.md - AI Assistant Guide for TER-revamp
 
 > This file provides context and guidelines for AI assistants working with this codebase.
-> Last updated: 2026-01-27
+> Last updated: 2026-01-29
 
 ## Project Overview
 
 **Repository:** TER-revamp
-**Status:** New/Initializing
-**Description:** [TODO: Add project description as the codebase develops]
+**Status:** Active Development
+**Description:** Professional event rental business website for Tasteful Event Rentals, a San Diego-based company offering tent, table, chair, lighting, and event equipment rentals.
 
-This is a newly initialized repository. As the project develops, this document should be updated to reflect the actual codebase structure, conventions, and workflows.
+**Live Site:** https://www.tastefuleventrentals.com/
 
 ---
 
@@ -18,21 +18,15 @@ This is a newly initialized repository. As the project develops, this document s
 ### Common Commands
 
 ```bash
-# [TODO: Add build commands]
-# npm run build
-# make build
+# Start local development server (using Python)
+python -m http.server 8000
+# Then open http://localhost:8000
 
-# [TODO: Add test commands]
-# npm test
-# pytest
+# Or using Node.js (if available)
+npx serve .
 
-# [TODO: Add development server commands]
-# npm run dev
-# python manage.py runserver
-
-# [TODO: Add linting/formatting commands]
-# npm run lint
-# black . && isort .
+# Or using PHP (if available)
+php -S localhost:8000
 ```
 
 ### Key Files to Know
@@ -40,9 +34,11 @@ This is a newly initialized repository. As the project develops, this document s
 | File/Directory | Purpose |
 |---------------|---------|
 | `CLAUDE.md` | AI assistant guidelines (this file) |
-| `README.md` | [TODO: Create project documentation] |
-| `src/` | [TODO: Main source code] |
-| `tests/` | [TODO: Test files] |
+| `index.html` | Homepage |
+| `pages/` | Subpages (rentals, packages, about, contact) |
+| `css/styles.css` | Main stylesheet with all styling |
+| `js/main.js` | JavaScript for interactivity |
+| `images/` | Logo and placeholder image locations |
 
 ---
 
@@ -50,178 +46,206 @@ This is a newly initialized repository. As the project develops, this document s
 
 ```
 TER-revamp/
-├── CLAUDE.md           # AI assistant guidelines
-├── README.md           # [TODO] Project documentation
-├── src/                # [TODO] Main source code
-├── tests/              # [TODO] Test files
-├── docs/               # [TODO] Additional documentation
-└── [config files]      # [TODO] Configuration files
+├── CLAUDE.md              # AI assistant guidelines
+├── index.html             # Homepage
+├── css/
+│   └── styles.css         # Main stylesheet (CSS variables, components)
+├── js/
+│   └── main.js            # Mobile menu, form validation, scroll effects
+├── images/
+│   ├── logo.svg           # Main logo (dark green/purple)
+│   ├── logo-white.svg     # White logo for dark backgrounds
+│   └── [placeholder images - see Image Guide below]
+└── pages/
+    ├── rentals.html       # Rental inventory with Booqable embed
+    ├── packages.html      # Party packages page
+    ├── about.html         # About the company
+    └── contact.html       # Contact form and info
 ```
-
-> **Note:** Update this structure as the project develops.
 
 ---
 
 ## Technology Stack
 
-[TODO: Document the technology stack as it's established]
+- **Language:** HTML5, CSS3, JavaScript (ES6+)
+- **Framework:** None (vanilla HTML/CSS/JS)
+- **Styling:** Custom CSS with CSS Variables
+- **Fonts:** Google Fonts (Playfair Display, Montserrat)
+- **Store Integration:** Booqable (embedded via HTML)
+- **Icons:** Inline SVG
 
-- **Language:** [e.g., TypeScript, Python, Go]
-- **Framework:** [e.g., React, Django, Express]
-- **Database:** [e.g., PostgreSQL, MongoDB]
-- **Build System:** [e.g., Webpack, Vite, Make]
-- **Package Manager:** [e.g., npm, yarn, pip, poetry]
-- **Testing:** [e.g., Jest, pytest, Go test]
+---
+
+## Color Scheme
+
+The site uses a green and purple color palette defined as CSS variables in `css/styles.css`:
+
+```css
+/* Primary - Dark Green */
+--color-green-dark: #1a4d3e;
+--color-green-medium: #2d6a4f;
+--color-green-light: #40916c;
+
+/* Accent - Purple */
+--color-purple-dark: #4a1259;
+--color-purple-medium: #6b2d7b;
+--color-purple-light: #8b4a9c;
+
+/* Neutrals */
+--color-white: #ffffff;
+--color-black: #1a1a1a;
+```
+
+To change colors site-wide, edit these variables in `css/styles.css` (lines 5-25).
+
+---
+
+## Image Guide
+
+### Required Images
+
+Replace these placeholder images with actual photos:
+
+| File Path | Recommended Size | Used On |
+|-----------|------------------|---------|
+| `images/hero-bg.jpg` | 1920x1080px | Homepage hero background |
+| `images/category-tents.jpg` | 600x800px | Homepage categories |
+| `images/category-tables.jpg` | 600x800px | Homepage categories |
+| `images/category-lighting.jpg` | 600x800px | Homepage categories |
+| `images/category-equipment.jpg` | 600x800px | Homepage categories |
+| `images/package-intimate.jpg` | 800x500px | Packages page |
+| `images/package-backyard.jpg` | 800x500px | Packages page |
+| `images/package-elegant.jpg` | 800x500px | Packages page |
+| `images/package-corporate.jpg` | 800x500px | Packages page |
+| `images/package-grand.jpg` | 800x500px | Packages page |
+| `images/package-basic.jpg` | 800x500px | Packages page |
+| `images/about-team.jpg` | 800x600px | About page |
+| `images/service-area.jpg` | 800x600px | About page |
+
+### How to Replace Images
+
+1. Save your new image with the exact filename listed above
+2. Place it in the `images/` folder
+3. Ensure the image is optimized for web (compress JPEGs to ~80% quality)
+4. Refresh the page to see changes
+
+### Image Optimization Tips
+
+- Use JPEG for photos, PNG for graphics with transparency
+- Compress images using tools like TinyPNG, Squoosh, or ImageOptim
+- Keep file sizes under 200KB when possible
+- Use consistent aspect ratios for grid layouts
+
+---
+
+## Booqable Store Integration
+
+### Current Setup
+
+The rental catalog page (`pages/rentals.html`) has a placeholder for the Booqable store embed.
+
+### How to Add Your Booqable Store
+
+1. Log in to your Booqable account at https://booqable.com
+2. Go to **Settings > Online Store > Embed**
+3. Copy your embed code
+4. Open `pages/rentals.html`
+5. Find the section marked `<!-- PLACEHOLDER - Replace with your Booqable embed code -->`
+6. Replace the placeholder div with your embed code
+
+**Example embed code:**
+```html
+<!-- Script embed method -->
+<script src="https://yourstore.booqable.shop/embed.js"></script>
+<div data-booqable-store></div>
+
+<!-- OR iframe method -->
+<iframe
+  src="https://yourstore.booqable.shop"
+  width="100%"
+  height="800"
+  frameborder="0"
+  style="border: none; min-height: 800px;">
+</iframe>
+```
+
+---
+
+## Contact Form Setup
+
+The contact form in `pages/contact.html` currently has client-side validation only. To make it functional:
+
+### Option 1: Formspree (Easiest)
+1. Sign up at https://formspree.io
+2. Create a new form
+3. Add `action="https://formspree.io/f/YOUR_FORM_ID" method="POST"` to the `<form>` tag
+
+### Option 2: Netlify Forms
+1. Host on Netlify
+2. Add `data-netlify="true"` to the `<form>` tag
+
+### Option 3: Custom Backend
+1. Set up a server endpoint
+2. Update `js/main.js` to POST form data to your endpoint
 
 ---
 
 ## Development Workflow
 
-### Setting Up the Environment
+### Local Development
 
-```bash
-# [TODO: Add setup instructions]
-# 1. Clone the repository
-git clone <repository-url>
-cd TER-revamp
+1. Clone the repository
+2. Open a terminal in the project folder
+3. Start a local server: `python -m http.server 8000`
+4. Open `http://localhost:8000` in your browser
+5. Edit files and refresh to see changes
 
-# 2. Install dependencies
-# npm install
-# pip install -r requirements.txt
+### Making Changes
 
-# 3. Configure environment
-# cp .env.example .env
+1. Edit HTML files directly for content changes
+2. Edit `css/styles.css` for styling changes
+3. Edit `js/main.js` for behavior changes
+4. Test on multiple screen sizes (responsive design)
 
-# 4. Start development
-# npm run dev
-```
+### Deployment
 
-### Branch Naming Convention
-
-- `main` or `master` - Production-ready code
-- `develop` - Integration branch for features
-- `feature/<description>` - New features
-- `bugfix/<description>` - Bug fixes
-- `hotfix/<description>` - Urgent production fixes
-- `claude/<session-id>` - AI assistant working branches
-
-### Commit Message Format
-
-Follow conventional commits:
-
-```
-<type>(<scope>): <description>
-
-[optional body]
-
-[optional footer]
-```
-
-Types: `feat`, `fix`, `docs`, `style`, `refactor`, `test`, `chore`
-
-Examples:
-```
-feat(auth): add OAuth2 login support
-fix(api): handle null response in user endpoint
-docs: update CLAUDE.md with new conventions
-```
+This is a static site and can be hosted on:
+- **Netlify** - Drag and drop deployment
+- **GitHub Pages** - Free hosting from repo
+- **Vercel** - Easy deployment with CLI
+- **Any web host** - Upload files via FTP
 
 ---
 
-## Code Conventions
+## Page-by-Page Guide
 
-### General Principles
+### index.html (Homepage)
+- Hero section with background image
+- "Why Choose Us" features grid
+- Rental categories grid with hover effects
+- Testimonials carousel
+- CTA section
 
-1. **Keep it simple** - Avoid over-engineering; implement only what's needed
-2. **Be consistent** - Follow existing patterns in the codebase
-3. **Write tests** - Add tests for new functionality
-4. **Document intent** - Comment the "why", not the "what"
-5. **Security first** - Never commit secrets; validate inputs
+### pages/rentals.html
+- Category quick-jump links
+- Booqable store embed area
+- Fallback category sections (for SEO)
 
-### Style Guidelines
+### pages/packages.html
+- Package cards with pricing
+- "Most Popular" badge on featured package
+- Custom quote CTA
 
-[TODO: Add language-specific style guidelines]
+### pages/about.html
+- Company story section
+- Statistics grid
+- Values cards
+- Service area with map-ready section
 
-```
-# Example for TypeScript/JavaScript:
-- Use TypeScript strict mode
-- Prefer `const` over `let`
-- Use meaningful variable names
-- Max line length: 100 characters
-
-# Example for Python:
-- Follow PEP 8
-- Use type hints
-- Max line length: 88 characters (Black default)
-```
-
----
-
-## Testing Guidelines
-
-### Running Tests
-
-```bash
-# [TODO: Add test commands]
-# Run all tests
-# npm test
-
-# Run specific test file
-# npm test -- path/to/test.ts
-
-# Run with coverage
-# npm test -- --coverage
-```
-
-### Writing Tests
-
-[TODO: Document testing patterns and expectations]
-
-- Unit tests for business logic
-- Integration tests for API endpoints
-- E2E tests for critical user flows
-- Aim for meaningful coverage, not 100%
-
----
-
-## Architecture Notes
-
-[TODO: Document key architectural decisions as they're made]
-
-### Key Patterns
-
-- [e.g., Repository pattern for data access]
-- [e.g., Service layer for business logic]
-- [e.g., Event-driven communication]
-
-### Important Decisions
-
-| Decision | Rationale | Date |
-|----------|-----------|------|
-| [TODO] | [TODO] | [TODO] |
-
----
-
-## Environment Configuration
-
-### Required Environment Variables
-
-[TODO: Document required environment variables]
-
-```bash
-# .env.example
-# DATABASE_URL=postgresql://localhost:5432/ter
-# API_KEY=your-api-key-here
-# NODE_ENV=development
-```
-
-### Configuration Files
-
-| File | Purpose |
-|------|---------|
-| `.env` | Local environment variables (git-ignored) |
-| `.env.example` | Template for environment setup |
-| [TODO: Add other config files] | [TODO] |
+### pages/contact.html
+- Contact information sidebar
+- Multi-field quote request form
+- FAQ accordion section
 
 ---
 
@@ -229,51 +253,47 @@ docs: update CLAUDE.md with new conventions
 
 ### When Working on This Codebase
 
-1. **Read before writing** - Always understand existing code before modifying
-2. **Use TodoWrite** - Track tasks and progress for complex work
-3. **Make incremental changes** - Small, focused commits are preferred
-4. **Test your changes** - Run tests before committing
-5. **Update documentation** - Keep CLAUDE.md and README.md current
+1. **Maintain the color scheme** - Use the defined CSS variables
+2. **Keep it responsive** - Test changes at mobile/tablet/desktop sizes
+3. **Preserve the professional tone** - Upscale, elegant, trustworthy
+4. **Use semantic HTML** - Proper headings, landmarks, alt text
+5. **Comment significant changes** - Especially in CSS
 
 ### Things to Avoid
 
-- Don't add features beyond what's requested
-- Don't introduce new dependencies without justification
-- Don't commit sensitive data (API keys, passwords)
-- Don't skip tests or disable linting
-- Don't make breaking changes without documentation
+- Don't change the logo without explicit request
+- Don't remove Booqable integration points
+- Don't add JavaScript frameworks (keep it vanilla)
+- Don't use external icon libraries (use inline SVG)
+- Don't change the navigation structure without updating all pages
 
-### Helpful Patterns
+### Common Tasks
 
-When exploring this codebase:
-```bash
-# Find files by pattern
-# Use Glob tool with patterns like "**/*.ts"
+**Change phone number:**
+- Search for `8582551130` and replace all instances
 
-# Search for code patterns
-# Use Grep tool to search content
+**Change email:**
+- Search for `info@tastefuleventrentals.com` and replace
 
-# Understand structure
-# Use Task tool with Explore agent for complex exploration
-```
+**Add a new page:**
+1. Copy an existing page as a template
+2. Update the nav links in all HTML files
+3. Update footer links
+
+**Change a color:**
+- Edit the CSS variable in `css/styles.css` (top of file)
 
 ---
 
 ## Troubleshooting
 
-### Common Issues
-
-[TODO: Document common issues and solutions as they arise]
-
 | Issue | Solution |
 |-------|----------|
-| [TODO] | [TODO] |
-
-### Getting Help
-
-- Check existing documentation
-- Search closed issues/PRs
-- Ask in project communication channels
+| Images not showing | Check file path and filename (case-sensitive) |
+| Styles not updating | Hard refresh (Ctrl+Shift+R) or clear cache |
+| Mobile menu not working | Ensure `js/main.js` is loaded |
+| Form not submitting | Set up form backend (see Contact Form Setup) |
+| Booqable not loading | Check embed code and Booqable account status |
 
 ---
 
@@ -281,19 +301,20 @@ When exploring this codebase:
 
 | Date | Changes |
 |------|---------|
-| 2026-01-27 | Initial CLAUDE.md created for empty repository |
+| 2026-01-29 | Complete website build: homepage, rentals, packages, about, contact |
+| 2026-01-29 | Added professional SVG logo (green/purple) |
+| 2026-01-29 | Booqable embed placeholder and documentation |
+| 2026-01-27 | Initial CLAUDE.md created |
 
 ---
 
-## Notes
+## File Quick Reference
 
-This CLAUDE.md was created when the repository was empty. As the project develops:
+For quick edits, here are the key line locations:
 
-1. Replace all `[TODO]` placeholders with actual information
-2. Update the codebase structure section
-3. Document the actual technology stack
-4. Add specific commands for building, testing, and running
-5. Document architectural decisions as they're made
-6. Add troubleshooting entries for common issues
-
-Keep this file up-to-date as the single source of truth for AI assistants working with this codebase.
+- **Colors:** `css/styles.css` lines 5-30
+- **Mobile breakpoint:** `css/styles.css` line 768 (`@media`)
+- **Navigation:** Each HTML file, `<header>` section
+- **Footer:** Each HTML file, `<footer>` section
+- **Phone number:** Search `8582551130`
+- **Email:** Search `info@tastefuleventrentals.com`
