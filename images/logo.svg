@@ -1,31 +1,70 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 60" width="280" height="60">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 70" width="320" height="70">
   <defs>
-    <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" style="stop-color:#1a4d3e"/>
-      <stop offset="100%" style="stop-color:#2541b2"/>
+      <stop offset="100%" style="stop-color:#1a2a5e"/>
     </linearGradient>
   </defs>
 
-  <!-- Elegant tent/canopy icon -->
-  <g transform="translate(0, 5)">
-    <!-- Main tent shape -->
-    <path d="M25 45 L5 45 L25 10 L45 45 L25 45" fill="none" stroke="url(#logoGradient)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-    <!-- Tent peak decoration -->
-    <path d="M25 10 L25 5" stroke="url(#logoGradient)" stroke-width="2.5" stroke-linecap="round"/>
-    <!-- Flag at top -->
-    <path d="M25 5 Q32 8 25 12" fill="#2541b2" opacity="0.8"/>
-    <!-- Tent draping lines -->
-    <path d="M15 27.5 L25 10 L35 27.5" fill="none" stroke="url(#logoGradient)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
+  <!-- Elegant monogram/crest icon -->
+  <g transform="translate(8, 8)">
+    <!-- Outer frame - elegant shield/crest shape -->
+    <path d="M25 0 L50 8 L50 32 Q50 48 25 54 Q0 48 0 32 L0 8 Z"
+          fill="none"
+          stroke="#1a4d3e"
+          stroke-width="1.5"/>
+
+    <!-- Inner decorative frame -->
+    <path d="M25 4 L46 11 L46 31 Q46 44 25 50 Q4 44 4 31 L4 11 Z"
+          fill="none"
+          stroke="#1a2a5e"
+          stroke-width="0.75"
+          opacity="0.5"/>
+
+    <!-- Stylized "T" monogram -->
+    <text x="25" y="36"
+          font-family="Georgia, 'Playfair Display', serif"
+          font-size="28"
+          font-weight="400"
+          fill="#1a4d3e"
+          text-anchor="middle"
+          font-style="italic">T</text>
+
+    <!-- Small decorative flourish under T -->
+    <path d="M15 40 Q25 44 35 40"
+          fill="none"
+          stroke="#1a2a5e"
+          stroke-width="1"
+          opacity="0.6"/>
   </g>
 
-  <!-- Company Name -->
-  <text x="55" y="28" font-family="Georgia, 'Playfair Display', serif" font-size="22" font-weight="600" fill="#1a4d3e">
-    TASTEFUL
-  </text>
-  <text x="55" y="48" font-family="Georgia, 'Playfair Display', serif" font-size="14" font-weight="400" fill="#2541b2" letter-spacing="3">
-    EVENT RENTALS
-  </text>
+  <!-- Company Name - Elegant Typography -->
+  <text x="70" y="30"
+        font-family="Georgia, 'Playfair Display', serif"
+        font-size="26"
+        font-weight="400"
+        fill="#1a4d3e"
+        letter-spacing="4">TASTEFUL</text>
 
-  <!-- Decorative line -->
-  <line x1="55" y1="32" x2="165" y2="32" stroke="url(#logoGradient)" stroke-width="1" opacity="0.4"/>
+  <!-- Thin decorative line -->
+  <line x1="70" y1="38" x2="230" y2="38"
+        stroke="#1a2a5e"
+        stroke-width="0.5"
+        opacity="0.4"/>
+
+  <!-- Tagline -->
+  <text x="70" y="55"
+        font-family="'Montserrat', 'Helvetica Neue', sans-serif"
+        font-size="11"
+        font-weight="400"
+        fill="#1a2a5e"
+        letter-spacing="5">EVENT RENTALS</text>
+
+  <!-- Small accent - Est. marker for heritage feel -->
+  <text x="248" y="55"
+        font-family="Georgia, 'Playfair Display', serif"
+        font-size="9"
+        font-style="italic"
+        fill="#1a4d3e"
+        opacity="0.6">San Diego</text>
 </svg>
