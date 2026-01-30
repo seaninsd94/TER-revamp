@@ -21,6 +21,8 @@
       box-shadow: var(--shadow-md);
       overflow: hidden;
       transition: transform var(--transition-base), box-shadow var(--transition-base);
+      display: flex;
+      flex-direction: column;
     }
 
     .package-card:hover {
@@ -31,6 +33,7 @@
     .package-image {
       height: 220px;
       overflow: hidden;
+      flex-shrink: 0;
     }
 
     .package-image img {
@@ -46,6 +49,9 @@
 
     .package-content {
       padding: var(--spacing-md);
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
     }
 
     .package-title {
@@ -73,6 +79,7 @@
       padding: var(--spacing-sm);
       background: var(--color-off-white);
       border-radius: var(--border-radius);
+      flex-grow: 1;
     }
 
     .package-includes li {
@@ -87,6 +94,10 @@
       content: "✓";
       color: var(--color-primary);
       font-weight: bold;
+    }
+
+    .package-footer {
+      margin-top: auto;
     }
 
     .package-price {
@@ -215,9 +226,8 @@
           File locations: images/package-intimate.jpg, etc.
         -->
 
-        <!-- Garden Soirée - Featured -->
-        <div class="package-card package-featured">
-          <span class="package-badge">Most Popular</span>
+        <!-- Garden Soirée -->
+        <div class="package-card">
           <div class="package-image">
             <img src="../images/package-backyard.jpg" alt="Garden Soirée Package">
           </div>
@@ -235,13 +245,16 @@
               <li>Bistro String Lights</li>
               <li>Two Cocktail Tables w\ Covers</li>
             </ul>
-            <p class="package-price">Starting at $1849 <span>/ weekend</span></p>
-            <a href="contact.html?package=garden-soiree" class="btn btn-secondary" style="width: 100%;">Request Quote</a>
+            <div class="package-footer">
+              <p class="package-price">Starting at $1849 <span>/ weekend</span></p>
+              <a href="contact.html?package=garden-soiree" class="btn btn-primary" style="width: 100%;">Request Quote</a>
+            </div>
           </div>
         </div>
 
-        <!-- Elegant Reception -->
-        <div class="package-card">
+        <!-- Elegant Reception - Featured -->
+        <div class="package-card package-featured">
+          <span class="package-badge">Most Popular</span>
           <div class="package-image">
             <img src="../images/package-elegant.jpg" alt="Elegant Reception Package">
           </div>
@@ -260,8 +273,10 @@
               <li>LED Uplighting (10 fixtures)</li>
               <li>Dance Floor (15' by 15')</li>
             </ul>
-            <p class="package-price">Starting at $5,499 <span>/ weekend</span></p>
-            <a href="contact.html?package=elegant" class="btn btn-primary" style="width: 100%;">Request Quote</a>
+            <div class="package-footer">
+              <p class="package-price">Starting at $5,499 <span>/ weekend</span></p>
+              <a href="contact.html?package=elegant" class="btn btn-secondary" style="width: 100%;">Request Quote</a>
+            </div>
           </div>
         </div>
 
@@ -286,8 +301,10 @@
               <li>Dance Floor (21' by 21')</li>
               <li>Cocktail Hour Setup</li>
             </ul>
-            <p class="package-price">Starting at $14,999 <span>/ weekend</span></p>
-            <a href="contact.html?package=grand" class="btn btn-primary" style="width: 100%;">Request Quote</a>
+            <div class="package-footer">
+              <p class="package-price">Starting at $14,999 <span>/ weekend</span></p>
+              <a href="contact.html?package=grand" class="btn btn-primary" style="width: 100%;">Request Quote</a>
+            </div>
           </div>
         </div>
       </div>
@@ -323,8 +340,10 @@
               <li>Four Linens (White or Black)</li>
               <li>String Lights (100ft)</li>
             </ul>
-            <p class="package-price">Starting at $599 <span>/ weekend</span></p>
-            <a href="contact.html?package=intimate" class="btn btn-primary" style="width: 100%;">Request Quote</a>
+            <div class="package-footer">
+              <p class="package-price">Starting at $599 <span>/ weekend</span></p>
+              <a href="contact.html?package=intimate" class="btn btn-primary" style="width: 100%;">Request Quote</a>
+            </div>
           </div>
         </div>
 
@@ -345,8 +364,10 @@
               <li>Delivery & Pickup</li>
               <li>Setup Available (add-on)</li>
             </ul>
-            <p class="package-price">Starting at $199 <span>/ weekend</span></p>
-            <a href="contact.html?package=basic" class="btn btn-primary" style="width: 100%;">Request Quote</a>
+            <div class="package-footer">
+              <p class="package-price">Starting at $199 <span>/ weekend</span></p>
+              <a href="contact.html?package=basic" class="btn btn-primary" style="width: 100%;">Request Quote</a>
+            </div>
           </div>
         </div>
       </div>
