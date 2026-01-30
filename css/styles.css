@@ -603,6 +603,27 @@ img {
   color: var(--color-text-light);
 }
 
+.testimonial-stars {
+  color: #f4b942;
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+  margin-bottom: var(--spacing-xs);
+}
+
+.google-review-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  font-size: 0.75rem;
+  color: var(--color-text-light);
+  margin-top: var(--spacing-xs);
+}
+
+.google-review-badge svg {
+  width: 16px;
+  height: 16px;
+}
+
 /* =============================================
    CTA SECTION
    ============================================= */
@@ -654,6 +675,30 @@ img {
   background: linear-gradient(135deg, var(--color-green-dark) 0%, var(--color-purple-dark) 100%);
   padding: calc(80px + var(--spacing-xl)) 0 var(--spacing-xl);
   text-align: center;
+  color: var(--color-white);
+}
+
+.about-hero h1,
+.about-hero h2,
+.about-hero h3,
+.about-hero p {
+  color: var(--color-white);
+}
+
+/* CTA Section text colors */
+.cta-section h1,
+.cta-section h2,
+.cta-section h3,
+.cta-section p {
+  color: var(--color-white);
+}
+
+/* Section-dark text colors */
+.section-dark h1,
+.section-dark h2,
+.section-dark h3,
+.section-dark h4,
+.section-dark p {
   color: var(--color-white);
 }
 
