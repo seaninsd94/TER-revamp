@@ -108,6 +108,29 @@
       gap: var(--spacing-md);
     }
 
+    .packages-grid-3 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .packages-grid-2 {
+      grid-template-columns: repeat(2, 1fr);
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 1024px) {
+      .packages-grid-3 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .packages-grid-3,
+      .packages-grid-2 {
+        grid-template-columns: 1fr;
+      }
+    }
+
     .package-featured {
       border: 3px solid var(--color-secondary);
       position: relative;
@@ -173,57 +196,34 @@
   </section>
 
   <!-- ============================================= -->
-  <!-- PACKAGES GRID -->
+  <!-- SIGNATURE PACKAGES -->
   <!-- ============================================= -->
   <section class="section">
     <div class="container">
       <div class="section-header">
-        <p class="section-subtitle">Our Revolutionary</p>
+        <p class="section-subtitle">Signature Collections</p>
         <h2 class="section-title">Curated Event Packages</h2>
         <p class="section-description">
           Each package is thoughtfully designed to give you everything you need. Customize any package to fit your specific needs.
         </p>
       </div>
 
-      <div class="packages-grid">
+      <div class="packages-grid packages-grid-3">
         <!--
           HOW TO EDIT PACKAGE IMAGES:
           Replace each image with your own. Recommended size: 800x500px
           File locations: images/package-intimate.jpg, etc.
         -->
 
-        <!-- Intimate Gathering -->
-        <div class="package-card">
-          <div class="package-image">
-            <img src="../images/package-intimate.jpg" alt="Intimate Gathering Package">
-          </div>
-          <div class="package-content">
-            <p class="package-subtitle">Up to 32 Guests</p>
-            <h3 class="package-title">Intimate Gathering</h3>
-            <p class="package-description">
-              Perfect for small celebrations, dinner parties, and backyard gatherings.
-            </p>
-            <ul class="package-includes">
-              <li>20' by 20' Canopy</li>
-              <li>Four Round Tables (60")</li>
-              <li>32 Folding Chairs</li>
-              <li>Four Linens (White or Black)</li>
-              <li>String Lights (100ft)</li>
-            </ul>
-            <p class="package-price">Starting at $599 <span>/ weekend</span></p>
-            <a href="contact.html?package=intimate" class="btn btn-primary" style="width: 100%;">Request Quote</a>
-          </div>
-        </div>
-
-        <!-- Backyard Party - Featured -->
+        <!-- Garden Soirée - Featured -->
         <div class="package-card package-featured">
           <span class="package-badge">Most Popular</span>
           <div class="package-image">
-            <img src="../images/package-backyard.jpg" alt="Backyard Party Package">
+            <img src="../images/package-backyard.jpg" alt="Garden Soirée Package">
           </div>
           <div class="package-content">
             <p class="package-subtitle">Up to 64 Guests</p>
-            <h3 class="package-title">Backyard Party</h3>
+            <h3 class="package-title">Garden Soirée</h3>
             <p class="package-description">
               Our most popular package - ideal for birthday parties, graduations, and family celebrations.
             </p>
@@ -236,7 +236,7 @@
               <li>Two Cocktail Tables w\ Covers</li>
             </ul>
             <p class="package-price">Starting at $1849 <span>/ weekend</span></p>
-            <a href="contact.html?package=backyard" class="btn btn-secondary" style="width: 100%;">Request Quote</a>
+            <a href="contact.html?package=garden-soiree" class="btn btn-secondary" style="width: 100%;">Request Quote</a>
           </div>
         </div>
 
@@ -290,6 +290,43 @@
             <a href="contact.html?package=grand" class="btn btn-primary" style="width: 100%;">Request Quote</a>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================= -->
+  <!-- SMALLER GATHERINGS -->
+  <!-- ============================================= -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-subtitle">Streamlined Options</p>
+        <h2 class="section-title">For Smaller Gatherings</h2>
+      </div>
+
+      <div class="packages-grid packages-grid-2">
+        <!-- Intimate Gathering -->
+        <div class="package-card">
+          <div class="package-image">
+            <img src="../images/package-intimate.jpg" alt="Intimate Gathering Package">
+          </div>
+          <div class="package-content">
+            <p class="package-subtitle">Up to 32 Guests</p>
+            <h3 class="package-title">Intimate Gathering</h3>
+            <p class="package-description">
+              Perfect for small celebrations, dinner parties, and backyard gatherings.
+            </p>
+            <ul class="package-includes">
+              <li>20' by 20' Canopy</li>
+              <li>Four Round Tables (60")</li>
+              <li>32 Folding Chairs</li>
+              <li>Four Linens (White or Black)</li>
+              <li>String Lights (100ft)</li>
+            </ul>
+            <p class="package-price">Starting at $599 <span>/ weekend</span></p>
+            <a href="contact.html?package=intimate" class="btn btn-primary" style="width: 100%;">Request Quote</a>
+          </div>
+        </div>
 
         <!-- Basic Essentials -->
         <div class="package-card">
@@ -319,7 +356,7 @@
   <!-- ============================================= -->
   <!-- CUSTOMIZE NOTE -->
   <!-- ============================================= -->
-  <section class="section section-alt">
+  <section class="section">
     <div class="container">
       <div style="max-width: 800px; margin: 0 auto; text-align: center;">
         <h2 class="section-title">Need Something Different?</h2>
