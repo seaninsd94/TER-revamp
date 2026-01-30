@@ -57,8 +57,8 @@ TER-revamp/
 │   ├── logo-white.svg     # White logo for dark backgrounds
 │   └── [placeholder images - see Image Guide below]
 └── pages/
-    ├── rentals.html       # Rental inventory with Booqable embed
     ├── packages.html      # Party packages page
+    ├── corporate.html     # Corporate events page
     ├── about.html         # About the company
     └── contact.html       # Contact form and info
 ```
@@ -140,18 +140,7 @@ Replace these placeholder images with actual photos:
 
 ## Booqable Store Integration
 
-### Current Setup
-
-The rental catalog page (`pages/rentals.html`) has a placeholder for the Booqable store embed.
-
-### How to Add Your Booqable Store
-
-1. Log in to your Booqable account at https://booqable.com
-2. Go to **Settings > Online Store > Embed**
-3. Copy your embed code
-4. Open `pages/rentals.html`
-5. Find the section marked `<!-- PLACEHOLDER - Replace with your Booqable embed code -->`
-6. Replace the placeholder div with your embed code
+The site is configured to direct visitors to the contact page for rental inquiries. If you want to add a Booqable store embed in the future, you can create a new page or add it to an existing page.
 
 **Example embed code:**
 ```html
@@ -226,15 +215,16 @@ This is a static site and can be hosted on:
 - Testimonials carousel
 - CTA section
 
-### pages/rentals.html
-- Category quick-jump links
-- Booqable store embed area
-- Fallback category sections (for SEO)
-
 ### pages/packages.html
 - Package cards with pricing
 - "Most Popular" badge on featured package
 - Custom quote CTA
+
+### pages/corporate.html
+- Corporate event solutions overview
+- Service categories with images
+- Corporate advantages section
+- Statistics and trust indicators
 
 ### pages/about.html
 - Company story section
