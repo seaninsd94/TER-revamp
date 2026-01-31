@@ -181,9 +181,275 @@
   </section>
 
   <!-- ============================================= -->
-  <!-- WHY CORPORATE CLIENTS CHOOSE US -->
+  <!-- CORPORATE PACKAGES -->
   <!-- ============================================= -->
   <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-subtitle">Curated Solutions</p>
+        <h2 class="section-title">Corporate Event Packages</h2>
+        <p class="section-description">
+          Comprehensive rental packages designed for corporate events of every scale. Each includes premium lounge furniture for executive networking areas.
+        </p>
+      </div>
+
+      <style>
+        .corporate-packages-grid {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: var(--spacing-lg);
+        }
+        @media (max-width: 992px) {
+          .corporate-packages-grid {
+            grid-template-columns: repeat(2, 1fr);
+          }
+        }
+        @media (max-width: 768px) {
+          .corporate-packages-grid {
+            grid-template-columns: 1fr;
+          }
+        }
+        .corporate-package-card {
+          background: var(--color-white);
+          border-radius: var(--border-radius-lg);
+          overflow: hidden;
+          box-shadow: var(--shadow-md);
+          display: flex;
+          flex-direction: column;
+        }
+        .corporate-package-header {
+          background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+          color: var(--color-white);
+          padding: var(--spacing-lg);
+          text-align: center;
+        }
+        .corporate-package-header h3 {
+          font-family: var(--font-secondary);
+          font-size: 1.5rem;
+          margin-bottom: var(--spacing-xs);
+        }
+        .corporate-package-guests {
+          font-size: 2.5rem;
+          font-weight: 700;
+          margin: var(--spacing-sm) 0;
+        }
+        .corporate-package-guests span {
+          font-size: 1rem;
+          font-weight: 400;
+          opacity: 0.9;
+        }
+        .corporate-package-content {
+          padding: var(--spacing-lg);
+          display: flex;
+          flex-direction: column;
+          flex-grow: 1;
+        }
+        .corporate-package-includes {
+          flex-grow: 1;
+        }
+        .corporate-package-includes h4 {
+          font-size: 0.875rem;
+          text-transform: uppercase;
+          letter-spacing: 0.1em;
+          color: var(--color-text-light);
+          margin-bottom: var(--spacing-sm);
+        }
+        .corporate-package-includes ul {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+        }
+        .corporate-package-includes li {
+          padding: var(--spacing-xs) 0;
+          border-bottom: 1px solid var(--color-border);
+          display: flex;
+          align-items: flex-start;
+          gap: var(--spacing-xs);
+        }
+        .corporate-package-includes li:last-child {
+          border-bottom: none;
+        }
+        .corporate-package-includes li svg {
+          width: 18px;
+          height: 18px;
+          color: var(--color-primary);
+          flex-shrink: 0;
+          margin-top: 2px;
+        }
+        .corporate-package-footer {
+          margin-top: auto;
+          padding-top: var(--spacing-md);
+          text-align: center;
+        }
+        .corporate-package-price {
+          font-size: 1.75rem;
+          font-weight: 700;
+          color: var(--color-primary);
+          margin-bottom: var(--spacing-sm);
+        }
+        .corporate-package-price span {
+          font-size: 0.875rem;
+          font-weight: 400;
+          color: var(--color-text-light);
+        }
+      </style>
+
+      <div class="corporate-packages-grid">
+        <!-- Executive Meeting Package -->
+        <div class="corporate-package-card">
+          <div class="corporate-package-header">
+            <h3>Executive Meeting</h3>
+            <div class="corporate-package-guests">100 <span>guests</span></div>
+          </div>
+          <div class="corporate-package-content">
+            <div class="corporate-package-includes">
+              <h4>Package Includes</h4>
+              <ul>
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  20' x 40' Frame Tent with Sidewalls
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  12 Round Tables (60" diameter)
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  100 Padded Folding Chairs
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  Premium Lounge Set (2 sofas, 4 armchairs, 2 coffee tables)
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  Bistro Lighting Package
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  White-Glove Delivery & Setup
+                </li>
+              </ul>
+            </div>
+            <div class="corporate-package-footer">
+              <div class="corporate-package-price">$2,995 <span>starting at</span></div>
+              <a href="contact.html?package=executive-meeting" class="btn btn-primary" style="width: 100%;">Request Quote</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Corporate Celebration Package -->
+        <div class="corporate-package-card">
+          <div class="corporate-package-header" style="background: linear-gradient(135deg, var(--color-accent), var(--color-accent-dark));">
+            <h3>Corporate Celebration</h3>
+            <div class="corporate-package-guests">250 <span>guests</span></div>
+          </div>
+          <div class="corporate-package-content">
+            <div class="corporate-package-includes">
+              <h4>Package Includes</h4>
+              <ul>
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  40' x 60' Frame Tent with Sidewalls
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  30 Round Tables (60" diameter)
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  250 Chiavari Chairs
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  Premium Lounge Sets (4 sofas, 8 armchairs, 4 coffee tables)
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  Full Lighting Package with Uplighting
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  Climate Control (Fans or Heaters)
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  White-Glove Delivery & Setup
+                </li>
+              </ul>
+            </div>
+            <div class="corporate-package-footer">
+              <div class="corporate-package-price">$6,495 <span>starting at</span></div>
+              <a href="contact.html?package=corporate-celebration" class="btn btn-primary" style="width: 100%;">Request Quote</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Grand Corporate Gala Package -->
+        <div class="corporate-package-card">
+          <div class="corporate-package-header">
+            <h3>Grand Corporate Gala</h3>
+            <div class="corporate-package-guests">400 <span>guests</span></div>
+          </div>
+          <div class="corporate-package-content">
+            <div class="corporate-package-includes">
+              <h4>Package Includes</h4>
+              <ul>
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  60' x 90' Frame Tent with Sidewalls
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  50 Round Tables (60" diameter)
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  400 Chiavari Chairs (Gold or Silver)
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  Executive Lounge Zone (6 sofas, 12 armchairs, 6 coffee tables, 4 high-top tables)
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  Premium Lighting (Chandeliers, Uplighting, String Lights)
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  Climate Control System
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  Staging Platform (8' x 12')
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  White-Glove Delivery & Setup
+                </li>
+              </ul>
+            </div>
+            <div class="corporate-package-footer">
+              <div class="corporate-package-price">$12,995 <span>starting at</span></div>
+              <a href="contact.html?package=grand-corporate-gala" class="btn btn-primary" style="width: 100%;">Request Quote</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: var(--spacing-xl);">
+        <p style="color: var(--color-text-light); margin-bottom: var(--spacing-md);">
+          Need a custom configuration? Our corporate events team can create a tailored solution for your specific requirements.
+        </p>
+        <a href="contact.html" class="btn btn-outline">Request Custom Quote</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================= -->
+  <!-- WHY CORPORATE CLIENTS CHOOSE US -->
+  <!-- ============================================= -->
+  <section class="section section-alt">
     <div class="container">
       <div class="section-header">
         <p class="section-subtitle">The Tasteful Advantage</p>
