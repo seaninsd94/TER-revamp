@@ -229,12 +229,29 @@
               <label class="form-label" for="interested-in">Interested In</label>
               <select id="interested-in" name="interested_in" class="form-select">
                 <option value="">Select an option...</option>
-                <option value="tents">Tents & Canopies</option>
-                <option value="tables-chairs">Tables & Chairs</option>
-                <option value="lighting">Lighting & Decor</option>
-                <option value="package">Party Package</option>
-                <option value="full-service">Full Event Setup</option>
-                <option value="not-sure">Not Sure Yet</option>
+                <optgroup label="Signature Event Packages">
+                  <option value="elegant-reception">Elegant Reception (Up to 100 Guests)</option>
+                  <option value="grand-celebration">Grand Celebration (Up to 200 Guests)</option>
+                  <option value="estate-affair">Estate Affair (Up to 250 Guests)</option>
+                </optgroup>
+                <optgroup label="Smaller Gathering Packages">
+                  <option value="garden-soiree">Garden Soirée (Up to 64 Guests)</option>
+                  <option value="intimate-gathering">Intimate Gathering (Up to 32 Guests)</option>
+                  <option value="basic-essentials">Basic Essentials (Tables & Chairs)</option>
+                </optgroup>
+                <optgroup label="Corporate Packages">
+                  <option value="executive-meeting">Executive Meeting (100 Guests)</option>
+                  <option value="corporate-celebration">Corporate Celebration (250 Guests)</option>
+                  <option value="grand-corporate-gala">Grand Corporate Gala (400 Guests)</option>
+                </optgroup>
+                <optgroup label="Individual Rentals">
+                  <option value="tents">Tents & Canopies</option>
+                  <option value="tables-chairs">Tables & Chairs</option>
+                  <option value="lighting">Lighting & Decor</option>
+                  <option value="lounge-furniture">Lounge Furniture</option>
+                  <option value="full-service">Full Event Setup</option>
+                </optgroup>
+                <option value="not-sure">Not Sure Yet - Need Guidance</option>
               </select>
             </div>
 
@@ -412,24 +429,56 @@
   <script>
     const urlParams = new URLSearchParams(window.location.search);
     const packageParam = urlParams.get('package');
+    const interestParam = urlParams.get('interest');
+
+    const interestedIn = document.getElementById('interested-in');
+    const message = document.getElementById('message');
+
+    // Package name mappings
+    const packageNames = {
+      // Signature Packages
+      'elegant': 'Elegant Reception',
+      'grand': 'Grand Celebration',
+      'estate-affair': 'Estate Affair',
+      // Smaller Gathering Packages
+      'garden-soiree': 'Garden Soirée',
+      'intimate': 'Intimate Gathering',
+      'basic': 'Basic Essentials',
+      // Corporate Packages
+      'executive-meeting': 'Executive Meeting',
+      'corporate-celebration': 'Corporate Celebration',
+      'grand-corporate-gala': 'Grand Corporate Gala'
+    };
+
+    // Map package param to dropdown value
+    const packageToDropdown = {
+      'elegant': 'elegant-reception',
+      'grand': 'grand-celebration',
+      'estate-affair': 'estate-affair',
+      'garden-soiree': 'garden-soiree',
+      'intimate': 'intimate-gathering',
+      'basic': 'basic-essentials',
+      'executive-meeting': 'executive-meeting',
+      'corporate-celebration': 'corporate-celebration',
+      'grand-corporate-gala': 'grand-corporate-gala'
+    };
+
     if (packageParam) {
-      const interestedIn = document.getElementById('interested-in');
-      if (interestedIn) {
-        interestedIn.value = 'package';
+      // Set dropdown to the specific package
+      const dropdownValue = packageToDropdown[packageParam];
+      if (interestedIn && dropdownValue) {
+        interestedIn.value = dropdownValue;
       }
-      const message = document.getElementById('message');
+      // Update placeholder with package name
       if (message && !message.value) {
-        const packageNames = {
-          'intimate': 'Intimate Gathering Package',
-          'backyard': 'Backyard Party Package',
-          'elegant': 'Elegant Reception Package',
-          'corporate': 'Corporate Event Package',
-          'grand': 'Grand Celebration Package',
-          'basic': 'Basic Essentials Package'
-        };
         const name = packageNames[packageParam] || packageParam;
-        message.placeholder = `I'm interested in the ${name}. Please provide a quote for...`;
+        message.placeholder = `I'm interested in the ${name} package. Please provide a quote for...`;
       }
+    }
+
+    // Handle interest param (for individual rental links)
+    if (interestParam && interestedIn) {
+      interestedIn.value = interestParam;
     }
   </script>
 
