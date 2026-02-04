@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Premium event experiences by Tasteful Event Rentals. Full-service event planning, personal concierge, custom design, and white-glove styling throughout San Diego, Los Angeles, and Palm Springs.">
+
+  <title>Premium Experiences | Event Planning & Design | Tasteful Event Rentals</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="../css/styles.css">
+
+  <style>
+    .experiences-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--spacing-lg);
+    }
+    @media (max-width: 992px) {
+      .experiences-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (max-width: 768px) {
+      .experiences-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    .experience-card {
+      background: var(--color-white);
+      border-radius: var(--border-radius-lg);
+      padding: var(--spacing-lg);
+      box-shadow: var(--shadow-md);
+      text-align: center;
+      transition: transform var(--transition-base), box-shadow var(--transition-base);
+    }
+    .experience-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-lg);
+    }
+    .experience-icon {
+      width: 64px;
+      height: 64px;
+      background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto var(--spacing-md);
+    }
+    .experience-icon svg {
+      width: 28px;
+      height: 28px;
+    }
+    .experience-card h3 {
+      font-family: var(--font-secondary);
+      font-size: 1.25rem;
+      color: var(--color-primary);
+      margin-bottom: var(--spacing-sm);
+    }
+    .experience-card p {
+      color: var(--color-text-light);
+      font-size: 0.95rem;
+      line-height: 1.7;
+    }
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: var(--spacing-md);
+      margin-top: var(--spacing-lg);
+    }
+    @media (max-width: 992px) {
+      .process-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (max-width: 768px) {
+      .process-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    .process-step {
+      text-align: center;
+      position: relative;
+    }
+    .process-number {
+      width: 48px;
+      height: 48px;
+      background: var(--color-primary);
+      color: var(--color-white);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-secondary);
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin: 0 auto var(--spacing-sm);
+    }
+    .process-step h4 {
+      color: var(--color-primary);
+      margin-bottom: var(--spacing-xs);
+    }
+    .process-step p {
+      color: var(--color-text-light);
+      font-size: 0.9rem;
+    }
+  </style>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="../images/logo.svg">
+</head>
+<body>
+
+  <!-- ============================================= -->
+  <!-- HEADER & NAVIGATION -->
+  <!-- ============================================= -->
+  <header class="header">
+    <div class="header-inner">
+      <a href="../index.html" class="logo">
+        <img src="../images/logo.svg" alt="Tasteful Event Rentals" style="height: 50px;">
+      </a>
+
+      <nav class="nav">
+        <ul class="nav-list">
+          <li><a href="../index.html" class="nav-link">Home</a></li>
+          <li><a href="packages.html" class="nav-link">Packages</a></li>
+          <li><a href="corporate.html" class="nav-link">Corporate</a></li>
+          <li><a href="experiences.html" class="nav-link active">Experiences</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+        <a href="contact.html" class="btn btn-primary">Get Quote</a>
+
+        <button class="mobile-menu-toggle" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ============================================= -->
+  <!-- PAGE HERO -->
+  <!-- ============================================= -->
+  <section class="about-hero">
+    <div class="container">
+      <h1>Premium Experiences</h1>
+      <p style="max-width: 600px; margin: 0 auto; opacity: 0.9;">
+        Beyond rentals. Full-service event design, planning, and concierge services for an effortless celebration.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============================================= -->
+  <!-- INTRO -->
+  <!-- ============================================= -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-subtitle">The Complete Experience</p>
+        <h2 class="section-title">From Vision to Celebration</h2>
+        <p class="section-description">
+          Tasteful Event Rentals offers more than curated collections&mdash;we offer a complete luxury event experience. Our premium services are designed for clients who want every detail handled with the same level of care and sophistication as the event itself.
+        </p>
+      </div>
+
+      <div class="experiences-grid">
+        <!-- Event Planning -->
+        <div class="experience-card">
+          <div class="experience-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+              <line x1="16" y1="2" x2="16" y2="6"/>
+              <line x1="8" y1="2" x2="8" y2="6"/>
+              <line x1="3" y1="10" x2="21" y2="10"/>
+            </svg>
+          </div>
+          <h3>Event Planning & Coordination</h3>
+          <p>
+            Our experienced planners work alongside you from concept to completion. We manage timelines, vendor coordination, and day-of logistics so you can be fully present for your celebration.
+          </p>
+        </div>
+
+        <!-- Personal Concierge -->
+        <div class="experience-card">
+          <div class="experience-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+              <circle cx="12" cy="7" r="4"/>
+            </svg>
+          </div>
+          <h3>Personal Concierge Service</h3>
+          <p>
+            A dedicated concierge assigned to your event, serving as your single point of contact from the first consultation through final breakdown. Available for our Estate Affair and Grand Celebration packages.
+          </p>
+        </div>
+
+        <!-- Custom Design -->
+        <div class="experience-card">
+          <div class="experience-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+              <path d="M12 19l7-7 3 3-7 7-3-3z"/>
+              <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/>
+              <path d="M2 2l7.586 7.586"/>
+              <circle cx="11" cy="11" r="2"/>
+            </svg>
+          </div>
+          <h3>Custom Event Design</h3>
+          <p>
+            Our design team creates bespoke floor plans, curated color palettes, and styling concepts tailored to your vision. We transform spaces into immersive environments that reflect your personal aesthetic.
+          </p>
+        </div>
+
+        <!-- White-Glove Setup -->
+        <div class="experience-card">
+          <div class="experience-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+            </svg>
+          </div>
+          <h3>White-Glove Delivery & Styling</h3>
+          <p>
+            Our professional installation team delivers, assembles, and styles every element with meticulous attention to detail. We arrive early and stay until every piece is positioned to perfection.
+          </p>
+        </div>
+
+        <!-- Lounge Design -->
+        <div class="experience-card">
+          <div class="experience-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+              <path d="M20 9V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v3"/>
+              <path d="M2 11v5a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-5a2 2 0 0 0-4 0v2H6v-2a2 2 0 0 0-4 0z"/>
+              <path d="M4 18v2"/>
+              <path d="M20 18v2"/>
+            </svg>
+          </div>
+          <h3>Curated Lounge Vignettes</h3>
+          <p>
+            Designed lounging environments featuring plush settees, sculptural accent chairs, artisan side tables, and statement cocktail tables&mdash;creating intimate gathering spaces within your event.
+          </p>
+        </div>
+
+        <!-- Lighting Design -->
+        <div class="experience-card">
+          <div class="experience-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+              <line x1="9" y1="18" x2="15" y2="18"/>
+              <line x1="10" y1="22" x2="14" y2="22"/>
+              <path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5A4.61 4.61 0 0 1 8.91 14"/>
+            </svg>
+          </div>
+          <h3>Ambient Lighting Design</h3>
+          <p>
+            From crystal chandeliers and bistro string lights to dramatic uplighting&mdash;our lighting designers craft the perfect atmosphere to complement your venue and elevate the mood throughout the evening.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================= -->
+  <!-- OUR PROCESS -->
+  <!-- ============================================= -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-subtitle">How It Works</p>
+        <h2 class="section-title">Your Journey With Us</h2>
+      </div>
+
+      <div class="process-grid">
+        <div class="process-step">
+          <div class="process-number">1</div>
+          <h4>Consultation</h4>
+          <p>Share your vision, venue details, and event goals. We listen, ask the right questions, and begin crafting your experience.</p>
+        </div>
+
+        <div class="process-step">
+          <div class="process-number">2</div>
+          <h4>Design & Proposal</h4>
+          <p>Receive a detailed proposal with curated selections, custom floor plans, and transparent pricing tailored to your event.</p>
+        </div>
+
+        <div class="process-step">
+          <div class="process-number">3</div>
+          <h4>Preparation</h4>
+          <p>Every item is inspected, cleaned, and staged. Your concierge coordinates logistics and confirms every detail.</p>
+        </div>
+
+        <div class="process-step">
+          <div class="process-number">4</div>
+          <h4>Flawless Execution</h4>
+          <p>Our team arrives, installs, and styles everything to perfection. After your event, we handle the complete breakdown.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================= -->
+  <!-- AVAILABLE WITH PACKAGES -->
+  <!-- ============================================= -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-subtitle">Elevate Your Package</p>
+        <h2 class="section-title">Available as Add-Ons or Included</h2>
+      </div>
+
+      <div style="max-width: 800px; margin: 0 auto;">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--spacing-md);">
+          <div style="background: var(--color-off-white); padding: var(--spacing-md); border-radius: var(--border-radius-lg);">
+            <h3 style="color: var(--color-primary); font-size: 1.1rem; margin-bottom: var(--spacing-sm);">Included with Estate Affair</h3>
+            <ul style="list-style: none; padding: 0;">
+              <li style="padding: var(--spacing-xs) 0; display: flex; align-items: center; gap: var(--spacing-xs); font-size: 0.95rem;">
+                <span style="color: var(--color-primary); font-weight: bold;">&#10003;</span> Personal Concierge Service
+              </li>
+              <li style="padding: var(--spacing-xs) 0; display: flex; align-items: center; gap: var(--spacing-xs); font-size: 0.95rem;">
+                <span style="color: var(--color-primary); font-weight: bold;">&#10003;</span> Event Planning Consultation
+              </li>
+              <li style="padding: var(--spacing-xs) 0; display: flex; align-items: center; gap: var(--spacing-xs); font-size: 0.95rem;">
+                <span style="color: var(--color-primary); font-weight: bold;">&#10003;</span> Two Curated Lounge Vignettes
+              </li>
+              <li style="padding: var(--spacing-xs) 0; display: flex; align-items: center; gap: var(--spacing-xs); font-size: 0.95rem;">
+                <span style="color: var(--color-primary); font-weight: bold;">&#10003;</span> White-Glove Delivery & Styling
+              </li>
+            </ul>
+          </div>
+
+          <div style="background: var(--color-off-white); padding: var(--spacing-md); border-radius: var(--border-radius-lg);">
+            <h3 style="color: var(--color-primary); font-size: 1.1rem; margin-bottom: var(--spacing-sm);">Included with Grand Celebration</h3>
+            <ul style="list-style: none; padding: 0;">
+              <li style="padding: var(--spacing-xs) 0; display: flex; align-items: center; gap: var(--spacing-xs); font-size: 0.95rem;">
+                <span style="color: var(--color-primary); font-weight: bold;">&#10003;</span> Event Planning Consultation
+              </li>
+              <li style="padding: var(--spacing-xs) 0; display: flex; align-items: center; gap: var(--spacing-xs); font-size: 0.95rem;">
+                <span style="color: var(--color-primary); font-weight: bold;">&#10003;</span> White-Glove Delivery & Styling
+              </li>
+            </ul>
+            <p style="font-size: 0.85rem; color: var(--color-text-light); margin-top: var(--spacing-sm); font-style: italic;">
+              Concierge and lounge vignettes available as add-ons.
+            </p>
+          </div>
+        </div>
+
+        <p style="text-align: center; margin-top: var(--spacing-lg); color: var(--color-text-light);">
+          All premium experiences can be added to any package. <a href="contact.html" style="color: var(--color-primary); font-weight: 600;">Contact us</a> to customize your event.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================= -->
+  <!-- CTA SECTION -->
+  <!-- ============================================= -->
+  <section class="cta-section">
+    <div class="container">
+      <h2 class="cta-title">Ready for an Effortless Celebration?</h2>
+      <p class="cta-description">
+        Let our team handle every detail while you enjoy every moment. Start with a complimentary consultation.
+      </p>
+      <div class="hero-buttons">
+        <a href="contact.html" class="btn btn-outline-white">Begin Your Consultation</a>
+        <a href="tel:8582551130" class="btn btn-secondary">Call (858) 255-1130</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================= -->
+  <!-- FOOTER -->
+  <!-- ============================================= -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <img src="../images/logo-white.svg" alt="Tasteful Event Rentals" style="height: 45px;">
+          </div>
+          <p class="footer-description">
+            Southern California's premier luxury event rental company, providing exceptional quality and service for weddings, corporate events, and celebrations.
+          </p>
+          <div class="footer-social">
+            <a href="#" class="social-link" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+              </svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="currentColor" stroke-width="2"/>
+                <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/>
+                <circle cx="17.5" cy="6.5" r="1.5"/>
+              </svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Pinterest">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2C6.48 2 2 6.48 2 12c0 4.25 2.67 7.9 6.44 9.34-.09-.78-.17-1.99.04-2.85.18-.78 1.17-4.97 1.17-4.97s-.3-.6-.3-1.48c0-1.39.8-2.42 1.8-2.42.85 0 1.26.64 1.26 1.4 0 .85-.54 2.12-.82 3.3-.24.99.5 1.8 1.48 1.8 1.78 0 3.14-1.87 3.14-4.58 0-2.4-1.72-4.07-4.18-4.07-2.85 0-4.52 2.14-4.52 4.35 0 .86.33 1.78.74 2.28.08.1.09.19.07.29-.08.31-.25.99-.28 1.13-.05.18-.15.22-.34.13-1.26-.59-2.05-2.44-2.05-3.93 0-3.2 2.32-6.14 6.7-6.14 3.52 0 6.25 2.5 6.25 5.86 0 3.49-2.2 6.3-5.26 6.3-1.03 0-2-.53-2.33-1.16l-.63 2.42c-.23.88-.85 1.99-1.27 2.66.96.3 1.97.46 3.02.46 5.52 0 10-4.48 10-10S17.52 2 12 2z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-column">
+          <h4 class="footer-title">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="packages.html">Packages</a></li>
+            <li><a href="corporate.html">Corporate</a></li>
+            <li><a href="experiences.html">Experiences</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4 class="footer-title">Our Services</h4>
+          <ul class="footer-links">
+            <li><a href="packages.html">Event Packages</a></li>
+            <li><a href="corporate.html">Corporate Events</a></li>
+            <li><a href="experiences.html">Premium Experiences</a></li>
+            <li><a href="contact.html?interest=tents">Tent Rentals</a></li>
+            <li><a href="contact.html?interest=tables-chairs">Table & Chair Rentals</a></li>
+            <li><a href="contact.html?interest=lighting">Lighting Rentals</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4 class="footer-title">Contact Info</h4>
+          <ul class="footer-links">
+            <li><a href="tel:8582551130">(858) 255-1130</a></li>
+            <li><a href="mailto:info@tastefuleventrentals.com">info@tastefuleventrentals.com</a></li>
+            <li>San Diego, CA</li>
+            <li>Serving San Diego, LA &amp; Palm Springs</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Tasteful Event Rentals. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="../js/main.js"></script>
+
+</body>
+</html>
