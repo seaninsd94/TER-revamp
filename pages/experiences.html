@@ -110,6 +110,32 @@
       color: var(--color-text-light);
       font-size: 0.9rem;
     }
+    /* Concierge Section Responsive */
+    .concierge-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--spacing-md);
+    }
+    .concierge-two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--spacing-lg);
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    @media (max-width: 992px) {
+      .concierge-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (max-width: 768px) {
+      .concierge-grid {
+        grid-template-columns: 1fr;
+      }
+      .concierge-two-col {
+        grid-template-columns: 1fr;
+      }
+    }
   </style>
 
   <!-- Favicon -->
@@ -260,6 +286,132 @@
             From crystal chandeliers and bistro string lights to dramatic uplighting&mdash;our lighting designers craft the perfect atmosphere to complement your venue and elevate the mood throughout the evening.
           </p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================= -->
+  <!-- EVENT CONCIERGE SERVICES -->
+  <!-- ============================================= -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-subtitle">White-Glove Event Support</p>
+        <h2 class="section-title">Event Concierge Services</h2>
+        <p class="section-description" style="font-size: 1.1rem; max-width: 800px; margin: 0 auto;">
+          We don't just deliver rentals&mdash;we manage how your event <em>feels</em>.
+        </p>
+      </div>
+
+      <!-- Primary Description -->
+      <div style="max-width: 800px; margin: 0 auto var(--spacing-lg); text-align: center;">
+        <p style="font-size: 1.05rem; line-height: 1.8; color: var(--color-text);">
+          Our Event Concierge service ensures every space functions beautifully for your guests, from the first arrival to the final transition. Working alongside your planner, we oversee layout refinement, guest flow, and on-site adjustments so your event feels effortless, intentional, and elevated.
+        </p>
+        <p style="font-size: 1rem; color: var(--color-text-light); margin-top: var(--spacing-sm);">
+          This service is designed for clients who value comfort, atmosphere, and seamless execution&mdash;not just items on a floor plan.
+        </p>
+      </div>
+
+      <!-- What Concierge Does -->
+      <div class="concierge-grid" style="margin-bottom: var(--spacing-lg);">
+        <!-- Before -->
+        <div style="background: var(--color-white); padding: var(--spacing-md); border-radius: var(--border-radius-lg); box-shadow: var(--shadow-sm);">
+          <h3 style="color: var(--color-primary); font-size: 1.1rem; margin-bottom: var(--spacing-sm); text-align: center;">Before the Event</h3>
+          <ul style="list-style: none; padding: 0;">
+            <li style="padding: var(--spacing-xs) 0; display: flex; align-items: flex-start; gap: var(--spacing-xs); font-size: 0.9rem; color: var(--color-text-light);">
+              <span style="color: var(--color-primary); font-weight: bold;">&#10003;</span> Collaborates with your planner on layout intent
+            </li>
+            <li style="padding: var(--spacing-xs) 0; display: flex; align-items: flex-start; gap: var(--spacing-xs); font-size: 0.9rem; color: var(--color-text-light);">
+              <span style="color: var(--color-primary); font-weight: bold;">&#10003;</span> Reviews guest count, venue constraints, and transitions
+            </li>
+            <li style="padding: var(--spacing-xs) 0; display: flex; align-items: flex-start; gap: var(--spacing-xs); font-size: 0.9rem; color: var(--color-text-light);">
+              <span style="color: var(--color-primary); font-weight: bold;">&#10003;</span> Pre-plans lighting zones, lounge placement, and flow
+            </li>
+          </ul>
+        </div>
+
+        <!-- During -->
+        <div style="background: var(--color-white); padding: var(--spacing-md); border-radius: var(--border-radius-lg); box-shadow: var(--shadow-sm); border: 2px solid var(--color-secondary);">
+          <h3 style="color: var(--color-primary); font-size: 1.1rem; margin-bottom: var(--spacing-sm); text-align: center;">During the Event</h3>
+          <ul style="list-style: none; padding: 0;">
+            <li style="padding: var(--spacing-xs) 0; display: flex; align-items: flex-start; gap: var(--spacing-xs); font-size: 0.9rem; color: var(--color-text-light);">
+              <span style="color: var(--color-primary); font-weight: bold;">&#10003;</span> Oversees environment execution on-site
+            </li>
+            <li style="padding: var(--spacing-xs) 0; display: flex; align-items: flex-start; gap: var(--spacing-xs); font-size: 0.9rem; color: var(--color-text-light);">
+              <span style="color: var(--color-primary); font-weight: bold;">&#10003;</span> Makes real-time adjustments to furniture and lighting
+            </li>
+            <li style="padding: var(--spacing-xs) 0; display: flex; align-items: flex-start; gap: var(--spacing-xs); font-size: 0.9rem; color: var(--color-text-light);">
+              <span style="color: var(--color-primary); font-weight: bold;">&#10003;</span> Coordinates quietly with catering, bar, and venue teams
+            </li>
+            <li style="padding: var(--spacing-xs) 0; display: flex; align-items: flex-start; gap: var(--spacing-xs); font-size: 0.9rem; color: var(--color-text-light);">
+              <span style="color: var(--color-primary); font-weight: bold;">&#10003;</span> Ensures cocktail hour, reception, and transitions feel natural
+            </li>
+          </ul>
+        </div>
+
+        <!-- After Transitions -->
+        <div style="background: var(--color-white); padding: var(--spacing-md); border-radius: var(--border-radius-lg); box-shadow: var(--shadow-sm);">
+          <h3 style="color: var(--color-primary); font-size: 1.1rem; margin-bottom: var(--spacing-sm); text-align: center;">After Transitions</h3>
+          <ul style="list-style: none; padding: 0;">
+            <li style="padding: var(--spacing-xs) 0; display: flex; align-items: flex-start; gap: var(--spacing-xs); font-size: 0.9rem; color: var(--color-text-light);">
+              <span style="color: var(--color-primary); font-weight: bold;">&#10003;</span> Manages environment shifts without disrupting guests
+            </li>
+            <li style="padding: var(--spacing-xs) 0; display: flex; align-items: flex-start; gap: var(--spacing-xs); font-size: 0.9rem; color: var(--color-text-light);">
+              <span style="color: var(--color-primary); font-weight: bold;">&#10003;</span> Protects the reveal and pacing of the event
+            </li>
+            <li style="padding: var(--spacing-xs) 0; display: flex; align-items: flex-start; gap: var(--spacing-xs); font-size: 0.9rem; color: var(--color-text-light);">
+              <span style="color: var(--color-primary); font-weight: bold;">&#10003;</span> Maintains visual cohesion throughout the evening
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Who Concierge Is For + Planner Partnership -->
+      <div class="concierge-two-col">
+        <!-- Who It's For -->
+        <div style="background: var(--color-white); padding: var(--spacing-lg); border-radius: var(--border-radius-lg); box-shadow: var(--shadow-md);">
+          <h3 style="color: var(--color-primary); font-size: 1.15rem; margin-bottom: var(--spacing-md);">Who Concierge Is For</h3>
+          <ul style="list-style: none; padding: 0;">
+            <li style="padding: var(--spacing-xs) 0; font-size: 0.95rem; color: var(--color-text);">
+              <span style="color: var(--color-secondary); margin-right: var(--spacing-xs);">&#9679;</span> Weddings with 150+ guests
+            </li>
+            <li style="padding: var(--spacing-xs) 0; font-size: 0.95rem; color: var(--color-text);">
+              <span style="color: var(--color-secondary); margin-right: var(--spacing-xs);">&#9679;</span> Multi-space events (ceremony, cocktail, reception)
+            </li>
+            <li style="padding: var(--spacing-xs) 0; font-size: 0.95rem; color: var(--color-text);">
+              <span style="color: var(--color-secondary); margin-right: var(--spacing-xs);">&#9679;</span> Tented or estate weddings
+            </li>
+            <li style="padding: var(--spacing-xs) 0; font-size: 0.95rem; color: var(--color-text);">
+              <span style="color: var(--color-secondary); margin-right: var(--spacing-xs);">&#9679;</span> Corporate and executive events
+            </li>
+            <li style="padding: var(--spacing-xs) 0; font-size: 0.95rem; color: var(--color-text);">
+              <span style="color: var(--color-secondary); margin-right: var(--spacing-xs);">&#9679;</span> Clients investing in full environments rather than individual rentals
+            </li>
+          </ul>
+        </div>
+
+        <!-- How It Works With Planners -->
+        <div style="background: var(--color-white); padding: var(--spacing-lg); border-radius: var(--border-radius-lg); box-shadow: var(--shadow-md);">
+          <h3 style="color: var(--color-primary); font-size: 1.15rem; margin-bottom: var(--spacing-md);">How Concierge Works With Your Planner</h3>
+          <p style="color: var(--color-text); font-size: 0.95rem; line-height: 1.7; margin-bottom: var(--spacing-sm);">
+            <strong>Your planner remains the creative and logistical lead.</strong>
+          </p>
+          <p style="color: var(--color-text-light); font-size: 0.95rem; line-height: 1.7; margin-bottom: var(--spacing-sm);">
+            Our concierge team supports their vision by managing the physical environment and guest experience in real time.
+          </p>
+          <p style="color: var(--color-text); font-size: 0.95rem; line-height: 1.7; font-style: italic;">
+            Think of it as an added layer of hospitality&mdash;not an extra vendor to manage.
+          </p>
+        </div>
+      </div>
+
+      <!-- Investment Note -->
+      <div style="text-align: center; margin-top: var(--spacing-lg); padding: var(--spacing-md); background: var(--color-primary); border-radius: var(--border-radius-lg); max-width: 700px; margin-left: auto; margin-right: auto;">
+        <p style="color: var(--color-white); font-size: 0.95rem; margin: 0;">
+          <strong>Event Concierge services are available exclusively with full environment packages.</strong><br>
+          <span style="opacity: 0.9;">Most Signature events include concierge support by default.</span>
+        </p>
       </div>
     </div>
   </section>
