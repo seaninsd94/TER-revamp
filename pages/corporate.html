@@ -73,7 +73,19 @@
         </p>
       </div>
 
-      <div class="features-grid">
+      <div class="features-grid" style="grid-template-columns: repeat(3, 1fr);">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Brand Activations & Launches</h3>
+          <p class="feature-description">
+            Immersive environments for product reveals, experiential marketing, pop-up activations, and media events that captivate audiences and amplify your brand message.
+          </p>
+        </div>
+
         <div class="feature-card">
           <div class="feature-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
@@ -82,9 +94,9 @@
               <line x1="12" y1="17" x2="12" y2="21"/>
             </svg>
           </div>
-          <h3 class="feature-title">Conferences & Seminars</h3>
+          <h3 class="feature-title">Conferences & Meetings</h3>
           <p class="feature-description">
-            Professional staging, seating arrangements, and AV-ready setups for impactful presentations and engaging workshops.
+            Professional staging, executive seating, and presentation-ready setups for board meetings, seminars, training sessions, and industry conferences.
           </p>
         </div>
 
@@ -97,34 +109,9 @@
               <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
             </svg>
           </div>
-          <h3 class="feature-title">Company Picnics</h3>
+          <h3 class="feature-title">Company Celebrations</h3>
           <p class="feature-description">
-            Comfortable outdoor settings with tents, tables, and climate control for memorable team-building experiences.
-          </p>
-        </div>
-
-        <div class="feature-card">
-          <div class="feature-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
-              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
-            </svg>
-          </div>
-          <h3 class="feature-title">Product Launches</h3>
-          <p class="feature-description">
-            Sophisticated environments designed to showcase your brand and create lasting impressions with clients and media.
-          </p>
-        </div>
-
-        <div class="feature-card">
-          <div class="feature-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
-              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
-              <circle cx="12" cy="7" r="4"/>
-            </svg>
-          </div>
-          <h3 class="feature-title">Executive Gatherings</h3>
-          <p class="feature-description">
-            Refined settings for board meetings, client entertainment, and VIP receptions that reflect your organization's prestige.
+            Elegant settings for holiday parties, award ceremonies, team appreciation events, milestone celebrations, and corporate galas that honor your team.
           </p>
         </div>
       </div>
@@ -198,7 +185,7 @@
         .corporate-packages-grid {
           display: grid;
           grid-template-columns: repeat(3, 1fr);
-          gap: var(--spacing-lg);
+          gap: var(--spacing-md);
         }
         @media (max-width: 992px) {
           .corporate-packages-grid {
@@ -221,26 +208,26 @@
         .corporate-package-header {
           background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
           color: var(--color-white);
-          padding: var(--spacing-lg);
+          padding: var(--spacing-md);
           text-align: center;
         }
         .corporate-package-header h3 {
           font-family: var(--font-secondary);
-          font-size: 1.5rem;
-          margin-bottom: var(--spacing-xs);
+          font-size: 1.25rem;
+          margin-bottom: 0;
         }
         .corporate-package-guests {
-          font-size: 2.5rem;
+          font-size: 2rem;
           font-weight: 700;
-          margin: var(--spacing-sm) 0;
+          margin: var(--spacing-xs) 0 0 0;
         }
         .corporate-package-guests span {
-          font-size: 1rem;
+          font-size: 0.875rem;
           font-weight: 400;
           opacity: 0.9;
         }
         .corporate-package-content {
-          padding: var(--spacing-lg);
+          padding: var(--spacing-md);
           display: flex;
           flex-direction: column;
           flex-grow: 1;
@@ -249,11 +236,11 @@
           flex-grow: 1;
         }
         .corporate-package-includes h4 {
-          font-size: 0.875rem;
+          font-size: 0.75rem;
           text-transform: uppercase;
           letter-spacing: 0.1em;
           color: var(--color-text-light);
-          margin-bottom: var(--spacing-sm);
+          margin-bottom: var(--spacing-xs);
         }
         .corporate-package-includes ul {
           list-style: none;
@@ -261,45 +248,46 @@
           margin: 0;
         }
         .corporate-package-includes li {
-          padding: var(--spacing-xs) 0;
+          padding: 0.35rem 0;
           border-bottom: 1px solid var(--color-border);
           display: flex;
           align-items: flex-start;
-          gap: var(--spacing-xs);
+          gap: 0.5rem;
+          font-size: 0.875rem;
         }
         .corporate-package-includes li:last-child {
           border-bottom: none;
         }
         .corporate-package-includes li svg {
-          width: 18px;
-          height: 18px;
+          width: 14px;
+          height: 14px;
           color: var(--color-primary);
           flex-shrink: 0;
-          margin-top: 2px;
+          margin-top: 3px;
         }
         .corporate-package-footer {
           margin-top: auto;
-          padding-top: var(--spacing-md);
+          padding-top: var(--spacing-sm);
           text-align: center;
         }
         .corporate-package-price {
-          font-size: 1.75rem;
+          font-size: 1.5rem;
           font-weight: 700;
           color: var(--color-primary);
-          margin-bottom: var(--spacing-sm);
+          margin-bottom: var(--spacing-xs);
         }
         .corporate-package-price span {
-          font-size: 0.875rem;
+          font-size: 0.75rem;
           font-weight: 400;
           color: var(--color-text-light);
         }
       </style>
 
       <div class="corporate-packages-grid">
-        <!-- Executive Meeting Package -->
+        <!-- Executive Session -->
         <div class="corporate-package-card">
           <div class="corporate-package-header">
-            <h3>Executive Meeting</h3>
+            <h3>Executive Session</h3>
             <div class="corporate-package-guests">100 <span>guests</span></div>
           </div>
           <div class="corporate-package-content">
@@ -308,41 +296,41 @@
               <ul>
                 <li>
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                  20' x 40' Frame Tent with Sidewalls
+                  Frame Tent with Sidewalls
                 </li>
                 <li>
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                  12 Round Tables (60" diameter)
+                  12 Banquet Round Tables
                 </li>
                 <li>
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                  100 Padded Folding Chairs
+                  100 Padded Chairs
                 </li>
                 <li>
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                  Premium Lounge Set (2 sofas, 4 armchairs, 2 coffee tables)
+                  Executive Lounge Vignette
                 </li>
                 <li>
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                  Bistro Lighting Package
+                  Bistro Lighting
                 </li>
                 <li>
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                  White-Glove Delivery & Setup
+                  Delivery & Professional Setup
                 </li>
               </ul>
             </div>
             <div class="corporate-package-footer">
               <div class="corporate-package-price">$2,995 <span>starting at</span></div>
-              <a href="contact.html?package=executive-meeting" class="btn btn-primary" style="width: 100%;">Request Quote</a>
+              <a href="contact.html?package=executive-session" class="btn btn-primary" style="width: 100%; font-size: 0.875rem;">Request Quote</a>
             </div>
           </div>
         </div>
 
-        <!-- Corporate Celebration Package -->
+        <!-- Corporate Showcase -->
         <div class="corporate-package-card">
           <div class="corporate-package-header" style="background: linear-gradient(135deg, var(--color-accent), var(--color-accent-dark));">
-            <h3>Corporate Celebration</h3>
+            <h3>Corporate Showcase</h3>
             <div class="corporate-package-guests">250 <span>guests</span></div>
           </div>
           <div class="corporate-package-content">
@@ -351,11 +339,11 @@
               <ul>
                 <li>
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                  40' x 60' Frame Tent with Sidewalls
+                  Grand Frame Tent with Sidewalls
                 </li>
                 <li>
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                  30 Round Tables (60" diameter)
+                  30 Banquet Round Tables
                 </li>
                 <li>
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
@@ -363,33 +351,33 @@
                 </li>
                 <li>
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                  Premium Lounge Sets (4 sofas, 8 armchairs, 4 coffee tables)
+                  Two Executive Lounge Vignettes
                 </li>
                 <li>
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                  Full Lighting Package with Uplighting
+                  Ambient Lighting with Uplighting
                 </li>
                 <li>
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                  Climate Control (Fans or Heaters)
+                  Climate Control
                 </li>
                 <li>
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                  White-Glove Delivery & Setup
+                  Delivery & Professional Setup
                 </li>
               </ul>
             </div>
             <div class="corporate-package-footer">
               <div class="corporate-package-price">$6,495 <span>starting at</span></div>
-              <a href="contact.html?package=corporate-celebration" class="btn btn-primary" style="width: 100%;">Request Quote</a>
+              <a href="contact.html?package=corporate-showcase" class="btn btn-primary" style="width: 100%; font-size: 0.875rem;">Request Quote</a>
             </div>
           </div>
         </div>
 
-        <!-- Grand Corporate Gala Package -->
+        <!-- Grand Gala -->
         <div class="corporate-package-card">
           <div class="corporate-package-header">
-            <h3>Grand Corporate Gala</h3>
+            <h3>Grand Gala</h3>
             <div class="corporate-package-guests">400 <span>guests</span></div>
           </div>
           <div class="corporate-package-content">
@@ -398,23 +386,23 @@
               <ul>
                 <li>
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                  60' x 90' Frame Tent with Sidewalls
+                  Estate Pavilion Tent with Sidewalls
                 </li>
                 <li>
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                  50 Round Tables (60" diameter)
+                  50 Banquet Round Tables
                 </li>
                 <li>
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                  400 Chiavari Chairs (Gold or Silver)
+                  400 Chiavari Chairs
                 </li>
                 <li>
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                  Executive Lounge Zone (6 sofas, 12 armchairs, 6 coffee tables, 4 high-top tables)
+                  VIP Lounge Zone with High-Tops
                 </li>
                 <li>
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                  Premium Lighting (Chandeliers, Uplighting, String Lights)
+                  Designer Lighting Package
                 </li>
                 <li>
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
@@ -422,17 +410,17 @@
                 </li>
                 <li>
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                  Staging Platform (8' x 12')
+                  Presentation Stage
                 </li>
                 <li>
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                  White-Glove Delivery & Setup
+                  Delivery & Professional Setup
                 </li>
               </ul>
             </div>
             <div class="corporate-package-footer">
               <div class="corporate-package-price">$12,995 <span>starting at</span></div>
-              <a href="contact.html?package=grand-corporate-gala" class="btn btn-primary" style="width: 100%;">Request Quote</a>
+              <a href="contact.html?package=grand-gala" class="btn btn-primary" style="width: 100%; font-size: 0.875rem;">Request Quote</a>
             </div>
           </div>
         </div>
@@ -457,7 +445,7 @@
         <h2 class="section-title">Why Corporate Clients Choose Us</h2>
       </div>
 
-      <div class="features-grid">
+      <div class="features-grid" style="grid-template-columns: repeat(3, 1fr);">
         <div class="feature-card" style="text-align: left;">
           <h3 class="feature-title" style="margin-bottom: var(--spacing-xs);">Dedicated Account Management</h3>
           <p class="feature-description">
@@ -466,23 +454,16 @@
         </div>
 
         <div class="feature-card" style="text-align: left;">
-          <h3 class="feature-title" style="margin-bottom: var(--spacing-xs);">Flexible Scheduling</h3>
+          <h3 class="feature-title" style="margin-bottom: var(--spacing-xs);">Flexible Scheduling & Billing</h3>
           <p class="feature-description">
-            Early morning setup, late-night breakdown, and weekend availability to accommodate your business schedule without disruption.
+            Early morning setup, late-night breakdown, and weekend availability. Net-30 terms available with detailed invoicing for your procurement team.
           </p>
         </div>
 
         <div class="feature-card" style="text-align: left;">
-          <h3 class="feature-title" style="margin-bottom: var(--spacing-xs);">Corporate Billing</h3>
+          <h3 class="feature-title" style="margin-bottom: var(--spacing-xs);">Fully Insured & Compliant</h3>
           <p class="feature-description">
-            Net-30 terms available for established accounts. Detailed invoicing compatible with your procurement and accounting processes.
-          </p>
-        </div>
-
-        <div class="feature-card" style="text-align: left;">
-          <h3 class="feature-title" style="margin-bottom: var(--spacing-xs);">Insurance & Compliance</h3>
-          <p class="feature-description">
-            Fully insured with COI available upon request. We meet the requirements of major venues and corporate facilities throughout San Diego.
+            COI available upon request. We meet the requirements of major venues and corporate facilities throughout Southern California.
           </p>
         </div>
       </div>
@@ -492,27 +473,27 @@
   <!-- ============================================= -->
   <!-- TRUSTED BY -->
   <!-- ============================================= -->
-  <section class="section section-alt">
+  <section class="section">
     <div class="container">
-      <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+      <div style="max-width: 900px; margin: 0 auto; text-align: center;">
         <p class="section-subtitle">Trusted Partners</p>
         <h2 class="section-title">Serving Southern California's Business Community</h2>
-        <p style="font-size: 1.125rem; color: var(--color-text-light); margin-bottom: var(--spacing-lg);">
-          From tech startups to Fortune 500 companies, we've provided premium event solutions for organizations across Southern California. Our experience with corporate clients in San Diego, Los Angeles, and Palm Springs ensures we understand the unique requirements of professional events.
+        <p style="font-size: 1.05rem; color: var(--color-text-light); margin-bottom: var(--spacing-lg);">
+          From tech startups to Fortune 500 companies, we've provided premium event solutions for organizations across Southern California.
         </p>
 
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--spacing-md); margin-top: var(--spacing-lg);">
-          <div style="background: var(--color-white); padding: var(--spacing-md); border-radius: var(--border-radius-lg); text-align: center;">
-            <p style="font-size: 2.5rem; font-weight: 700; color: var(--color-primary); margin-bottom: 0;">500+</p>
-            <p style="color: var(--color-text-light); margin: 0;">Corporate Events</p>
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--spacing-lg); margin-top: var(--spacing-lg);">
+          <div style="text-align: center;">
+            <p style="font-size: 3rem; font-weight: 700; color: var(--color-primary); margin-bottom: 0;">500+</p>
+            <p style="color: var(--color-text-light); margin: 0; font-size: 0.95rem;">Corporate Events</p>
           </div>
-          <div style="background: var(--color-white); padding: var(--spacing-md); border-radius: var(--border-radius-lg); text-align: center;">
-            <p style="font-size: 2.5rem; font-weight: 700; color: var(--color-primary); margin-bottom: 0;">100+</p>
-            <p style="color: var(--color-text-light); margin: 0;">Business Clients</p>
+          <div style="text-align: center;">
+            <p style="font-size: 3rem; font-weight: 700; color: var(--color-primary); margin-bottom: 0;">100+</p>
+            <p style="color: var(--color-text-light); margin: 0; font-size: 0.95rem;">Business Clients</p>
           </div>
-          <div style="background: var(--color-white); padding: var(--spacing-md); border-radius: var(--border-radius-lg); text-align: center;">
-            <p style="font-size: 2.5rem; font-weight: 700; color: var(--color-primary); margin-bottom: 0;">15+</p>
-            <p style="color: var(--color-text-light); margin: 0;">Years Experience</p>
+          <div style="text-align: center;">
+            <p style="font-size: 3rem; font-weight: 700; color: var(--color-primary); margin-bottom: 0;">15+</p>
+            <p style="color: var(--color-text-light); margin: 0; font-size: 0.95rem;">Years Experience</p>
           </div>
         </div>
       </div>
