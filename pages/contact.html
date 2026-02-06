@@ -230,27 +230,20 @@
               <label class="form-label" for="interested-in">Interested In</label>
               <select id="interested-in" name="interested_in" class="form-select">
                 <option value="">Select an option...</option>
-                <optgroup label="Signature Event Packages">
+                <optgroup label="Signature Environments">
                   <option value="elegant-reception">Elegant Reception (Up to 100 Guests)</option>
                   <option value="grand-celebration">Grand Celebration (Up to 200 Guests)</option>
                   <option value="estate-affair">Estate Affair (Up to 250 Guests)</option>
                 </optgroup>
-                <optgroup label="Smaller Gathering Packages">
-                  <option value="garden-soiree">Garden Soirée (Up to 64 Guests)</option>
-                  <option value="intimate-gathering">Intimate Gathering (Up to 32 Guests)</option>
-                  <option value="the-essentials">The Essentials (Tables & Chairs)</option>
+                <optgroup label="Corporate Environments">
+                  <option value="executive-meeting">Executive Meeting (Up to 100 Guests)</option>
+                  <option value="corporate-celebration">Corporate Celebration (Up to 250 Guests)</option>
+                  <option value="grand-corporate-gala">Grand Corporate Gala (Up to 400 Guests)</option>
                 </optgroup>
-                <optgroup label="Corporate Packages">
-                  <option value="executive-meeting">Executive Meeting (100 Guests)</option>
-                  <option value="corporate-celebration">Corporate Celebration (250 Guests)</option>
-                  <option value="grand-corporate-gala">Grand Corporate Gala (400 Guests)</option>
-                </optgroup>
-                <optgroup label="Individual Rentals">
-                  <option value="tents">Tents & Canopies</option>
-                  <option value="tables-chairs">Tables & Chairs</option>
-                  <option value="lighting">Lighting & Decor</option>
-                  <option value="lounge-furniture">Lounge Furniture</option>
-                  <option value="full-service">Full Event Setup</option>
+                <optgroup label="Experiences">
+                  <option value="cocktail-hour">Cocktail Hour Experience</option>
+                  <option value="lounge-environment">Lounge Environment</option>
+                  <option value="event-concierge">Event Concierge Service</option>
                 </optgroup>
                 <option value="not-sure">Not Sure Yet - Need Guidance</option>
               </select>
@@ -463,12 +456,12 @@
           </h4>
           <div class="faq-answer">
             <div class="faq-answer-content">
-              <p>Our Signature Collection packages include cocktail hour experiences:</p>
+              <p>Our Signature Environments include cocktail hour experiences:</p>
               <ul>
                 <li><strong>Grand Celebration (200 guests):</strong> Classic Cocktail Hour Experience included</li>
                 <li><strong>Estate Affair (250 guests):</strong> Elevated Cocktail Hour Experience included</li>
               </ul>
-              <p>The Elegant Reception package and smaller gathering packages do not include a cocktail hour experience, but any tier can be added as an enhancement.</p>
+              <p>The Elegant Reception environment does not include a cocktail hour experience, but any tier can be added as an enhancement.</p>
             </div>
           </div>
         </div>
@@ -645,18 +638,18 @@
 
     // Package name mappings
     const packageNames = {
-      // Signature Packages
+      // Signature Environments
       'elegant': 'Elegant Reception',
       'grand': 'Grand Celebration',
       'estate-affair': 'Estate Affair',
-      // Smaller Gathering Packages
-      'garden-soiree': 'Garden Soirée',
-      'intimate': 'Intimate Gathering',
-      'basic': 'The Essentials',
-      // Corporate Packages
+      // Corporate Environments
       'executive-meeting': 'Executive Meeting',
       'corporate-celebration': 'Corporate Celebration',
-      'grand-corporate-gala': 'Grand Corporate Gala'
+      'grand-corporate-gala': 'Grand Corporate Gala',
+      // Experiences
+      'cocktail-hour': 'Cocktail Hour Experience',
+      'lounge-environment': 'Lounge Environment',
+      'event-concierge': 'Event Concierge Service'
     };
 
     // Map package param to dropdown value
@@ -664,12 +657,12 @@
       'elegant': 'elegant-reception',
       'grand': 'grand-celebration',
       'estate-affair': 'estate-affair',
-      'garden-soiree': 'garden-soiree',
-      'intimate': 'intimate-gathering',
-      'basic': 'the-essentials',
       'executive-meeting': 'executive-meeting',
       'corporate-celebration': 'corporate-celebration',
-      'grand-corporate-gala': 'grand-corporate-gala'
+      'grand-corporate-gala': 'grand-corporate-gala',
+      'cocktail-hour': 'cocktail-hour',
+      'lounge-environment': 'lounge-environment',
+      'event-concierge': 'event-concierge'
     };
 
     if (packageParam) {
@@ -678,10 +671,10 @@
       if (interestedIn && dropdownValue) {
         interestedIn.value = dropdownValue;
       }
-      // Update placeholder with package name
+      // Update placeholder with environment name
       if (message && !message.value) {
         const name = packageNames[packageParam] || packageParam;
-        message.placeholder = `I'm interested in the ${name} package. Please provide a quote for...`;
+        message.placeholder = `I'm interested in the ${name} environment. Please provide details about...`;
       }
     }
 
