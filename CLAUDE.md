@@ -7,7 +7,7 @@
 
 **Repository:** TER-revamp
 **Status:** Active Development
-**Description:** Professional event rental business website for Tasteful Event Rentals, a San Diego-based company offering tent, table, chair, lighting, and event equipment rentals.
+**Description:** Professional event rental business website for Tasteful Event Environments, a San Diego-based company offering tent, table, chair, lighting, and event equipment rentals.
 
 **Live Site:** https://www.tastefuleventrentals.com/
 
