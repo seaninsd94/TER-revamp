@@ -1,5 +1,5 @@
 /**
- * Tasteful Event Rentals - Main JavaScript
+ * Tasteful Environments - Main JavaScript
  * Handles navigation, animations, and interactivity
  */
 
