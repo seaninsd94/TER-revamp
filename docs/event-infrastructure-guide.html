@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Infrastructure Guide | Tasteful Environments</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 11pt;
+      line-height: 1.6;
+      color: #1a1a1a;
+      max-width: 8.5in;
+      margin: 0 auto;
+      padding: 0.75in;
+      background: white;
+    }
+
+    @media print {
+      body {
+        padding: 0;
+      }
+      .page-break {
+        page-break-before: always;
+      }
+    }
+
+    h1, h2, h3, h4 {
+      font-family: 'Playfair Display', serif;
+      color: #1a4d3e;
+    }
+
+    h1 {
+      font-size: 24pt;
+      margin-bottom: 0.25in;
+      padding-bottom: 0.15in;
+      border-bottom: 2px solid #1a4d3e;
+    }
+
+    h2 {
+      font-size: 16pt;
+      margin-top: 0.4in;
+      margin-bottom: 0.15in;
+      color: #1a4d3e;
+    }
+
+    h3 {
+      font-size: 13pt;
+      margin-top: 0.25in;
+      margin-bottom: 0.1in;
+      color: #2d6a4f;
+    }
+
+    h4 {
+      font-size: 11pt;
+      margin-top: 0.2in;
+      margin-bottom: 0.08in;
+      color: #1a1a1a;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+    }
+
+    p {
+      margin-bottom: 0.12in;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 0.3in;
+    }
+
+    .header-brand {
+      font-family: 'Playfair Display', serif;
+      font-size: 14pt;
+      color: #1a4d3e;
+      font-weight: 600;
+    }
+
+    .header-subtitle {
+      font-size: 9pt;
+      color: #6c757d;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 0.15in 0 0.25in 0;
+      font-size: 10pt;
+    }
+
+    th, td {
+      padding: 0.1in 0.15in;
+      text-align: left;
+      border: 1px solid #dee2e6;
+    }
+
+    th {
+      background: #1a4d3e;
+      color: white;
+      font-weight: 600;
+      font-size: 9pt;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    tr:nth-child(even) {
+      background: #f8f9fa;
+    }
+
+    .highlight-box {
+      background: #f0f7f4;
+      border-left: 4px solid #1a4d3e;
+      padding: 0.15in 0.2in;
+      margin: 0.2in 0;
+    }
+
+    .highlight-box h4 {
+      margin-top: 0;
+      color: #1a4d3e;
+    }
+
+    ul {
+      margin: 0.1in 0 0.15in 0.3in;
+    }
+
+    li {
+      margin-bottom: 0.05in;
+    }
+
+    .two-column {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.3in;
+    }
+
+    .section-intro {
+      font-size: 11pt;
+      color: #495057;
+      margin-bottom: 0.2in;
+      font-style: italic;
+    }
+
+    .calculation-box {
+      background: #fff;
+      border: 1px solid #1a4d3e;
+      padding: 0.2in;
+      margin: 0.2in 0;
+    }
+
+    .calculation-box h4 {
+      color: #1a4d3e;
+      margin-bottom: 0.1in;
+    }
+
+    .formula {
+      font-family: monospace;
+      background: #f8f9fa;
+      padding: 0.05in 0.1in;
+      display: inline-block;
+      margin: 0.05in 0;
+    }
+
+    .footer {
+      margin-top: 0.5in;
+      padding-top: 0.15in;
+      border-top: 1px solid #dee2e6;
+      font-size: 9pt;
+      color: #6c757d;
+      text-align: center;
+    }
+
+    .badge {
+      display: inline-block;
+      background: #1a4d3e;
+      color: white;
+      font-size: 8pt;
+      padding: 0.02in 0.08in;
+      border-radius: 3px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-left: 0.1in;
+    }
+
+    .badge.optional {
+      background: #6c757d;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <div>
+      <div class="header-brand">Tasteful Environments</div>
+      <div class="header-subtitle">Event Infrastructure Reference Guide</div>
+    </div>
+    <div style="text-align: right; font-size: 9pt; color: #6c757d;">
+      Internal Reference Document<br>
+      San Diego &bull; Los Angeles &bull; Palm Springs
+    </div>
+  </div>
+
+  <h1>Power & Infrastructure</h1>
+
+  <p class="section-intro">
+    Complete electrical infrastructure is essential for tent-based events at private estates, vineyards, and venues without adequate power service. This guide covers equipment requirements, load calculations, and safety considerations.
+  </p>
+
+  <h2>Power Distribution Components</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="width: 25%;">Component</th>
+        <th style="width: 40%;">Purpose</th>
+        <th style="width: 35%;">When Required</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Generator</strong></td>
+        <td>Primary power source for entire event infrastructure</td>
+        <td>Any venue without adequate electrical service (most private estates, vineyards, open fields)</td>
+      </tr>
+      <tr>
+        <td><strong>Spider Box / Distro Box</strong></td>
+        <td>Splits generator power into multiple protected circuits with breakers</td>
+        <td>All events requiring distributed power for lighting, HVAC, catering, entertainment</td>
+      </tr>
+      <tr>
+        <td><strong>Quad Boxes</strong></td>
+        <td>4-outlet power stations placed throughout tent footprint</td>
+        <td>Position every 20-30 feet for vendor access; catering stations, DJ booth, photo areas</td>
+      </tr>
+      <tr>
+        <td><strong>Commercial Extension Cords</strong></td>
+        <td>Heavy-duty 10-12 gauge cables, 50-100ft runs</td>
+        <td>Connect distribution system to outlet stations; sized for load requirements</td>
+      </tr>
+      <tr>
+        <td><strong>Cable Ramps / Cord Covers</strong></td>
+        <td>Protect cords and prevent trip hazards in walkways</td>
+        <td>Any cord crossing guest pathways, entrance areas, dance floor perimeter</td>
+      </tr>
+      <tr>
+        <td><strong>Surge Protectors</strong></td>
+        <td>Protect sensitive equipment from power fluctuations</td>
+        <td>AV equipment, lighting controllers, catering refrigeration, DJ/band equipment</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>Power Requirements by Event Size</h2>
+
+  <div class="highlight-box">
+    <h4>General Rule</h4>
+    <p>Total power = Lighting + HVAC + Catering + Entertainment + Buffer (20%)</p>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Event Size</th>
+        <th>Service Required</th>
+        <th>Generator Size</th>
+        <th>Distribution</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>100 guests</strong><br>Elegant Reception</td>
+        <td>30-50 amp service</td>
+        <td>20-30 kW generator<br><em>or venue power if available</em></td>
+        <td>1 spider box, 4-6 quad boxes</td>
+      </tr>
+      <tr>
+        <td><strong>200 guests</strong><br>Grand Celebration</td>
+        <td>100-150 amp service</td>
+        <td>45-60 kW generator</td>
+        <td>1-2 spider boxes, 8-10 quad boxes</td>
+      </tr>
+      <tr>
+        <td><strong>250+ guests</strong><br>Estate Affair</td>
+        <td>200+ amp service</td>
+        <td>80-100 kW generator<br><em>or dual units for redundancy</em></td>
+        <td>2-3 spider boxes, 12-16 quad boxes</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>Load Calculation Reference</h2>
+
+  <p>Use this reference to calculate total power requirements based on equipment in use:</p>
+
+  <div class="two-column">
+    <div>
+      <h4>Climate Control</h4>
+      <ul>
+        <li>Portable AC unit (5-ton): 30-40 amps</li>
+        <li>Portable AC unit (3-ton): 20-25 amps</li>
+        <li>Patio heater (electric): 15-20 amps</li>
+        <li>Industrial fan: 2-5 amps</li>
+      </ul>
+
+      <h4>Lighting</h4>
+      <ul>
+        <li>Chandelier cluster: 5-10 amps</li>
+        <li>Uplighting (per zone): 3-5 amps</li>
+        <li>String lights (100ft): 2-3 amps</li>
+        <li>Pin spots / accent: 1-2 amps</li>
+      </ul>
+    </div>
+    <div>
+      <h4>Catering Equipment</h4>
+      <ul>
+        <li>Refrigeration unit: 10-15 amps</li>
+        <li>Coffee service: 15-20 amps</li>
+        <li>Chafing dish warmers: 5-10 amps</li>
+        <li>Ice machine: 10-15 amps</li>
+      </ul>
+
+      <h4>Entertainment</h4>
+      <ul>
+        <li>DJ setup (full): 20-30 amps</li>
+        <li>Live band: 30-50 amps</li>
+        <li>Photo booth: 10-15 amps</li>
+        <li>Projection/screens: 5-10 amps</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="calculation-box">
+    <h4>Example: 200 Guest Grand Celebration</h4>
+    <table style="margin: 0.1in 0;">
+      <tr><td>Climate (2 × 5-ton AC)</td><td style="text-align: right;">70 amps</td></tr>
+      <tr><td>Lighting (chandeliers + uplighting)</td><td style="text-align: right;">25 amps</td></tr>
+      <tr><td>Catering (refrigeration + coffee + warmers)</td><td style="text-align: right;">35 amps</td></tr>
+      <tr><td>DJ/Entertainment</td><td style="text-align: right;">25 amps</td></tr>
+      <tr><td>Miscellaneous (charging, photo booth)</td><td style="text-align: right;">15 amps</td></tr>
+      <tr style="background: #e9ecef; font-weight: bold;"><td>Subtotal</td><td style="text-align: right;">170 amps</td></tr>
+      <tr style="background: #e9ecef;"><td>+ 20% Buffer</td><td style="text-align: right;">34 amps</td></tr>
+      <tr style="background: #1a4d3e; color: white; font-weight: bold;"><td>Total Required</td><td style="text-align: right;">204 amps</td></tr>
+    </table>
+    <p style="font-size: 9pt; color: #6c757d; margin: 0.1in 0 0 0;"><em>Recommendation: 60-80 kW generator with 200A distribution</em></p>
+  </div>
+
+  <h2>Safety & Compliance</h2>
+
+  <ul>
+    <li><strong>GFCI Protection:</strong> All outdoor outlets must be GFCI-protected</li>
+    <li><strong>Grounding:</strong> Generators must be properly grounded per local code</li>
+    <li><strong>Clearance:</strong> Generators positioned minimum 20ft from tent, downwind</li>
+    <li><strong>Fuel:</strong> Adequate fuel for runtime + 25% reserve; refueling protocol</li>
+    <li><strong>Noise:</strong> Consider generator placement relative to ceremony/reception areas</li>
+    <li><strong>Backup:</strong> For critical events, secondary generator on standby</li>
+  </ul>
+
+  <div class="page-break"></div>
+
+  <h1>Flooring & Surface Systems</h1>
+
+  <p class="section-intro">
+    Professional event flooring transforms uneven outdoor terrain into elegant, safe surfaces. This guide covers subflooring systems, finished flooring options, and coverage calculations.
+  </p>
+
+  <h2>Subflooring Systems</h2>
+
+  <p>Subflooring creates a stable, level base and is required when installing over grass, uneven terrain, or specialty surfaces.</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="width: 25%;">System Type</th>
+        <th style="width: 35%;">Best Applications</th>
+        <th style="width: 40%;">Technical Notes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Plywood Subflooring</strong></td>
+        <td>Grass lawns, standard outdoor venues, garden settings</td>
+        <td>3/4" CDX plywood on 2×4 frame; most cost-effective option; protects turf from damage</td>
+      </tr>
+      <tr>
+        <td><strong>Leveling Subfloor System</strong></td>
+        <td>Sloped terrain, hillside venues, uneven ground</td>
+        <td>Adjustable leg system accommodates up to 18" grade change; engineered for stability</td>
+      </tr>
+      <tr>
+        <td><strong>Pool Cover + Subfloor</strong></td>
+        <td>Events over swimming pools</td>
+        <td>Requires engineering certification; weight-rated for occupancy; custom fabrication</td>
+      </tr>
+      <tr>
+        <td><strong>Interlocking Panel System</strong></td>
+        <td>Large-scale events, quick installation</td>
+        <td>Modular plastic or aluminum panels; tool-free assembly; reusable</td>
+      </tr>
+      <tr>
+        <td><strong>Tent Flooring Frame</strong></td>
+        <td>Integrated with tent structure</td>
+        <td>Perimeter frame ties into tent anchoring; provides clean edge transition</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>Finished Flooring Options</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="width: 25%;">Flooring Type</th>
+        <th style="width: 25%;">Aesthetic</th>
+        <th style="width: 25%;">Best Applications</th>
+        <th style="width: 25%;">Considerations</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>White Vinyl</strong></td>
+        <td>Clean, modern, bright</td>
+        <td>Cocktail areas, modern weddings, corporate events</td>
+        <td>Shows scuffs; requires touch-up during event</td>
+      </tr>
+      <tr>
+        <td><strong>Black/White Checkered</strong></td>
+        <td>Classic, formal, dramatic</td>
+        <td>Dance floors, grand entrances, gala events</td>
+        <td>Iconic look; photographs well</td>
+      </tr>
+      <tr>
+        <td><strong>Wood-Look Vinyl</strong></td>
+        <td>Warm, rustic-elegant</td>
+        <td>Barn venues, vineyard weddings, estate events</td>
+        <td>Multiple stain options; oak, walnut, whitewash</td>
+      </tr>
+      <tr>
+        <td><strong>Natural Wood Parquet</strong></td>
+        <td>Premium, authentic</td>
+        <td>Luxury weddings, high-end galas</td>
+        <td>Higher cost; authentic wood grain</td>
+      </tr>
+      <tr>
+        <td><strong>Carpet / Turf</strong></td>
+        <td>Soft, comfortable</td>
+        <td>Lounge areas, ceremony aisles, VIP zones</td>
+        <td>Multiple colors; outdoor-rated options</td>
+      </tr>
+      <tr>
+        <td><strong>Astroturf (Premium)</strong></td>
+        <td>Garden, natural</td>
+        <td>Outdoor cocktail areas, garden parties</td>
+        <td>Drainage-ready; realistic appearance</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>Transition & Safety Elements</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="width: 30%;">Element</th>
+        <th style="width: 70%;">Purpose & Requirements</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>ADA Ramps</strong></td>
+        <td>Wheelchair accessibility at all entry points; 1:12 slope ratio maximum; 36" minimum width; handrails for rises over 6"</td>
+      </tr>
+      <tr>
+        <td><strong>Transition Strips</strong></td>
+        <td>Smooth edge treatment between different flooring surfaces; beveled aluminum or rubber; prevents trip hazards</td>
+      </tr>
+      <tr>
+        <td><strong>Entrance Mats</strong></td>
+        <td>Capture dirt and moisture at entry points; logo/custom branding available; scraper + wiper combination for outdoor</td>
+      </tr>
+      <tr>
+        <td><strong>Aisle Runners</strong></td>
+        <td>Define ceremonial pathways; protect flooring; available in custom colors and widths</td>
+      </tr>
+      <tr>
+        <td><strong>Non-Slip Coating</strong></td>
+        <td>Required for dance floors; applied to all surfaces in wet weather conditions; clear matte finish</td>
+      </tr>
+      <tr>
+        <td><strong>Edge Trim</strong></td>
+        <td>Finished perimeter treatment; hides subfloor edge; available in matching or contrasting colors</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>Coverage Calculations</h2>
+
+  <div class="highlight-box">
+    <h4>Space Allocation Guidelines</h4>
+    <p>Calculate square footage based on intended use and guest count:</p>
+  </div>
+
+  <div class="two-column">
+    <div>
+      <h4>Per-Guest Allocations</h4>
+      <ul>
+        <li><strong>Dining (seated):</strong> 12-15 sq ft/guest</li>
+        <li><strong>Cocktail (standing):</strong> 8-10 sq ft/guest</li>
+        <li><strong>Dance floor:</strong> 4-5 sq ft/guest<br><span style="font-size: 9pt; color: #6c757d;">(assume 40-50% of guests dancing)</span></li>
+        <li><strong>Ceremony seating:</strong> 8-10 sq ft/guest</li>
+        <li><strong>Lounge areas:</strong> 15-20 sq ft/guest</li>
+      </ul>
+    </div>
+    <div>
+      <h4>Fixed Allocations</h4>
+      <ul>
+        <li><strong>Lounge vignette:</strong> 100-150 sq ft each</li>
+        <li><strong>Bar station:</strong> 100-120 sq ft each</li>
+        <li><strong>Buffet line:</strong> 100-150 sq ft</li>
+        <li><strong>DJ/Band area:</strong> 150-300 sq ft</li>
+        <li><strong>Entry/transitions:</strong> 150-250 sq ft</li>
+        <li><strong>Catering staging:</strong> 200-400 sq ft</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="calculation-box">
+    <h4>Example: 200 Guest Grand Celebration</h4>
+    <table style="margin: 0.1in 0;">
+      <tr><td>Dining area (200 × 12 sq ft)</td><td style="text-align: right;">2,400 sq ft</td></tr>
+      <tr><td>Dance floor (100 dancers × 4.5 sq ft)</td><td style="text-align: right;">450 sq ft</td></tr>
+      <tr><td>Cocktail area (200 × 8 sq ft)</td><td style="text-align: right;">1,600 sq ft</td></tr>
+      <tr><td>Lounge vignettes (2 × 125 sq ft)</td><td style="text-align: right;">250 sq ft</td></tr>
+      <tr><td>Bar stations (2 × 100 sq ft)</td><td style="text-align: right;">200 sq ft</td></tr>
+      <tr><td>Entry/transitions</td><td style="text-align: right;">200 sq ft</td></tr>
+      <tr style="background: #1a4d3e; color: white; font-weight: bold;"><td>Total Flooring Required</td><td style="text-align: right;">~5,100 sq ft</td></tr>
+    </table>
+    <p style="font-size: 9pt; color: #6c757d; margin: 0.1in 0 0 0;"><em>Note: Cocktail and dining may share space if event flows between phases</em></p>
+  </div>
+
+  <h2>Dance Floor Sizing Guide</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Guest Count</th>
+        <th>Active Dancers (50%)</th>
+        <th>Recommended Size</th>
+        <th>Dimensions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>100 guests</td>
+        <td>50 dancers</td>
+        <td>225-250 sq ft</td>
+        <td>15' × 15' or 12' × 20'</td>
+      </tr>
+      <tr>
+        <td>150 guests</td>
+        <td>75 dancers</td>
+        <td>340-375 sq ft</td>
+        <td>18' × 18' or 15' × 24'</td>
+      </tr>
+      <tr>
+        <td>200 guests</td>
+        <td>100 dancers</td>
+        <td>450-500 sq ft</td>
+        <td>21' × 21' or 18' × 27'</td>
+      </tr>
+      <tr>
+        <td>250 guests</td>
+        <td>125 dancers</td>
+        <td>560-625 sq ft</td>
+        <td>24' × 24' or 21' × 30'</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>Installation Timeline</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Event Size</th>
+        <th>Subfloor Installation</th>
+        <th>Finished Flooring</th>
+        <th>Total Lead Time</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>100 guests (~2,500 sq ft)</td>
+        <td>4-6 hours</td>
+        <td>2-3 hours</td>
+        <td>1 day before event</td>
+      </tr>
+      <tr>
+        <td>200 guests (~5,000 sq ft)</td>
+        <td>8-10 hours</td>
+        <td>4-5 hours</td>
+        <td>1-2 days before event</td>
+      </tr>
+      <tr>
+        <td>250+ guests (~6,500+ sq ft)</td>
+        <td>12-16 hours</td>
+        <td>6-8 hours</td>
+        <td>2-3 days before event</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="footer">
+    <strong>Tasteful Environments</strong> &bull; San Diego &bull; Los Angeles &bull; Palm Springs<br>
+    Concierge Desk: (858) 255-1130 &bull; tastefuleventrentals.com<br>
+    <em style="font-size: 8pt;">Internal Reference Document &ndash; Not for Distribution</em>
+  </div>
+
+</body>
+</html>
