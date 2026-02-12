@@ -1,15 +1,15 @@
 # CLAUDE.md - AI Assistant Guide for TER-revamp
 
 > This file provides context and guidelines for AI assistants working with this codebase.
-> Last updated: 2026-01-29
+> Last updated: 2026-02-12
 
 ## Project Overview
 
 **Repository:** TER-revamp
 **Status:** Active Development
-**Description:** Professional event rental business website for Tasteful Environments, a San Diego-based company offering tent, table, chair, lighting, and event equipment rentals.
+**Description:** Professional luxury event design website for Tasteful Studio, a San Diego-based company offering curated event environments, tent, table, chair, lighting, and event equipment rentals.
 
-**Live Site:** https://www.tastefuleventrentals.com/
+**Live Site:** https://www.tastefulstudio.com/
 
 ---
 
@@ -260,10 +260,10 @@ This is a static site and can be hosted on:
 ### Common Tasks
 
 **Change phone number:**
-- Search for `8582551130` and replace all instances
+- Search for `8582554766` and replace all instances
 
 **Change email:**
-- Search for `info@tastefuleventrentals.com` and replace
+- Search for `concierge@tastefulstudio.com` and replace
 
 **Add a new page:**
 1. Copy an existing page as a template
@@ -291,6 +291,8 @@ This is a static site and can be hosted on:
 
 | Date | Changes |
 |------|---------|
+| 2026-02-12 | Rebranded from "Tasteful Environments" to "Tasteful Studio" |
+| 2026-02-12 | Updated contact info: concierge@tastefulstudio.com, (858) 255-4766 |
 | 2026-01-29 | Complete website build: homepage, rentals, packages, about, contact |
 | 2026-01-29 | Added professional SVG logo (green/purple) |
 | 2026-01-29 | Booqable embed placeholder and documentation |
@@ -306,5 +308,5 @@ For quick edits, here are the key line locations:
 - **Mobile breakpoint:** `css/styles.css` line 768 (`@media`)
 - **Navigation:** Each HTML file, `<header>` section
 - **Footer:** Each HTML file, `<footer>` section
-- **Phone number:** Search `8582551130`
-- **Email:** Search `info@tastefuleventrentals.com`
+- **Phone number:** Search `8582554766`
+- **Email:** Search `concierge@tastefulstudio.com`
