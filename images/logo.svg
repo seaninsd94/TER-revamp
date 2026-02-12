@@ -44,5 +44,6 @@
         font-size="18"
         font-weight="400"
         fill="#4a1259"
-        letter-spacing="6">STUDIO</text>
+        letter-spacing="6"
+        font-style="italic">studio</text>
 </svg>
