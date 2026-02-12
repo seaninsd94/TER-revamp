@@ -974,6 +974,17 @@ img {
     --font-size-base: 15px;
   }
 
+  /* Prevent horizontal overflow */
+  html, body {
+    overflow-x: hidden;
+    max-width: 100vw;
+  }
+
+  .container {
+    padding-left: var(--spacing-sm);
+    padding-right: var(--spacing-sm);
+  }
+
   .header-inner {
     padding: var(--spacing-sm);
   }
@@ -1000,6 +1011,7 @@ img {
 
   .hero-title {
     font-size: 2.5rem;
+    letter-spacing: 1px;
   }
 
   .hero-description {
@@ -1011,7 +1023,27 @@ img {
   }
 
   .section-title {
-    font-size: 2rem;
+    font-size: 1.75rem;
+    letter-spacing: 0;
+    word-wrap: break-word;
+  }
+
+  .section-subtitle {
+    letter-spacing: 2px;
+    font-size: 0.75rem;
+  }
+
+  /* Force single column on mobile - override inline styles */
+  .features-grid,
+  .features-grid[style],
+  .categories-grid,
+  .categories-grid[style] {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Statistics grids */
+  [style*="grid-template-columns: repeat(3"] {
+    grid-template-columns: 1fr !important;
   }
 
   .contact-grid {
@@ -1034,11 +1066,37 @@ img {
   .testimonials-grid {
     grid-template-columns: 1fr;
   }
+
+  /* CTA section mobile fixes */
+  .cta-title {
+    font-size: 1.75rem;
+    letter-spacing: 0;
+  }
+
+  .cta-description {
+    font-size: 0.95rem;
+    padding: 0 var(--spacing-sm);
+  }
+
+  /* Category cards mobile height */
+  .category-card {
+    height: 320px;
+  }
+
+  /* Feature cards */
+  .feature-card {
+    padding: var(--spacing-md);
+  }
+
+  .feature-title {
+    font-size: 1.1rem;
+  }
 }
 
 @media (max-width: 480px) {
   .hero-title {
-    font-size: 2rem;
+    font-size: 1.75rem;
+    letter-spacing: 0;
   }
 
   .hero-buttons {
@@ -1054,9 +1112,39 @@ img {
     grid-template-columns: 1fr;
   }
 
-  h1 { font-size: 2rem; }
-  h2 { font-size: 1.75rem; }
-  h3 { font-size: 1.5rem; }
+  h1 { font-size: 1.75rem; letter-spacing: 0; }
+  h2 { font-size: 1.5rem; letter-spacing: 0; }
+  h3 { font-size: 1.25rem; }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .cta-title {
+    font-size: 1.5rem;
+  }
+
+  /* Package/experience cards */
+  .package-card,
+  .experience-card {
+    padding: var(--spacing-sm);
+  }
+
+  /* Corporate packages grid */
+  .corporate-packages-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Process grid */
+  .process-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Any inline 3-column grids */
+  [style*="repeat(3"],
+  [style*="repeat(4"] {
+    grid-template-columns: 1fr !important;
+  }
 }
 
 /* =============================================
