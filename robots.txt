@@ -1,0 +1,6 @@
+# Robots.txt for tastefulstudio.com
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://tastefulstudio.com/sitemap.xml
