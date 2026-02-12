@@ -1,71 +1,48 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 56" width="340" height="56">
-  <!-- Luxury Monogram with Diamond Frame -->
-  <g transform="translate(4, 4)">
-    <!-- Outer diamond frame -->
-    <path d="M24 0 L48 24 L24 48 L0 24 Z"
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 70" width="320" height="70">
+  <!-- Elegant monogram/crest icon -->
+  <g transform="translate(8, 8)">
+    <!-- Outer frame - elegant shield/crest shape -->
+    <path d="M25 0 L50 8 L50 32 Q50 48 25 54 Q0 48 0 32 L0 8 Z"
           fill="none"
           stroke="#ffffff"
-          stroke-width="1.2"/>
+          stroke-width="1.5"/>
 
-    <!-- Inner diamond accent -->
-    <path d="M24 6 L42 24 L24 42 L6 24 Z"
+    <!-- Inner decorative frame -->
+    <path d="M25 4 L46 11 L46 31 Q46 44 25 50 Q4 44 4 31 L4 11 Z"
           fill="none"
           stroke="#ffffff"
-          stroke-width="0.6"
-          opacity="0.4"/>
+          stroke-width="0.75"
+          opacity="0.5"/>
 
-    <!-- Refined TS Monogram -->
-    <text x="24" y="29"
-          font-family="'Playfair Display', Georgia, serif"
-          font-size="18"
-          font-weight="500"
+    <!-- Stylized "T" monogram -->
+    <text x="25" y="36"
+          font-family="Georgia, 'Playfair Display', serif"
+          font-size="28"
+          font-weight="400"
           fill="#ffffff"
           text-anchor="middle"
-          letter-spacing="1">TS</text>
+          font-style="italic">T</text>
+
+    <!-- Small decorative flourish under T -->
+    <path d="M15 40 Q25 44 35 40"
+          fill="none"
+          stroke="#ffffff"
+          stroke-width="1"
+          opacity="0.6"/>
   </g>
 
-  <!-- Left laurel branch -->
-  <g transform="translate(56, 14)" fill="none" stroke="#ffffff" stroke-width="0.8">
-    <path d="M12 14 Q8 10 4 14" opacity="0.6"/>
-    <path d="M10 11 Q6 6 2 10" opacity="0.5"/>
-    <path d="M8 8 Q5 3 1 6" opacity="0.4"/>
-    <ellipse cx="3" cy="13" rx="2.5" ry="4" transform="rotate(-30 3 13)" fill="#ffffff" opacity="0.12"/>
-    <ellipse cx="1.5" cy="9" rx="2" ry="3.5" transform="rotate(-40 1.5 9)" fill="#ffffff" opacity="0.1"/>
-    <ellipse cx="0.5" cy="5" rx="1.8" ry="3" transform="rotate(-50 0.5 5)" fill="#ffffff" opacity="0.08"/>
-  </g>
-
-  <!-- Company Name -->
-  <text x="82" y="30"
-        font-family="'Playfair Display', Georgia, serif"
-        font-size="28"
+  <!-- Company Name - Elegant Typography -->
+  <text x="70" y="32"
+        font-family="Georgia, 'Playfair Display', serif"
+        font-size="26"
         font-weight="400"
         fill="#ffffff"
-        letter-spacing="6">TASTEFUL</text>
+        letter-spacing="3">TASTEFUL</text>
 
-  <!-- Decorative dot separator -->
-  <circle cx="230" cy="24" r="2" fill="#ffffff" opacity="0.5"/>
-
-  <!-- Studio text -->
-  <text x="244" y="30"
-        font-family="'Playfair Display', Georgia, serif"
-        font-size="28"
+  <text x="70" y="55"
+        font-family="Georgia, 'Playfair Display', serif"
+        font-size="18"
         font-weight="400"
         fill="rgba(255,255,255,0.85)"
-        letter-spacing="4">STUDIO</text>
-
-  <!-- Right laurel branch (mirrored) -->
-  <g transform="translate(332, 42) scale(-1, -1)" fill="none" stroke="#ffffff" stroke-width="0.8">
-    <path d="M12 14 Q8 10 4 14" opacity="0.6"/>
-    <path d="M10 11 Q6 6 2 10" opacity="0.5"/>
-    <path d="M8 8 Q5 3 1 6" opacity="0.4"/>
-    <ellipse cx="3" cy="13" rx="2.5" ry="4" transform="rotate(-30 3 13)" fill="#ffffff" opacity="0.12"/>
-    <ellipse cx="1.5" cy="9" rx="2" ry="3.5" transform="rotate(-40 1.5 9)" fill="#ffffff" opacity="0.1"/>
-    <ellipse cx="0.5" cy="5" rx="1.8" ry="3" transform="rotate(-50 0.5 5)" fill="#ffffff" opacity="0.08"/>
-  </g>
-
-  <!-- Subtle underline accent -->
-  <line x1="82" y1="38" x2="330" y2="38"
-        stroke="#ffffff"
-        stroke-width="0.5"
-        opacity="0.2"/>
+        letter-spacing="6">STUDIO</text>
 </svg>
