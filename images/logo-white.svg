@@ -1,65 +1,71 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 60" width="320" height="60">
-  <!-- Castle Icon -->
-  <g transform="translate(8, 6)">
-    <!-- Castle base -->
-    <rect x="5" y="24" width="40" height="24" fill="none" stroke="#ffffff" stroke-width="1.5"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 56" width="340" height="56">
+  <!-- Luxury Monogram with Diamond Frame -->
+  <g transform="translate(4, 4)">
+    <!-- Outer diamond frame -->
+    <path d="M24 0 L48 24 L24 48 L0 24 Z"
+          fill="none"
+          stroke="#ffffff"
+          stroke-width="1.2"/>
 
-    <!-- Castle gate (arched doorway) -->
-    <path d="M20 48 L20 36 Q25 30 30 36 L30 48" fill="none" stroke="#ffffff" stroke-width="1.5"/>
+    <!-- Inner diamond accent -->
+    <path d="M24 6 L42 24 L24 42 L6 24 Z"
+          fill="none"
+          stroke="#ffffff"
+          stroke-width="0.6"
+          opacity="0.4"/>
 
-    <!-- Left tower -->
-    <rect x="2" y="12" width="12" height="12" fill="none" stroke="#ffffff" stroke-width="1.5"/>
-    <!-- Left tower battlements -->
-    <rect x="2" y="8" width="3" height="4" fill="#ffffff"/>
-    <rect x="7" y="8" width="3" height="4" fill="#ffffff"/>
-    <rect x="12" y="8" width="2" height="4" fill="#ffffff"/>
-
-    <!-- Right tower -->
-    <rect x="36" y="12" width="12" height="12" fill="none" stroke="#ffffff" stroke-width="1.5"/>
-    <!-- Right tower battlements -->
-    <rect x="36" y="8" width="2" height="4" fill="#ffffff"/>
-    <rect x="40" y="8" width="3" height="4" fill="#ffffff"/>
-    <rect x="45" y="8" width="3" height="4" fill="#ffffff"/>
-
-    <!-- Center tower (taller) -->
-    <rect x="18" y="4" width="14" height="20" fill="none" stroke="rgba(255,255,255,0.8)" stroke-width="1"/>
-    <!-- Center tower battlements -->
-    <rect x="18" y="0" width="3" height="4" fill="rgba(255,255,255,0.8)"/>
-    <rect x="23.5" y="0" width="3" height="4" fill="rgba(255,255,255,0.8)"/>
-    <rect x="29" y="0" width="3" height="4" fill="rgba(255,255,255,0.8)"/>
-
-    <!-- Tower windows -->
-    <rect x="6" y="16" width="4" height="5" fill="#ffffff" opacity="0.3"/>
-    <rect x="40" y="16" width="4" height="5" fill="#ffffff" opacity="0.3"/>
-    <rect x="23" y="10" width="4" height="6" fill="#ffffff" opacity="0.3"/>
+    <!-- Refined TS Monogram -->
+    <text x="24" y="29"
+          font-family="'Playfair Display', Georgia, serif"
+          font-size="18"
+          font-weight="500"
+          fill="#ffffff"
+          text-anchor="middle"
+          letter-spacing="1">TS</text>
   </g>
 
-  <!-- Company Name - Elegant Typography -->
-  <text x="70" y="28"
-        font-family="Georgia, 'Playfair Display', serif"
-        font-size="24"
+  <!-- Left laurel branch -->
+  <g transform="translate(56, 14)" fill="none" stroke="#ffffff" stroke-width="0.8">
+    <path d="M12 14 Q8 10 4 14" opacity="0.6"/>
+    <path d="M10 11 Q6 6 2 10" opacity="0.5"/>
+    <path d="M8 8 Q5 3 1 6" opacity="0.4"/>
+    <ellipse cx="3" cy="13" rx="2.5" ry="4" transform="rotate(-30 3 13)" fill="#ffffff" opacity="0.12"/>
+    <ellipse cx="1.5" cy="9" rx="2" ry="3.5" transform="rotate(-40 1.5 9)" fill="#ffffff" opacity="0.1"/>
+    <ellipse cx="0.5" cy="5" rx="1.8" ry="3" transform="rotate(-50 0.5 5)" fill="#ffffff" opacity="0.08"/>
+  </g>
+
+  <!-- Company Name -->
+  <text x="82" y="30"
+        font-family="'Playfair Display', Georgia, serif"
+        font-size="28"
         font-weight="400"
         fill="#ffffff"
-        letter-spacing="3">TASTEFUL</text>
+        letter-spacing="6">TASTEFUL</text>
 
-  <text x="212" y="28"
-        font-family="Georgia, 'Playfair Display', serif"
-        font-size="24"
+  <!-- Decorative dot separator -->
+  <circle cx="230" cy="24" r="2" fill="#ffffff" opacity="0.5"/>
+
+  <!-- Studio text -->
+  <text x="244" y="30"
+        font-family="'Playfair Display', Georgia, serif"
+        font-size="28"
         font-weight="400"
         fill="rgba(255,255,255,0.85)"
-        letter-spacing="3">STUDIO</text>
+        letter-spacing="4">STUDIO</text>
 
-  <!-- Thin decorative line -->
-  <line x1="70" y1="36" x2="295" y2="36"
+  <!-- Right laurel branch (mirrored) -->
+  <g transform="translate(332, 42) scale(-1, -1)" fill="none" stroke="#ffffff" stroke-width="0.8">
+    <path d="M12 14 Q8 10 4 14" opacity="0.6"/>
+    <path d="M10 11 Q6 6 2 10" opacity="0.5"/>
+    <path d="M8 8 Q5 3 1 6" opacity="0.4"/>
+    <ellipse cx="3" cy="13" rx="2.5" ry="4" transform="rotate(-30 3 13)" fill="#ffffff" opacity="0.12"/>
+    <ellipse cx="1.5" cy="9" rx="2" ry="3.5" transform="rotate(-40 1.5 9)" fill="#ffffff" opacity="0.1"/>
+    <ellipse cx="0.5" cy="5" rx="1.8" ry="3" transform="rotate(-50 0.5 5)" fill="#ffffff" opacity="0.08"/>
+  </g>
+
+  <!-- Subtle underline accent -->
+  <line x1="82" y1="38" x2="330" y2="38"
         stroke="#ffffff"
         stroke-width="0.5"
-        opacity="0.4"/>
-
-  <!-- Location accent -->
-  <text x="70" y="50"
-        font-family="Georgia, 'Playfair Display', serif"
-        font-size="10"
-        font-style="italic"
-        fill="#ffffff"
-        opacity="0.7">San Diego</text>
+        opacity="0.2"/>
 </svg>
