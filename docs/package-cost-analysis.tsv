@@ -1,183 +1,53 @@
-TASTEFUL ENVIRONMENTS - PACKAGE PRICING WITH INFRASTRUCTURE COSTS
-Target Markup: Elegant Reception 91.7% | Grand Celebration 80.7% | Estate Affair 80.7%
+TASTEFUL STUDIO - PACKAGE PRICING WITH INFRASTRUCTURE COSTS
+Target: 75% Gross Profit Margin
 
-===== SIGNATURE ENVIRONMENTS - PRICING BY VENUE TYPE =====
+===== SIGNATURE ENVIRONMENTS =====
 
-ELEGANT RECEPTION (100 Guests) - 91.7% Markup
-Base Package Cost	$3,390
+ELEGANT RECEPTION (100 Guests)
+Current Price: $6,499 | Current GPM: 20.41% | Price at 75% GPM: $20,690.65
 
-Venue Type	Infrastructure Cost	Total Cost	Recommended Price	Markup
-Resort/Hotel (Scenario C)	$600	$3,990	$7,649	91.7%
-Winery/Garden (Scenario B)	$1,613	$5,003	$9,591	91.7%
-Estate/Remote (Scenario A)	$5,863	$9,253	$17,738	91.7%
-
-Infrastructure Breakdown - Elegant Reception
-Venue Type	Power	Flooring	Sanitation	Climate	Total
-Resort/Hotel	$50	$450	$100	$0	$600
-Winery/Garden	$375	$663	$163	$413	$1,613
-Estate/Remote	$925	$3,163	$1,163	$613	$5,863
-
-
-GRAND CELEBRATION (200 Guests) - 80.7% Markup
-Base Package Cost	$11,070
-
-Venue Type	Infrastructure Cost	Total Cost	Recommended Price	Markup
-Resort/Hotel (Scenario C)	$938	$12,008	$21,698	80.7%
-Winery/Garden (Scenario B)	$2,713	$13,783	$24,907	80.7%
-Estate/Remote (Scenario A)	$10,325	$21,395	$38,661	80.7%
-
-Infrastructure Breakdown - Grand Celebration
-Venue Type	Power	Flooring	Sanitation	Climate	Total
-Resort/Hotel	$75	$700	$163	$0	$938
-Winery/Garden	$700	$1,025	$263	$725	$2,713
-Estate/Remote	$1,700	$5,775	$1,763	$1,088	$10,325
-
-
-ESTATE AFFAIR (250 Guests) - 80.7% Markup
-Base Package Cost	$22,138
-
-Venue Type	Infrastructure Cost	Total Cost	Recommended Price	Markup
-Resort/Hotel (Scenario C)	$1,250	$23,388	$42,262	80.7%
-Winery/Garden (Scenario B)	$3,725	$25,863	$46,734	80.7%
-Estate/Remote (Scenario A)	$14,388	$36,526	$66,003	80.7%
-
-Infrastructure Breakdown - Estate Affair
-Venue Type	Power	Flooring	Sanitation	Climate	Total
-Resort/Hotel	$100	$925	$225	$0	$1,250
-Winery/Garden	$1,038	$1,350	$350	$988	$3,725
-Estate/Remote	$2,738	$7,525	$2,650	$1,475	$14,388
-
-
-===== CORPORATE ENVIRONMENTS - PRICING BY VENUE TYPE =====
-
-EXECUTIVE SESSION (100 Attendees) - 99.7% Markup
-Base Package Cost	$1,500
-
-Venue Type	Infrastructure Cost	Total Cost	Recommended Price	Markup
-Conference/Hotel (Scenario C)	$600	$2,100	$4,193	99.7%
-Outdoor w/ Power (Scenario B)	$1,613	$3,113	$6,216	99.7%
-Remote/Field (Scenario A)	$5,863	$7,363	$14,701	99.7%
-
-Infrastructure Breakdown - Executive Session
-Venue Type	Power	Flooring	Sanitation	Climate	Total
-Conference/Hotel	$50	$450	$100	$0	$600
-Outdoor w/ Power	$375	$663	$163	$413	$1,613
-Remote/Field	$925	$3,163	$1,163	$613	$5,863
-
-
-CORPORATE SHOWCASE (250 Attendees) - 85.6% Markup
-Base Package Cost	$3,500
-
-Venue Type	Infrastructure Cost	Total Cost	Recommended Price	Markup
-Conference/Hotel (Scenario C)	$1,250	$4,750	$8,816	85.6%
-Outdoor w/ Power (Scenario B)	$3,725	$7,225	$13,410	85.6%
-Remote/Field (Scenario A)	$14,388	$17,888	$33,200	85.6%
-
-Infrastructure Breakdown - Corporate Showcase
-Venue Type	Power	Flooring	Sanitation	Climate	Total
-Conference/Hotel	$100	$925	$225	$0	$1,250
-Outdoor w/ Power	$1,038	$1,350	$350	$988	$3,725
-Remote/Field	$2,738	$7,525	$2,650	$1,475	$14,388
-
-
-GRAND GALA (400 Attendees) - 85.6% Markup
-Base Package Cost	$7,000
-
-Venue Type	Infrastructure Cost	Total Cost	Recommended Price	Markup
-Conference/Hotel (Scenario C)	$1,550	$8,550	$15,869	85.6%
-Outdoor w/ Power (Scenario B)	$4,375	$11,375	$21,108	85.6%
-Remote/Field (Scenario A)	$18,250	$25,250	$46,864	85.6%
-
-Infrastructure Breakdown - Grand Gala
-Venue Type	Power	Flooring	Sanitation	Climate	Total
-Conference/Hotel	$150	$1,100	$300	$0	$1,550
-Outdoor w/ Power	$1,250	$1,600	$425	$1,100	$4,375
-Remote/Field	$3,250	$9,500	$3,500	$2,000	$18,250
-
-
-===== QUICK REFERENCE - RECOMMENDED PRICING =====
-
-SIGNATURE ENVIRONMENTS
-Package	Guests	Markup	Resort/Hotel	Winery/Garden	Estate/Remote
-Elegant Reception	100	91.7%	$7,649	$9,591	$17,738
-Grand Celebration	200	80.7%	$21,698	$24,907	$38,661
-Estate Affair	250	80.7%	$42,262	$46,734	$66,003
-
-CORPORATE ENVIRONMENTS
-Package	Attendees	Markup	Conference/Hotel	Outdoor w/ Power	Remote/Field
-Executive Session	100	99.7%	$4,193	$6,216	$14,701
-Corporate Showcase	250	85.6%	$8,816	$13,410	$33,200
-Grand Gala	400	85.6%	$15,869	$21,108	$46,864
-
-
-===== PRICING STRATEGY OPTIONS =====
-
-OPTION 1: TIERED VENUE PRICING
-- Quote based on actual venue type
-- Maintains consistent markup across all venues
-- Requires venue assessment before quoting
-
-OPTION 2: BASE + SUPPLEMENT MODEL
-- Use Winery/Garden pricing as base
-- Add "Estate Venue Supplement" for Scenario A venues
-- Supplement amounts to maintain markup:
-
-Package	Estate Supplement
-Elegant Reception	+$8,147
-Grand Celebration	+$13,754
-Estate Affair	+$19,269
-Executive Session	+$8,485
-Corporate Showcase	+$19,790
-Grand Gala	+$25,756
-
-OPTION 3: SINGLE PRICE (BLENDED)
-- Average across venue types
-- Simpler quoting, variable margins
-- Resort venues = higher profit, Estate venues = lower profit
-
-
-===== ORIGINAL PACKAGE PRICING REFERENCE =====
-
-Package	Original Price	Base Cost	Markup
-Elegant Reception	$6,499	$3,390	91.7%
-Grand Celebration	$19,999	$11,070	80.7%
-Estate Affair	$39,999	$22,138	80.7%
-Executive Session	$2,995	$1,500	99.7%
-Corporate Showcase	$6,495	$3,500	85.6%
-Grand Gala	$12,995	$7,000	85.6%
-
-
-===== ITEMIZED PACKAGE COSTS =====
-
-ELEGANT RECEPTION - Base Package Items
-Category	Item	Qty	Unit Cost	Item Total
+Category	Item	Qty	Unit Cost	Total
 Structure	Grand Ballroom 30x60 Frame	1	$266.70	$266.70
 Tables	Round Tables (60")	12	$4.34	$52.04
-Chairs	Chiavari Chairs	100	$9.00	$900.00
-Linens	Premium Linens (poly)	12	$16.50	$198.00
-Lighting	Chandelier	1	$400.00	$400.00
-Lighting	LED Uplighting Fixtures	10	$42.50	$425.00
-Flooring	Dance Floor (15' x 15')	1	$398.75	$398.75
+Chairs	Chiavari Chairs	100	$9.90	$990.00
+Linens	Premium Linens (poly)	12	$18.15	$217.80
+Lighting	Chandelier	1	$440.00	$440.00
+Lighting	LED Uplighting Fixtures	10	$46.75	$467.50
+Flooring	Dance Floor (15' x 15')	1	$438.63	$438.63
 Service	Setup and Breakdown	10	$75.00	$750.00
-		BASE TOTAL		$3,390.49
+Infrastructure	Power	1	$325.00	$325.00
+Infrastructure	Flooring	1	$650.00	$650.00
+Infrastructure	Sanitation	1	$150.00	$150.00
+Infrastructure	Climate	1	$425.00	$425.00
+		TOTAL COST		$5,172.66
 
-GRAND CELEBRATION - Base Package Items
-Category	Item	Qty	Unit Cost	Item Total
+
+GRAND CELEBRATION (200 Guests)
+Current Price: $19,999 | Current GPM: 28.51% | Price at 75% GPM: $57,185.46
+
+Category	Item	Qty	Unit Cost	Total
 Structure	The Regency Celebration Pavilion 40x80	1	$471.14	$471.14
 Tables	Round Tables (60")	25	$4.34	$108.42
-Chairs	Chiavari Chairs	200	$9.00	$1,800.00
-Linens	Premium Linens (satin etc)	25	$27.00	$675.00
-Linens	Napkins	200	$1.15	$230.00
-Lighting	Crystal Chandeliers	3	$400.00	$1,200.00
+Chairs	Chiavari Chairs	200	$9.90	$1,980.00
+Linens	Premium Linens (satin etc)	25	$29.70	$742.50
+Linens	Napkins	200	$1.27	$253.00
+Lighting	Crystal Chandeliers	3	$440.00	$1,320.00
 Lighting	Full Lighting Package - 50 ft strand	20	$0.10	$1.95
-Flooring	Dance Floor (21' x 21')	1	$781.55	$781.55
-Service	Cocktail Hour Setup (no bar)	12	$33.52	$402.25
+Flooring	Dance Floor (21' x 21')	1	$859.71	$859.71
+Service	Cocktail Hour Setup (no bar)	12	$36.22	$434.65
 Service	Event Planning Consultation	8	$75.00	$600.00
 Service	Setup and Breakdown	64	$75.00	$4,800.00
-		BASE TOTAL		$11,070.31
+Infrastructure	Power	1	$700.00	$700.00
+Infrastructure	Flooring	1	$1,050.00	$1,050.00
+Infrastructure	Sanitation	1	$250.00	$250.00
+Infrastructure	Climate	1	$725.00	$725.00
+		TOTAL COST		$14,296.37
 
-ESTATE AFFAIR - Base Package Items
-Category	Item	Qty	Unit Cost	Item Total
+
+ESTATE AFFAIR (250 Guests)
+Current Price: $39,999 | Current GPM: 35.12% | Price at 75% GPM: $103,799.49
+
+Category	Item	Qty	Unit Cost	Total
 Structure	The Heritage Grand Pavilion (50x120 Frame or 45x124 Sailcloth)	1	$1,143.79	$1,143.79
 Tables	Round Tables (60")	30	$4.34	$130.11
 Chairs	Gold Chiavari Chairs	250	$9.90	$2,475.00
@@ -186,19 +56,114 @@ Linens	Bespoke Napkin Collection	250	$1.27	$316.25
 Lighting	Crystal Chandeliers	5	$440.00	$2,200.00
 Lighting	Designer Lighting Suite	40	$0.10	$3.90
 Flooring	Dance Floor (24' x 24')	1	$1,122.88	$1,122.88
-Lounge	Curated Lounge Vignette	2	$30.57	$61.14
-Service	Cocktail Hour Setup with Bar	16	$33.52	$893.84
+Lounge	Curated Lounge Vignette	2	$39.96	$79.91
+Service	Cocktail Hour Setup with Bar	16	$36.22	$937.04
 Service	Personal Concierge Service	1	$4,500.00	$4,500.00
 Service	Event Planning Consultation	16	$75.00	$1,200.00
 Service	Setup and Breakdown	96	$75.00	$7,200.00
-		BASE TOTAL		$22,137.90
+Infrastructure	Power	1	$1,050.00	$1,050.00
+Infrastructure	Flooring	1	$1,350.00	$1,350.00
+Infrastructure	Sanitation	1	$350.00	$350.00
+Infrastructure	Climate	1	$1,000.00	$1,000.00
+		TOTAL COST		$25,949.87
 
 
-===== OPTIONAL ENHANCEMENT BUNDLES =====
+===== CORPORATE ENVIRONMENTS =====
 
-Bundle Name	Price Range	Cost Estimate	Markup
-Guest Comfort Package	$400-$700	$200-$350	100%
-Premium Bar Package	$700-$1,200	$350-$600	100%
-Catering Support Package	$350-$600	$175-$300	100%
-Production Package	$500-$900	$250-$450	100%
-VIP Experience Package	$300-$550	$150-$275	100%
+EXECUTIVE SESSION (100 Attendees)
+Current Price: $2,995 | Current GPM: -31.19% | Price at 75% GPM: $15,716.77
+
+Category	Item	Qty	Unit Cost	Total
+Structure	Weather-Controlled Frame Structure	1	$266.70	$266.70
+Tables	Banquet Round Tables	12	$4.34	$52.04
+Chairs	Padded Chairs	100	$8.03	$803.00
+Lounge	VIP Networking Lounge	1	$39.96	$39.96
+Lighting	Ambient Event Lighting	10	$46.75	$467.50
+Service	Professional Installation + Teardown	10	$75.00	$750.00
+Infrastructure	Power	1	$325.00	$325.00
+Infrastructure	Flooring	1	$650.00	$650.00
+Infrastructure	Sanitation	1	$150.00	$150.00
+Infrastructure	Climate	1	$425.00	$425.00
+		TOTAL COST		$3,929.19
+
+
+CORPORATE SHOWCASE (250 Attendees)
+Current Price: $6,495 | Costs: TBD
+
+Category	Item	Qty	Unit Cost	Total
+Structure	Climate-Controlled Grand Pavilion	1	TBD	TBD
+Tables	Banquet Round Tables	30	TBD	TBD
+Chairs	Formal Event Seating	250	TBD	TBD
+Lounge	Executive Lounge Zone	2	TBD	TBD
+Lighting	Brand-Ready Uplighting	1	TBD	TBD
+Service	Layout Planning & Flow Design	1	TBD	TBD
+Service	Professional Installation	1	TBD	TBD
+Service	Teardown	1	TBD	TBD
+Climate	Climate Control System	1	TBD	TBD
+Infrastructure	Power	1	TBD	TBD
+Infrastructure	Flooring	1	TBD	TBD
+Infrastructure	Sanitation	1	TBD	TBD
+Infrastructure	Climate	1	TBD	TBD
+		TOTAL COST		TBD
+
+
+GRAND GALA (400 Attendees)
+Current Price: $12,995 | Costs: TBD
+
+Category	Item	Qty	Unit Cost	Total
+Structure	Estate Pavilion with HVAC	1	TBD	TBD
+Tables	Banquet Round Tables	50	TBD	TBD
+Chairs	Formal Event Seating	400	TBD	TBD
+Lounge	VIP Lounge Zone	1	TBD	TBD
+Lounge	Cocktail Zone with High-Tops	1	TBD	TBD
+Lighting	Designer Production Lighting	1	TBD	TBD
+Stage	Presentation Stage	1	TBD	TBD
+Service	Sightline Planning	1	TBD	TBD
+Service	Professional Installation	1	TBD	TBD
+Service	Teardown	1	TBD	TBD
+Infrastructure	Power	1	TBD	TBD
+Infrastructure	Flooring	1	TBD	TBD
+Infrastructure	Sanitation	1	TBD	TBD
+Infrastructure	Climate	1	TBD	TBD
+		TOTAL COST		TBD
+
+
+===== PRICING SUMMARY =====
+
+SIGNATURE ENVIRONMENTS
+Package	Guests	Total Cost	Current Price	Current GPM	Price at 75% GPM
+Elegant Reception	100	$5,172.66	$6,499	20.41%	$20,690.65
+Grand Celebration	200	$14,296.37	$19,999	28.51%	$57,185.46
+Estate Affair	250	$25,949.87	$39,999	35.12%	$103,799.49
+
+CORPORATE ENVIRONMENTS
+Package	Attendees	Total Cost	Current Price	Current GPM	Price at 75% GPM
+Executive Session	100	$3,929.19	$2,995	-31.19%	$15,716.77
+Corporate Showcase	250	TBD	$6,495	TBD	TBD
+Grand Gala	400	TBD	$12,995	TBD	TBD
+
+
+===== MARGIN ANALYSIS =====
+
+KEY FINDINGS:
+1. All Signature packages are significantly underpriced for 75% GPM target
+2. Executive Session is LOSING MONEY at current pricing (-31.19% GPM)
+3. Infrastructure costs (Power, Flooring, Sanitation, Climate) are now included in base costs
+4. Corporate Showcase and Grand Gala need unit costs entered to complete analysis
+
+INFRASTRUCTURE COSTS INCLUDED (per package):
+
+Package	Power	Flooring	Sanitation	Climate	Infra Total
+Elegant Reception	$325	$650	$150	$425	$1,550
+Grand Celebration	$700	$1,050	$250	$725	$2,725
+Estate Affair	$1,050	$1,350	$350	$1,000	$3,750
+Executive Session	$325	$650	$150	$425	$1,550
+
+COST CHANGES FROM PREVIOUS ANALYSIS:
+- Chairs increased: $9.00 → $9.90 (Chiavari), new $8.03 (Padded)
+- Linens increased: $16.50 → $18.15 (poly), $27.00 → $29.70 (satin/bespoke)
+- Napkins increased: $1.15 → $1.27
+- Lounge updated: $30.57 → $39.96 per vignette
+- Cocktail setup: $33.52 → $36.22
+- Dance floors increased across all sizes
+- Infrastructure now uses single venue scenario (Winery/Garden level)
