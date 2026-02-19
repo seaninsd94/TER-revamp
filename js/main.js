@@ -156,32 +156,41 @@ function initContactForm() {
       }
 
       if (isValid) {
-        // Show success message (replace with actual form submission)
         const submitBtn = form.querySelector('button[type="submit"]');
         const originalText = submitBtn.textContent;
 
         submitBtn.textContent = 'Sending...';
         submitBtn.disabled = true;
 
-        // Simulate form submission (replace with actual AJAX call)
-        setTimeout(() => {
-          submitBtn.textContent = 'Message Sent!';
-          submitBtn.style.background = 'var(--color-green-medium)';
-          form.reset();
+        // Submit to Netlify Forms
+        fetch('/', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: new URLSearchParams(new FormData(form)).toString()
+        })
+        .then(response => {
+          if (response.ok) {
+            submitBtn.textContent = 'Message Sent!';
+            submitBtn.style.background = 'var(--color-green-medium)';
+            form.reset();
 
+            setTimeout(() => {
+              submitBtn.textContent = originalText;
+              submitBtn.disabled = false;
+              submitBtn.style.background = '';
+            }, 3000);
+          } else {
+            throw new Error('Form submission failed');
+          }
+        })
+        .catch(error => {
+          console.error('Error:', error);
+          submitBtn.textContent = 'Error - Try Again';
+          submitBtn.disabled = false;
           setTimeout(() => {
             submitBtn.textContent = originalText;
-            submitBtn.disabled = false;
-            submitBtn.style.background = '';
           }, 3000);
-        }, 1000);
-
-        // Actual form submission would go here:
-        // fetch('/api/contact', {
-        //   method: 'POST',
-        //   headers: { 'Content-Type': 'application/json' },
-        //   body: JSON.stringify(data)
-        // }).then(response => { ... });
+        });
       }
     });
 
