@@ -651,8 +651,10 @@
     const urlParams = new URLSearchParams(window.location.search);
     const packageParam = urlParams.get('package');
     const interestParam = urlParams.get('interest');
+    const typeParam = urlParams.get('type');
 
     const interestedIn = document.getElementById('interested-in');
+    const eventType = document.getElementById('event-type');
     const message = document.getElementById('message');
 
     // Package name mappings
@@ -662,9 +664,9 @@
       'grand': 'Grand Celebration',
       'estate-affair': 'Estate Affair',
       // Corporate Environments
-      'executive-meeting': 'Executive Meeting',
-      'corporate-celebration': 'Corporate Celebration',
-      'grand-corporate-gala': 'Grand Corporate Gala',
+      'executive-session': 'Executive Session',
+      'corporate-showcase': 'Corporate Showcase',
+      'grand-gala': 'Grand Gala',
       // Experiences
       'cocktail-hour': 'Cocktail Hour Experience',
       'lounge-environment': 'Lounge Environment',
@@ -673,12 +675,15 @@
 
     // Map package param to dropdown value
     const packageToDropdown = {
+      // Signature Environments
       'elegant': 'elegant-reception',
       'grand': 'grand-celebration',
       'estate-affair': 'estate-affair',
-      'executive-meeting': 'executive-meeting',
-      'corporate-celebration': 'corporate-celebration',
-      'grand-corporate-gala': 'grand-corporate-gala',
+      // Corporate Environments
+      'executive-session': 'executive-meeting',
+      'corporate-showcase': 'corporate-celebration',
+      'grand-gala': 'grand-corporate-gala',
+      // Experiences
       'cocktail-hour': 'cocktail-hour',
       'lounge-environment': 'lounge-environment',
       'event-concierge': 'event-concierge'
@@ -695,6 +700,11 @@
         const name = packageNames[packageParam] || packageParam;
         message.placeholder = `I'm interested in the ${name} environment. Please provide details about...`;
       }
+    }
+
+    // Handle event type param (for corporate links)
+    if (typeParam && eventType) {
+      eventType.value = typeParam;
     }
 
     // Handle interest param (for individual rental links)
