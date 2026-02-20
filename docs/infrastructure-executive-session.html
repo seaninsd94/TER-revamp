@@ -5,15 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Executive Session Infrastructure | Tasteful Studio</title>
   <style>
-    @page {
-      size: letter;
-      margin: 0.75in;
-    }
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    @page { size: letter; margin: 0.75in; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       font-size: 11pt;
@@ -120,18 +113,20 @@
     .checklist {
       list-style: none;
       padding: 0;
+      columns: 2;
+      column-gap: 30px;
     }
     .checklist li {
-      padding: 6px 0;
-      padding-left: 25px;
+      padding: 5px 0;
+      padding-left: 20px;
       position: relative;
+      break-inside: avoid;
     }
     .checklist li:before {
-      content: "✓";
+      content: "☐";
       position: absolute;
       left: 0;
       color: #1a4d3e;
-      font-weight: bold;
     }
     .note {
       background: #fff8e6;
@@ -149,16 +144,12 @@
       color: #666;
       text-align: center;
     }
-    .contact {
-      margin-top: 10px;
-    }
     .contact a {
       color: #1a4d3e;
       text-decoration: none;
     }
     @media print {
       body { padding: 0; }
-      .no-print { display: none; }
     }
   </style>
 </head>
@@ -172,7 +163,7 @@
   <h1>Executive Session</h1>
   <p class="subtitle">Corporate Environment for 100 Attendees</p>
 
-  <p>The Executive Session environment is designed for board meetings, executive retreats, seminars, and intimate corporate gatherings. This document outlines the complete infrastructure requirements for both standard venues and outdoor/remote locations.</p>
+  <p>The Executive Session environment is designed for board meetings, executive retreats, seminars, and intimate corporate gatherings. This document outlines infrastructure requirements for venues with existing services and remote locations requiring full support.</p>
 
   <h2>Environment Overview</h2>
 
@@ -180,7 +171,7 @@
     <div class="spec-box">
       <div class="spec-label">Tent Structure</div>
       <div class="spec-value">30' x 60'</div>
-      <div>1,800 sq ft capacity</div>
+      <div>1,800 sq ft enclosed space</div>
     </div>
     <div class="spec-box">
       <div class="spec-label">Guest Capacity</div>
@@ -190,65 +181,71 @@
   </div>
 
   <h2>Standard Infrastructure</h2>
-  <p><em>For conference centers, hotels, resorts, and venues with existing power & climate services</em></p>
+  <p><em>For venues with existing power and restroom facilities (hotels, resorts, conference centers)</em></p>
 
   <table>
     <thead>
       <tr>
         <th>Category</th>
         <th>Equipment</th>
-        <th>Quantity</th>
-        <th>Specifications</th>
+        <th>Qty</th>
+        <th>Notes</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td>Power Distribution</td>
-        <td>Spider Box (Twist-Lock)</td>
+        <td>Power</td>
+        <td>Spider Box Distribution</td>
         <td>1</td>
-        <td>50A input, multiple 20A outputs</td>
+        <td>Connects to venue power, 50A input</td>
       </tr>
       <tr>
-        <td>Power Distribution</td>
-        <td>Extension Cords (White)</td>
+        <td>Power</td>
+        <td>Extension Cords (50ft white)</td>
         <td>4</td>
-        <td>50ft, 12-gauge</td>
-      </tr>
-      <tr>
-        <td>Climate</td>
-        <td>High-Velocity Pedestal Fans</td>
-        <td>2</td>
-        <td>20", 5200 CFM</td>
+        <td>12-gauge, venue to tent</td>
       </tr>
       <tr>
         <td>Flooring</td>
-        <td>Stage/Presentation Flooring</td>
-        <td>1</td>
-        <td>As needed for venue</td>
+        <td>Tent Subflooring</td>
+        <td>1,800 sf</td>
+        <td>Leveled platform inside tent</td>
       </tr>
       <tr>
-        <td>Setup</td>
-        <td>Cable Covers & Management</td>
+        <td>Flooring</td>
+        <td>Finished Surface</td>
+        <td>1,800 sf</td>
+        <td>Carpet, vinyl, or composite</td>
+      </tr>
+      <tr>
+        <td>Climate</td>
+        <td>Pedestal Fans (20")</td>
+        <td>2</td>
+        <td>5200 CFM, air circulation</td>
+      </tr>
+      <tr>
+        <td>Climate</td>
+        <td>Portable AC Unit</td>
+        <td>1-2</td>
+        <td>As needed for season</td>
+      </tr>
+      <tr>
+        <td>Safety</td>
+        <td>Cable Covers</td>
         <td>1 set</td>
-        <td>Safety-compliant covers</td>
+        <td>Trip hazard prevention</td>
       </tr>
       <tr>
-        <td>Setup</td>
-        <td>Backstage Power Strip</td>
-        <td>1</td>
-        <td>6-outlet surge protected</td>
-      </tr>
-      <tr>
-        <td>Service</td>
-        <td>Professional Installation</td>
-        <td>32 hrs</td>
-        <td>Setup & breakdown crew</td>
+        <td>Restrooms</td>
+        <td>Venue Facilities</td>
+        <td>—</td>
+        <td>Guest access to venue restrooms</td>
       </tr>
     </tbody>
   </table>
 
   <h2>Outdoor & Remote Venue Package</h2>
-  <p><em>For corporate campus events, vineyard retreats, private estates, and venues without existing infrastructure</em></p>
+  <p><em>For locations without existing infrastructure (vineyards, estates, campus grounds, open fields)</em></p>
 
   <div class="specs">
     <div class="spec-box outdoor">
@@ -259,7 +256,7 @@
     <div class="spec-box outdoor">
       <div class="spec-label">Climate Control</div>
       <div class="spec-value">3.5-5 Ton</div>
-      <div>AC unit with heater/dehumidifier</div>
+      <div>Commercial AC with heater</div>
     </div>
   </div>
 
@@ -268,8 +265,8 @@
       <tr>
         <th>Category</th>
         <th>Equipment</th>
-        <th>Quantity</th>
-        <th>Specifications</th>
+        <th>Qty</th>
+        <th>Notes</th>
       </tr>
     </thead>
     <tbody>
@@ -289,31 +286,31 @@
         <td>Power</td>
         <td>Spider Box Distribution</td>
         <td>1</td>
-        <td>50A input, multi-output</td>
+        <td>Multi-circuit output</td>
+      </tr>
+      <tr>
+        <td>Flooring</td>
+        <td>Tent Subflooring</td>
+        <td>1,800 sf</td>
+        <td>Leveled platform inside tent</td>
+      </tr>
+      <tr>
+        <td>Flooring</td>
+        <td>Finished Surface</td>
+        <td>1,800 sf</td>
+        <td>Carpet, vinyl, or composite</td>
       </tr>
       <tr>
         <td>Climate</td>
-        <td>Commercial AC/Heater Unit</td>
+        <td>Commercial AC/Heater</td>
         <td>1</td>
         <td>3.5-5 Ton, 230V</td>
       </tr>
       <tr>
         <td>Climate</td>
         <td>HVAC Ducting</td>
-        <td>1</td>
-        <td>12ft insulated</td>
-      </tr>
-      <tr>
-        <td>Climate</td>
-        <td>High-Velocity Fans</td>
-        <td>2</td>
-        <td>20", circulation assist</td>
-      </tr>
-      <tr>
-        <td>Flooring</td>
-        <td>Subflooring System</td>
-        <td>1,800 sq ft</td>
-        <td>Leveled, finished surface</td>
+        <td>12ft</td>
+        <td>Insulated flex duct</td>
       </tr>
       <tr>
         <td>Sanitation</td>
@@ -325,7 +322,7 @@
         <td>Safety</td>
         <td>Pathway Lighting</td>
         <td>1 set</td>
-        <td>LED stake lights</td>
+        <td>LED stake lights to restrooms/parking</td>
       </tr>
       <tr>
         <td>Fuel</td>
@@ -338,41 +335,44 @@
 
   <h2>Equipment Checklist</h2>
 
-  <h3>Standard Venue Setup</h3>
+  <h3>Standard Venue</h3>
   <ul class="checklist">
-    <li>Spider box (twist-lock distribution)</li>
-    <li>Extension cords (4x 50ft white)</li>
-    <li>Pedestal fans (2x 20" high-velocity)</li>
-    <li>Cable covers and management system</li>
-    <li>Backstage power strip</li>
-    <li>Stage/presentation flooring</li>
+    <li>Spider box distribution</li>
+    <li>Extension cords (4x 50ft)</li>
+    <li>Tent subflooring (1,800 sf)</li>
+    <li>Finished floor surface</li>
+    <li>Pedestal fans (2x)</li>
+    <li>Portable AC (as needed)</li>
+    <li>Cable covers</li>
+    <li>Venue restroom access confirmed</li>
   </ul>
 
-  <h3>Outdoor/Remote Venue Setup</h3>
+  <h3>Outdoor/Remote Venue</h3>
   <ul class="checklist">
-    <li>20kW towable diesel generator</li>
-    <li>3.5-5 Ton AC unit with heater/dehumidifier</li>
-    <li>12ft HVAC ducting</li>
-    <li>Subflooring (1,800 sq ft)</li>
-    <li>2-stall luxury restroom trailer</li>
+    <li>20kW diesel generator</li>
+    <li>Generator power cords (2x 75ft)</li>
+    <li>Spider box distribution</li>
+    <li>Tent subflooring (1,800 sf)</li>
+    <li>Finished floor surface</li>
+    <li>3.5-5 Ton AC/heater unit</li>
+    <li>HVAC ducting (12ft)</li>
+    <li>2-stall restroom trailer</li>
+    <li>Pathway lighting</li>
     <li>Generator fuel (15-20 gal/day)</li>
-    <li>Spider box + 75ft generator power cords</li>
-    <li>Pathway lighting system</li>
   </ul>
 
   <div class="note">
-    <strong>Note:</strong> Climate requirements calculated at 1 ton AC per 100-150 sq ft. Generator sizing includes headroom for lighting, AV equipment, and climate control startup loads. Actual requirements may vary based on venue conditions, season, and specific event needs.
+    <strong>Note:</strong> Climate requirements based on 1 ton AC per 100-150 sq ft. Generator sizing includes headroom for lighting, AV, and startup loads. Requirements may vary by season and venue conditions.
   </div>
 
   <div class="footer">
-    <strong>TASTEFUL STUDIO</strong><br>
-    Luxury Event Environments
-    <div class="contact">
-      <a href="tel:8582554766">(858) 255-4766</a> &nbsp;|&nbsp;
-      <a href="mailto:concierge@tastefulstudio.com">concierge@tastefulstudio.com</a> &nbsp;|&nbsp;
+    <strong>TASTEFUL STUDIO</strong> &nbsp;|&nbsp; Luxury Event Environments
+    <div class="contact" style="margin-top: 8px;">
+      <a href="tel:8582554766">(858) 255-4766</a> &nbsp;•&nbsp;
+      <a href="mailto:concierge@tastefulstudio.com">concierge@tastefulstudio.com</a> &nbsp;•&nbsp;
       <a href="https://tastefulstudio.com">tastefulstudio.com</a>
     </div>
-    <div style="margin-top: 10px;">San Diego &bull; Los Angeles &bull; Palm Springs</div>
+    <div style="margin-top: 8px;">San Diego &bull; Los Angeles &bull; Palm Springs</div>
   </div>
 
 </body>
