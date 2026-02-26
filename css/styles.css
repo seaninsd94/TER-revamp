@@ -1045,6 +1045,11 @@ img {
     display: none;
   }
 
+  /* Center hero background image better on mobile */
+  .hero-background {
+    object-position: center center;
+  }
+
   .hero-title {
     font-size: 2.5rem;
     letter-spacing: 1px;
@@ -1140,6 +1145,11 @@ img {
     padding: 0.4rem 0.85rem;
     font-size: 0.65rem;
     letter-spacing: 0.5px;
+  }
+
+  /* Hero image centering for small phones */
+  .hero-background {
+    object-position: 50% 30%;
   }
 
   .hero-title {
