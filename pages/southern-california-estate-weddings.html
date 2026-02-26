@@ -31,21 +31,23 @@
 
   <!-- Header -->
   <header class="header">
-    <div class="container header-container">
+    <div class="header-inner">
       <a href="../index.html" class="logo">
         <img src="../images/logo.svg" alt="Tasteful Studio" width="320" height="70" style="height: 50px;">
       </a>
 
-      <nav class="main-nav" aria-label="Main navigation">
+      <nav class="nav">
         <ul class="nav-list">
-          <li class="nav-item"><a href="our-approach.html" class="nav-link">Our Approach</a></li>
-          <li class="nav-item"><a href="packages.html" class="nav-link">Environments</a></li>
-          <li class="nav-item"><a href="stories.html" class="nav-link">Stories</a></li>
-          <li class="nav-item"><a href="corporate.html" class="nav-link">Corporate</a></li>
-          <li class="nav-item"><a href="contact.html" class="btn btn-primary nav-cta">Inquire</a></li>
+          <li><a href="../index.html" class="nav-link">Home</a></li>
+          <li><a href="our-approach.html" class="nav-link">Our Approach</a></li>
+          <li><a href="packages.html" class="nav-link">Environments</a></li>
+          <li><a href="stories.html" class="nav-link">Stories</a></li>
+          <li><a href="corporate.html" class="nav-link">Corporate</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
         </ul>
+        <a href="contact.html" class="btn btn-primary nav-cta">Inquire</a>
 
-        <button class="mobile-menu-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Toggle menu">
+        <button class="mobile-menu-toggle" aria-label="Toggle menu">
           <span></span>
           <span></span>
           <span></span>
@@ -54,20 +56,14 @@
     </div>
   </header>
 
-  <main id="main-content">
-
+<main id="main-content">
   <!-- Hero Section -->
-  <section class="page-hero" style="background: linear-gradient(135deg, var(--color-green-dark) 0%, var(--color-purple-dark) 100%); padding: clamp(100px, 15vh, 160px) 0 clamp(60px, 10vh, 100px);">
-    <div class="container" style="text-align: center;">
-      <p style="font-size: 0.75rem; letter-spacing: 3px; color: rgba(255,255,255,0.6); margin-bottom: var(--spacing-sm); text-transform: uppercase;">From San Diego to Santa Barbara</p>
-      <h1 style="font-family: var(--font-primary); font-size: clamp(2rem, 5vw, 3.5rem); color: var(--color-white); font-weight: 400; margin-bottom: var(--spacing-sm); line-height: 1.2;">
-        Creating Immersive<br>Celebrations
-      </h1>
-      <p style="font-size: 1.15rem; color: rgba(255,255,255,0.9); max-width: 600px; margin: 0 auto var(--spacing-md); line-height: 1.5;">
+  <section class="about-hero">
+    <div class="container">
+      <p style="font-size: 0.875rem; letter-spacing: 2px; opacity: 0.8; margin-bottom: var(--spacing-sm);">SAN DIEGO TO SANTA BARBARA</p>
+      <h1>Creating Immersive<br>Celebrations</h1>
+      <p style="max-width: 650px; margin: var(--spacing-sm) auto 0; opacity: 0.9; font-size: 1.1rem;">
         Luxury estate wedding environments throughout Southern California.
-      </p>
-      <p style="font-size: 0.95rem; color: rgba(255,255,255,0.7); max-width: 550px; margin: 0 auto; line-height: 1.7;">
-        Custom tented celebrations for private estates, from coastal Malibu to the rolling hills of wine country.
       </p>
     </div>
   </section>
@@ -215,26 +211,42 @@
   <!-- Footer -->
   <footer class="footer">
     <div class="container">
-      <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: var(--spacing-md);">
-        <div>
-          <img src="../images/logo-white.svg" alt="Tasteful Studio" width="180" height="40" style="height: 35px; opacity: 0.9;">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <img src="../images/logo-white.svg" alt="Tasteful Studio" width="320" height="70" style="height: 45px;">
+          </div>
+          <p class="footer-description">
+            Designing bespoke event environments for Southern California's most distinguished occasions. Luxury tenting, furnishings, and atmospheric design for discerning hosts.
+          </p>
         </div>
-        <div style="display: flex; gap: var(--spacing-lg); font-size: 0.8rem;">
-          <a href="our-approach.html" style="color: rgba(255,255,255,0.7); text-decoration: none;">Our Approach</a>
-          <a href="packages.html" style="color: rgba(255,255,255,0.7); text-decoration: none;">Environments</a>
-          <a href="stories.html" style="color: rgba(255,255,255,0.7); text-decoration: none;">Stories</a>
-          <a href="corporate.html" style="color: rgba(255,255,255,0.7); text-decoration: none;">Corporate</a>
-          <a href="contact.html" style="color: rgba(255,255,255,0.7); text-decoration: none;">Contact</a>
+
+        <div class="footer-column">
+          <h4 class="footer-title">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="our-approach.html">Our Approach</a></li>
+            <li><a href="packages.html">Environments</a></li>
+            <li><a href="stories.html">Stories</a></li>
+            <li><a href="corporate.html">Corporate</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
         </div>
-        <div style="font-size: 0.8rem; color: rgba(255,255,255,0.6);">
-          <a href="tel:8582554766" style="color: rgba(255,255,255,0.7); text-decoration: none;">(858) 255-4766</a>
+
+        <div class="footer-column">
+          <h4 class="footer-title">Contact Info</h4>
+          <ul class="footer-links">
+            <li><a href="tel:8582554766">(858) 255-4766</a></li>
+            <li><a href="mailto:concierge@tastefulstudio.com">concierge@tastefulstudio.com</a></li>
+            <li>San Diego, CA</li>
+            <li>Serving San Diego, LA &amp; Palm Springs</li>
+          </ul>
         </div>
       </div>
-      <div style="margin-top: var(--spacing-lg); padding-top: var(--spacing-md); border-top: 1px solid rgba(255,255,255,0.1); text-align: center;">
-        <p style="font-size: 0.7rem; color: rgba(255,255,255,0.35); margin: 0 0 var(--spacing-sm); max-width: 700px; margin-left: auto; margin-right: auto; line-height: 1.6;">
-          Tasteful Studio designs luxury wedding and estate event environments in San Diego, Rancho Santa Fe, La Jolla, Newport Beach, Los Angeles, Montecito, and throughout Southern California.
-        </p>
-        <p style="font-size: 0.7rem; color: rgba(255,255,255,0.4); margin: 0;">&copy; 2026 Tasteful Studio &nbsp;|&nbsp; Narrative Environment Designers</p>
+
+      <div class="footer-bottom">
+        <p style="font-size: 0.75rem; color: rgba(255,255,255,0.35); margin-bottom: 0.5rem; max-width: 600px; margin-left: auto; margin-right: auto;">Tasteful Studio designs luxury wedding and estate event environments in San Diego, Rancho Santa Fe, La Jolla, Newport Beach, Los Angeles, Montecito, and throughout Southern California.</p>
+        <p>&copy; 2026 Tasteful Studio. All rights reserved.</p>
       </div>
     </div>
   </footer>
