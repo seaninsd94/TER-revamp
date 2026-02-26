@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Planner Prospecting System | Tasteful Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --color-primary: #1a4d3e;
+      --color-secondary: #2541b2;
+      --color-text: #1a1a1a;
+      --color-text-light: #6c757d;
+      --color-border: #e9ecef;
+      --color-bg-alt: #f8f9fa;
+      --color-tier-a: #1a4d3e;
+      --color-tier-b: #2541b2;
+      --color-tier-c: #6c757d;
+      --font-primary: 'Playfair Display', Georgia, serif;
+      --font-secondary: 'Montserrat', sans-serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: var(--font-secondary);
+      font-size: 13px;
+      line-height: 1.6;
+      color: var(--color-text);
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 30px;
+      background: #fff;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 40px;
+      padding-bottom: 30px;
+      border-bottom: 2px solid var(--color-primary);
+    }
+
+    .logo-text {
+      font-family: var(--font-primary);
+      font-size: 28px;
+      color: var(--color-primary);
+      margin-bottom: 8px;
+      letter-spacing: 2px;
+    }
+
+    .subtitle {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      color: var(--color-text-light);
+      margin-bottom: 20px;
+    }
+
+    .doc-title {
+      font-family: var(--font-primary);
+      font-size: 24px;
+      color: var(--color-primary);
+      margin-bottom: 8px;
+    }
+
+    .doc-description {
+      font-size: 13px;
+      color: var(--color-text-light);
+      font-style: italic;
+    }
+
+    .section {
+      margin-bottom: 35px;
+      page-break-inside: avoid;
+    }
+
+    .section-number {
+      display: inline-block;
+      background: var(--color-primary);
+      color: white;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 28px;
+      font-weight: 600;
+      font-size: 14px;
+      margin-right: 10px;
+    }
+
+    .section-title {
+      font-family: var(--font-primary);
+      font-size: 18px;
+      color: var(--color-primary);
+      margin-bottom: 15px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .geo-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin: 15px 0;
+    }
+
+    .geo-box {
+      background: var(--color-bg-alt);
+      padding: 15px;
+      border-radius: 6px;
+    }
+
+    .geo-box h4 {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--color-primary);
+      margin-bottom: 10px;
+    }
+
+    .geo-box ul {
+      margin-left: 18px;
+      font-size: 13px;
+    }
+
+    .geo-box li {
+      margin-bottom: 5px;
+    }
+
+    .signal-list {
+      background: #fff8e6;
+      border: 1px solid #f0d78c;
+      border-radius: 6px;
+      padding: 15px;
+      margin: 15px 0;
+    }
+
+    .signal-list h4 {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #856404;
+      margin-bottom: 10px;
+    }
+
+    .signal-list ul {
+      margin-left: 18px;
+      color: #856404;
+    }
+
+    .signal-list li {
+      margin-bottom: 5px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 15px 0;
+      font-size: 12px;
+    }
+
+    th {
+      background: var(--color-primary);
+      color: white;
+      padding: 10px 8px;
+      text-align: left;
+      font-weight: 600;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    td {
+      padding: 10px 8px;
+      border-bottom: 1px solid var(--color-border);
+      vertical-align: top;
+    }
+
+    tr:nth-child(even) {
+      background: var(--color-bg-alt);
+    }
+
+    .column-group {
+      margin-bottom: 20px;
+    }
+
+    .column-group h4 {
+      font-size: 13px;
+      color: var(--color-secondary);
+      margin-bottom: 10px;
+      padding-bottom: 5px;
+      border-bottom: 1px dashed var(--color-border);
+    }
+
+    .tier-card {
+      border-radius: 6px;
+      padding: 15px;
+      margin-bottom: 15px;
+    }
+
+    .tier-a {
+      background: linear-gradient(135deg, #1a4d3e 0%, #2d6a4f 100%);
+      color: white;
+    }
+
+    .tier-b {
+      background: linear-gradient(135deg, #2541b2 0%, #4169e1 100%);
+      color: white;
+    }
+
+    .tier-c {
+      background: var(--color-bg-alt);
+      border: 1px solid var(--color-border);
+    }
+
+    .tier-card h4 {
+      font-size: 14px;
+      margin-bottom: 8px;
+    }
+
+    .tier-card p {
+      font-size: 12px;
+      margin-bottom: 10px;
+      opacity: 0.9;
+    }
+
+    .tier-card ul {
+      margin-left: 18px;
+      font-size: 12px;
+    }
+
+    .tier-card li {
+      margin-bottom: 4px;
+    }
+
+    .method-box {
+      background: var(--color-bg-alt);
+      border-left: 3px solid var(--color-secondary);
+      padding: 15px;
+      margin: 12px 0;
+    }
+
+    .method-box h4 {
+      font-size: 13px;
+      color: var(--color-secondary);
+      margin-bottom: 8px;
+    }
+
+    .method-box p {
+      font-size: 12px;
+      color: var(--color-text-light);
+      margin: 0;
+    }
+
+    .avoid-box {
+      background: #fff5f5;
+      border: 1px solid #f5c6cb;
+      border-radius: 6px;
+      padding: 15px;
+      margin: 15px 0;
+    }
+
+    .avoid-box h4 {
+      color: #721c24;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 10px;
+    }
+
+    .avoid-box ul {
+      margin-left: 18px;
+      color: #721c24;
+      font-size: 12px;
+    }
+
+    .goal-box {
+      background: var(--color-primary);
+      color: white;
+      border-radius: 6px;
+      padding: 20px;
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    .goal-box h4 {
+      font-size: 14px;
+      margin-bottom: 15px;
+      font-weight: 500;
+    }
+
+    .goal-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+    }
+
+    .goal-item {
+      background: rgba(255,255,255,0.1);
+      border-radius: 4px;
+      padding: 12px;
+    }
+
+    .goal-number {
+      font-family: var(--font-primary);
+      font-size: 28px;
+      font-weight: 300;
+    }
+
+    .goal-label {
+      font-size: 11px;
+      opacity: 0.9;
+    }
+
+    .checklist {
+      columns: 2;
+      column-gap: 30px;
+      margin: 15px 0;
+    }
+
+    .checklist li {
+      break-inside: avoid;
+      margin-bottom: 8px;
+      padding-left: 25px;
+      position: relative;
+      list-style: none;
+    }
+
+    .checklist li::before {
+      content: "☐";
+      position: absolute;
+      left: 0;
+      color: var(--color-primary);
+    }
+
+    .publications-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 10px 0;
+    }
+
+    .pub-tag {
+      background: var(--color-bg-alt);
+      padding: 4px 10px;
+      border-radius: 12px;
+      font-size: 11px;
+      color: var(--color-text-light);
+    }
+
+    .pub-tag.tier-1 {
+      background: var(--color-primary);
+      color: white;
+    }
+
+    .footer {
+      margin-top: 50px;
+      padding-top: 20px;
+      border-top: 1px solid var(--color-border);
+      text-align: center;
+    }
+
+    .footer p {
+      font-size: 11px;
+      color: var(--color-text-light);
+      margin-bottom: 5px;
+    }
+
+    @media print {
+      body { padding: 20px; font-size: 11px; }
+      .section { page-break-inside: avoid; }
+      .geo-grid { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="logo-text">TASTEFUL STUDIO</div>
+    <div class="subtitle">Business Development System</div>
+    <h1 class="doc-title">Planner Prospecting System</h1>
+    <p class="doc-description">A structured framework to identify, qualify, rank, and approach Southern California planners who coordinate $100K+ events</p>
+  </div>
+
+  <!-- SECTION 1 -->
+  <div class="section">
+    <h2 class="section-title"><span class="section-number">1</span>Target Market Geography</h2>
+    <p style="margin-bottom: 15px; color: var(--color-text-light);">Focus on high-density luxury pockets. You don't want all of Southern California.</p>
+
+    <div class="geo-grid">
+      <div class="geo-box">
+        <h4>Primary Markets</h4>
+        <ul>
+          <li><strong>San Diego</strong> — Rancho Santa Fe, La Jolla estates</li>
+          <li><strong>Newport Beach</strong> — Coastal estates, yacht-adjacent</li>
+          <li><strong>Los Angeles</strong> — Private estates, Hollywood Hills</li>
+          <li><strong>Santa Barbara</strong> — Montecito estates</li>
+        </ul>
+      </div>
+      <div class="geo-box">
+        <h4>Secondary Expansion</h4>
+        <ul>
+          <li><strong>Palm Springs</strong> — Luxury desert buyouts</li>
+          <li><strong>Malibu</strong> — Private oceanfront properties</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="signal-list">
+      <h4>Event Signals You Want</h4>
+      <ul>
+        <li>Estate properties (not hotel ballrooms)</li>
+        <li>Tented builds</li>
+        <li>175–300+ guests</li>
+        <li>Full production lighting</li>
+        <li>Multi-day events</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- SECTION 2 -->
+  <div class="section">
+    <h2 class="section-title"><span class="section-number">2</span>Spreadsheet Structure</h2>
+    <p style="margin-bottom: 20px; color: var(--color-text-light);">Create these columns exactly in Airtable or Google Sheets.</p>
+
+    <div class="column-group">
+      <h4>A. Core Identity</h4>
+      <table>
+        <tr>
+          <th>Column Name</th>
+          <th>Type</th>
+          <th>Notes</th>
+        </tr>
+        <tr>
+          <td>Planner Company Name</td>
+          <td>Text</td>
+          <td>Business name</td>
+        </tr>
+        <tr>
+          <td>Principal Planner Name</td>
+          <td>Text</td>
+          <td>Decision maker</td>
+        </tr>
+        <tr>
+          <td>Website</td>
+          <td>URL</td>
+          <td>Primary website</td>
+        </tr>
+        <tr>
+          <td>Instagram</td>
+          <td>URL</td>
+          <td>@handle</td>
+        </tr>
+        <tr>
+          <td>City Base</td>
+          <td>Dropdown</td>
+          <td>San Diego, LA, Newport, etc.</td>
+        </tr>
+        <tr>
+          <td>Years in Business</td>
+          <td>Number</td>
+          <td>Estimate if needed</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="column-group">
+      <h4>B. Event Scale Indicators</h4>
+      <table>
+        <tr>
+          <th>Column Name</th>
+          <th>Type</th>
+          <th>Notes</th>
+        </tr>
+        <tr>
+          <td>Largest Guest Count Seen</td>
+          <td>Number</td>
+          <td>Estimate from portfolio</td>
+        </tr>
+        <tr>
+          <td>Tent Builds?</td>
+          <td>Checkbox</td>
+          <td>Y/N</td>
+        </tr>
+        <tr>
+          <td>Estate Events?</td>
+          <td>Checkbox</td>
+          <td>Y/N</td>
+        </tr>
+        <tr>
+          <td>Multi-Day Events?</td>
+          <td>Checkbox</td>
+          <td>Y/N</td>
+        </tr>
+        <tr>
+          <td>Aesthetic Tier</td>
+          <td>Rating (1-5)</td>
+          <td>1=mid-market, 5=ultra-luxury</td>
+        </tr>
+        <tr>
+          <td>Publication Features</td>
+          <td>Multi-select</td>
+          <td>List publications</td>
+        </tr>
+      </table>
+
+      <p style="font-size: 12px; color: var(--color-text-light); margin-top: 10px;"><strong>Tier 1 Publications</strong> (if featured, mark as priority):</p>
+      <div class="publications-list">
+        <span class="pub-tag tier-1">Vogue</span>
+        <span class="pub-tag tier-1">Brides</span>
+        <span class="pub-tag tier-1">Martha Stewart Weddings</span>
+        <span class="pub-tag tier-1">Over The Moon</span>
+        <span class="pub-tag tier-1">Style Me Pretty</span>
+      </div>
+    </div>
+
+    <div class="column-group">
+      <h4>C. Production Signals (Very Important)</h4>
+      <p style="font-size: 12px; color: var(--color-text-light); margin-bottom: 10px;">These signals tell you budget scale. Check their Instagram for:</p>
+      <ul class="checklist">
+        <li>Tags of large tent companies</li>
+        <li>Tags of lighting production firms</li>
+        <li>Trussing, chandeliers, flooring visible</li>
+        <li>Custom lounge builds shown</li>
+      </ul>
+      <table>
+        <tr>
+          <th>Column Name</th>
+          <th>Type</th>
+          <th>Notes</th>
+        </tr>
+        <tr>
+          <td>Large Tent Vendor Used</td>
+          <td>Text</td>
+          <td>Company names from tags</td>
+        </tr>
+        <tr>
+          <td>Production Vendor Used</td>
+          <td>Text</td>
+          <td>Lighting/AV companies</td>
+        </tr>
+        <tr>
+          <td>Floral Vendor Tier</td>
+          <td>Rating (1-5)</td>
+          <td>Quality assessment</td>
+        </tr>
+        <tr>
+          <td>Clearspan/Frame Structures?</td>
+          <td>Checkbox</td>
+          <td>Indicates high budget</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="column-group">
+      <h4>D. Compatibility Score</h4>
+      <table>
+        <tr>
+          <th>Score</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td style="text-align: center; font-weight: bold; color: var(--color-text-light);">1</td>
+          <td>Mid-market wedding aesthetic</td>
+        </tr>
+        <tr>
+          <td style="text-align: center; font-weight: bold; color: var(--color-text-light);">3</td>
+          <td>Polished but limited scale</td>
+        </tr>
+        <tr>
+          <td style="text-align: center; font-weight: bold; color: var(--color-primary);">5</td>
+          <td>High-production, estate-level luxury</td>
+        </tr>
+      </table>
+      <p style="font-size: 12px; color: var(--color-text-light); margin-top: 8px;">This score determines outreach priority.</p>
+    </div>
+
+    <div class="column-group">
+      <h4>E. Relationship Stage Tracker</h4>
+      <table>
+        <tr>
+          <th>Column Name</th>
+          <th>Type</th>
+          <th>Options/Notes</th>
+        </tr>
+        <tr>
+          <td>Status</td>
+          <td>Dropdown</td>
+          <td>Not Contacted → Intro Email Sent → Follow-Up Sent → Call Scheduled → Met In Person → Active Collaboration → Dormant</td>
+        </tr>
+        <tr>
+          <td>Date of Last Contact</td>
+          <td>Date</td>
+          <td>Track touchpoints</td>
+        </tr>
+        <tr>
+          <td>Notes</td>
+          <td>Long text</td>
+          <td>Personality, preferences, red flags</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <!-- SECTION 3 -->
+  <div class="section">
+    <h2 class="section-title"><span class="section-number">3</span>How Many to Source</h2>
+    <table>
+      <tr>
+        <th>Tier</th>
+        <th>Count</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td style="font-weight: bold; color: var(--color-tier-a);">Tier 1</td>
+        <td>20</td>
+        <td>High-production luxury planners</td>
+      </tr>
+      <tr>
+        <td style="font-weight: bold; color: var(--color-tier-b);">Tier 2</td>
+        <td>20</td>
+        <td>Solid high-end, scaling planners</td>
+      </tr>
+      <tr>
+        <td style="font-weight: bold; color: var(--color-tier-c);">Aspirational</td>
+        <td>10</td>
+        <td>Stretch targets / emerging luxury</td>
+      </tr>
+      <tr>
+        <td style="font-weight: bold;">TOTAL</td>
+        <td><strong>50</strong></td>
+        <td>You do not need more.</td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- SECTION 4 -->
+  <div class="section">
+    <h2 class="section-title"><span class="section-number">4</span>How to Identify Them</h2>
+
+    <div class="method-box">
+      <h4>Method 1 — Venue Tag Mining</h4>
+      <p>Search Instagram for events at Rancho Santa Fe estates, La Jolla venues, Montecito private estates, Malibu properties. Click event photos. Identify planners tagged. Add to sheet.</p>
+    </div>
+
+    <div class="method-box">
+      <h4>Method 2 — Publication Backtracking</h4>
+      <p>Search: "Southern California wedding featured in Brides" → Open article → Scroll to vendor credits → Extract planner. This filters out low-budget planners instantly.</p>
+    </div>
+
+    <div class="method-box">
+      <h4>Method 3 — Production Vendor Reverse Engineering</h4>
+      <p>Look at major tent/production companies in SoCal. Scroll through their tagged posts. See which planners consistently appear on large builds. Add those planners.</p>
+    </div>
+  </div>
+
+  <!-- SECTION 5 -->
+  <div class="section">
+    <h2 class="section-title"><span class="section-number">5</span>Prioritization Model</h2>
+    <p style="margin-bottom: 15px; color: var(--color-text-light);">Once your 50 are listed, segment by approach strategy:</p>
+
+    <div class="tier-card tier-a">
+      <h4>TIER A — Top 10</h4>
+      <p>Estate events • $200K+ aesthetic • Multi-day builds • Clear production sophistication</p>
+      <ul>
+        <li>Personalized email</li>
+        <li>Custom pitch deck</li>
+        <li>Possibly mailed lookbook</li>
+      </ul>
+    </div>
+
+    <div class="tier-card tier-b">
+      <h4>TIER B — Next 20</h4>
+      <p>Solid high-end weddings • Strong aesthetic • Some tent builds</p>
+      <ul>
+        <li>Standard intro email</li>
+        <li>Follow-up sequence</li>
+        <li>Light relationship building</li>
+      </ul>
+    </div>
+
+    <div class="tier-card tier-c">
+      <h4>TIER C — Remaining 20</h4>
+      <p>Emerging luxury planners • Good potential • Still scaling</p>
+      <ul>
+        <li>Soft introduction</li>
+        <li>Social engagement first</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- SECTION 6 -->
+  <div class="section">
+    <h2 class="section-title"><span class="section-number">6</span>What You're Looking For</h2>
+    <p style="margin-bottom: 15px; color: var(--color-text-light);">Planners who align with your narrative approach:</p>
+    <ul class="checklist" style="columns: 1;">
+      <li>Care about storytelling</li>
+      <li>Use words like "immersive," "intentional," "personal"</li>
+      <li>Show custom installations</li>
+      <li>Avoid Pinterest-heavy duplication</li>
+    </ul>
+    <p style="margin-top: 15px; font-weight: 500; color: var(--color-primary);">You want alignment, not volume.</p>
+  </div>
+
+  <!-- SECTION 7 -->
+  <div class="section">
+    <h2 class="section-title"><span class="section-number">7</span>What to Avoid</h2>
+    <div class="avoid-box">
+      <h4>Red Flags — Skip These Planners</h4>
+      <ul>
+        <li>Market primarily on affordability</li>
+        <li>Offer partial planning only</li>
+        <li>Show primarily venue-based weddings (no builds)</li>
+        <li>Have no evidence of production scale</li>
+      </ul>
+      <p style="margin-top: 12px; font-weight: 500;">They won't convert into $15K+ environment projects.</p>
+    </div>
+  </div>
+
+  <!-- SECTION 8 -->
+  <div class="section">
+    <h2 class="section-title"><span class="section-number">8</span>6-Month Goal</h2>
+    <div class="goal-box">
+      <h4>Ideal End State</h4>
+      <div class="goal-grid">
+        <div class="goal-item">
+          <div class="goal-number">5</div>
+          <div class="goal-label">Planners sending<br>consistent inquiries</div>
+        </div>
+        <div class="goal-item">
+          <div class="goal-number">2</div>
+          <div class="goal-label">Planners sending<br>multi-event referrals</div>
+        </div>
+        <div class="goal-item">
+          <div class="goal-number">1</div>
+          <div class="goal-label">Preferred environment<br>partner relationship</div>
+        </div>
+      </div>
+      <p style="margin-top: 20px; font-size: 13px; opacity: 0.9;">That's all you need.</p>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p><strong>TASTEFUL STUDIO</strong></p>
+    <p>Narrative Environment Designers</p>
+    <p>San Diego &bull; Los Angeles &bull; Palm Springs</p>
+    <p style="margin-top: 10px;">concierge@tastefulstudio.com &bull; (858) 255-4766</p>
+    <p style="margin-top: 15px; font-style: italic;">Internal Document &bull; Not for Distribution</p>
+  </div>
+</body>
+</html>
