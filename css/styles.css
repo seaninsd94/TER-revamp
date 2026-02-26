@@ -239,6 +239,16 @@ img {
   color: var(--color-primary);
 }
 
+/* Nav CTA Button */
+.nav-cta {
+  border-radius: 25px;
+  padding: 0.6rem 1.5rem;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
 /* Mobile Menu Toggle */
 .mobile-menu-toggle {
   display: none;
@@ -1001,6 +1011,15 @@ img {
     padding: var(--spacing-sm);
   }
 
+  /* Header CTA button - elegant mobile version */
+  .nav-cta {
+    padding: 0.5rem 1rem;
+    font-size: 0.7rem;
+    letter-spacing: 1px;
+    border-radius: 20px;
+    white-space: nowrap;
+  }
+
   .nav-list {
     display: none;
     position: absolute;
@@ -1058,6 +1077,11 @@ img {
     grid-template-columns: 1fr !important;
   }
 
+  /* 4-column grids to 2-column on tablet/mobile */
+  [style*="grid-template-columns: repeat(4"] {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
   /* Statistics grids */
   [style*="grid-template-columns: repeat(3"] {
     grid-template-columns: 1fr !important;
@@ -1111,6 +1135,13 @@ img {
 }
 
 @media (max-width: 480px) {
+  /* Header CTA - compact on small mobile */
+  .nav-cta {
+    padding: 0.4rem 0.85rem;
+    font-size: 0.65rem;
+    letter-spacing: 0.5px;
+  }
+
   .hero-title {
     font-size: 1.75rem;
     letter-spacing: 0;
@@ -1132,6 +1163,34 @@ img {
   h1 { font-size: 1.75rem; letter-spacing: 0; }
   h2 { font-size: 1.5rem; letter-spacing: 0; }
   h3 { font-size: 1.25rem; }
+
+  /* 4-column and 2-column grids to single column */
+  [style*="grid-template-columns: repeat(4"],
+  [style*="grid-template-columns: repeat(2"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Roman numerals smaller on mobile */
+  [style*="font-size: 2.5rem"] {
+    font-size: 1.75rem !important;
+  }
+
+  [style*="font-size: 2rem"] {
+    font-size: 1.5rem !important;
+  }
+
+  /* Footer flex layout mobile */
+  footer [style*="display: flex"][style*="justify-content: space-between"] {
+    flex-direction: column !important;
+    text-align: center;
+    gap: var(--spacing-md) !important;
+  }
+
+  footer [style*="display: flex"][style*="gap: var(--spacing-lg)"] {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--spacing-sm) !important;
+  }
 
   .section-title {
     font-size: 1.5rem;
