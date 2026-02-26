@@ -23,13 +23,19 @@
   <meta name="twitter:description" content="We transform personal memories, heirlooms, and defining moments into immersive event environments.">
   <meta name="twitter:image" content="https://tastefulstudio.com/images/og-image.webp">
 
-  <!-- Fonts -->
+  <!-- Fonts - optimized loading -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet"></noscript>
 
   <!-- Styles -->
   <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Preload hero image -->
+  <link rel="preload" as="image" href="images/hero-bg.webp" type="image/webp" media="(min-width: 769px)">
+  <link rel="preload" as="image" href="images/hero-bg-mobile.webp" type="image/webp" media="(max-width: 768px)">
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="images/logo.svg">
@@ -97,10 +103,11 @@
   <!-- HERO SECTION -->
   <!-- ============================================= -->
   <section class="hero">
-    <video class="hero-video" autoplay muted loop playsinline aria-hidden="true">
-      <source src="images/hero-video.mp4" type="video/mp4">
-    </video>
-    <img src="images/hero-bg.webp" alt="" class="hero-background" aria-hidden="true" width="1920" height="1080" fetchpriority="high">
+    <picture>
+      <source media="(max-width: 768px)" srcset="images/hero-bg-mobile.webp" type="image/webp">
+      <source media="(min-width: 769px)" srcset="images/hero-bg.webp" type="image/webp">
+      <img src="images/hero-bg.webp" alt="Elegant outdoor event environment with warm lighting" class="hero-background" width="1920" height="1280" fetchpriority="high">
+    </picture>
     <div class="hero-overlay"></div>
 
     <div class="hero-content">
