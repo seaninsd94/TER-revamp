@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore narrative case studies from Tasteful Studio - real events where personal memories became immersive environments. San Diego, Los Angeles & Palm Springs.">
+
+  <title>Stories | Narrative Event Case Studies | Tasteful Studio</title>
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://tastefulstudio.com/pages/stories.html">
+  <meta property="og:title" content="Stories | Narrative Event Case Studies | Tasteful Studio">
+  <meta property="og:description" content="Real events where personal memories became immersive environments. See how we translate stories into spaces.">
+  <meta property="og:image" content="https://tastefulstudio.com/images/og-image.webp">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Stories | Narrative Event Case Studies | Tasteful Studio">
+  <meta name="twitter:description" content="Real events where personal memories became immersive environments.">
+  <meta name="twitter:image" content="https://tastefulstudio.com/images/og-image.webp">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="../css/styles.css">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="../images/logo.svg">
+
+  <style>
+    .story-card {
+      background: var(--color-white);
+      border-radius: var(--border-radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+      margin-bottom: var(--spacing-xl);
+    }
+    .story-image {
+      height: 400px;
+      background: var(--color-gray-light);
+      position: relative;
+      overflow: hidden;
+    }
+    .story-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .story-image-placeholder {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+      color: white;
+      font-family: var(--font-primary);
+      font-size: 1.5rem;
+      font-style: italic;
+      text-align: center;
+      padding: var(--spacing-md);
+    }
+    .story-content {
+      padding: var(--spacing-lg);
+    }
+    .story-meta {
+      display: flex;
+      gap: var(--spacing-md);
+      margin-bottom: var(--spacing-sm);
+      font-size: 0.8rem;
+      color: var(--color-text-light);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .story-title {
+      font-size: 1.75rem;
+      color: var(--color-primary);
+      margin-bottom: var(--spacing-sm);
+      line-height: 1.3;
+    }
+    .story-subtitle {
+      font-family: var(--font-primary);
+      font-style: italic;
+      color: var(--color-secondary);
+      font-size: 1.1rem;
+      margin-bottom: var(--spacing-md);
+    }
+    .story-section {
+      margin-bottom: var(--spacing-md);
+    }
+    .story-section-title {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--color-primary);
+      margin-bottom: var(--spacing-xs);
+      font-weight: 600;
+    }
+    .story-text {
+      color: var(--color-text-light);
+      line-height: 1.8;
+    }
+    .story-quote {
+      font-family: var(--font-primary);
+      font-style: italic;
+      font-size: 1.25rem;
+      color: var(--color-text);
+      border-left: 3px solid var(--color-secondary);
+      padding-left: var(--spacing-md);
+      margin: var(--spacing-md) 0;
+    }
+    .story-elements {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--spacing-xs);
+      margin-top: var(--spacing-sm);
+    }
+    .story-element {
+      background: var(--color-off-white);
+      padding: 0.35rem 0.75rem;
+      border-radius: var(--border-radius);
+      font-size: 0.8rem;
+      color: var(--color-text-light);
+    }
+    @media (max-width: 768px) {
+      .story-image {
+        height: 280px;
+      }
+      .story-content {
+        padding: var(--spacing-md);
+      }
+      .story-title {
+        font-size: 1.4rem;
+      }
+      .story-meta {
+        flex-direction: column;
+        gap: var(--spacing-xs);
+      }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- ============================================= -->
+  <!-- HEADER & NAVIGATION -->
+  <!-- ============================================= -->
+  <header class="header">
+    <div class="header-inner">
+      <a href="../index.html" class="logo">
+        <img src="../images/logo.svg" alt="Tasteful Studio" width="320" height="70" style="height: 50px;">
+      </a>
+
+      <nav class="nav">
+        <ul class="nav-list">
+          <li><a href="../index.html" class="nav-link">Home</a></li>
+          <li><a href="our-approach.html" class="nav-link">Our Approach</a></li>
+          <li><a href="stories.html" class="nav-link active">Stories</a></li>
+          <li><a href="corporate.html" class="nav-link">Corporate</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+        <a href="contact.html" class="btn btn-primary">Start Your Story</a>
+
+        <button class="mobile-menu-toggle" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+<main id="main-content">
+  <!-- ============================================= -->
+  <!-- PAGE HERO -->
+  <!-- ============================================= -->
+  <section class="about-hero">
+    <div class="container">
+      <p style="font-size: 0.875rem; letter-spacing: 2px; opacity: 0.8; margin-bottom: var(--spacing-sm);">CASE STUDIES</p>
+      <h1>Stories We've Helped Tell</h1>
+      <p style="max-width: 650px; margin: var(--spacing-sm) auto 0; opacity: 0.9; font-size: 1.1rem;">
+        Every environment begins with a conversation. Here's how we've translated personal memories into immersive celebrations.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============================================= -->
+  <!-- CASE STUDIES -->
+  <!-- ============================================= -->
+  <section class="section">
+    <div class="container" style="max-width: 900px;">
+
+      <!-- STORY 1: From Winter in Chicago to a Coastal Celebration -->
+      <article class="story-card" id="coastal-celebration">
+        <div class="story-image">
+          <div class="story-image-placeholder">
+            "The moment I saw the blue, I was back on that pier."
+          </div>
+        </div>
+        <div class="story-content">
+          <div class="story-meta">
+            <span>Wedding</span>
+            <span>200 Guests</span>
+            <span>Del Mar, California</span>
+          </div>
+          <h2 class="story-title">From Winter in Chicago to a Coastal Celebration</h2>
+          <p class="story-subtitle">A love story that began on a frozen pier, told through a California sunset.</p>
+
+          <div class="story-section">
+            <p class="story-section-title">The Memory</p>
+            <p class="story-text">
+              When Sarah and Michael first met, it was February in Chicago. They'd both wandered onto the same frozen pier at Navy Pier, seeking solitude from a city wrapped in grey. She was escaping a difficult conversation. He was trying to find inspiration. They stood in silence for twenty minutes before he finally spoke: "The lake is so still, it looks like glass."
+            </p>
+            <p class="story-text">
+              That moment&mdash;the stillness, the cold, the unexpected warmth of connection&mdash;became the foundation of everything that followed. Four years later, they were planning a wedding in California, but their hearts kept returning to that pier.
+            </p>
+          </div>
+
+          <div class="story-section">
+            <p class="story-section-title">The Challenge</p>
+            <p class="story-text">
+              How do you evoke the feeling of a frozen Chicago pier at a sunset wedding overlooking the Pacific? The obvious approach&mdash;ice sculptures and winter whites&mdash;would feel forced. We needed to capture the emotion, not the temperature.
+            </p>
+          </div>
+
+          <div class="story-section">
+            <p class="story-section-title">The Environment</p>
+            <p class="story-text">
+              We designed the space around stillness and reflection. Cool blue-grey undertones in the linens. Mirrored surfaces that caught the light like frozen water. Crystal chandeliers that cast the same quality of light as winter sun through clouds. The tent itself was positioned so guests would be facing west during the ceremony&mdash;watching the Pacific turn to glass as the sun set.
+            </p>
+            <p class="story-text">
+              At each place setting, guests found a small card with a single line: "The lake is so still, it looks like glass." No one knew what it meant. Everyone felt what it meant.
+            </p>
+          </div>
+
+          <blockquote class="story-quote">
+            "My mother kept asking why she felt so emotional. She couldn't explain it. That's when I knew we'd done something right."
+          </blockquote>
+
+          <div class="story-section">
+            <p class="story-section-title">Design Elements</p>
+            <div class="story-elements">
+              <span class="story-element">Sailcloth Pavilion</span>
+              <span class="story-element">Crystal Chandeliers</span>
+              <span class="story-element">Mirrored Table Runners</span>
+              <span class="story-element">Cool Blue Uplighting</span>
+              <span class="story-element">Glass Lantern Aisle</span>
+              <span class="story-element">Harvest Tables</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- STORY 2: A Grandmother's Legacy Reimagined -->
+      <article class="story-card" id="grandmothers-legacy">
+        <div class="story-image">
+          <div class="story-image-placeholder">
+            "She's been gone ten years, but she was at every table."
+          </div>
+        </div>
+        <div class="story-content">
+          <div class="story-meta">
+            <span>50th Anniversary</span>
+            <span>150 Guests</span>
+            <span>Rancho Santa Fe, California</span>
+          </div>
+          <h2 class="story-title">A Grandmother's Legacy Reimagined</h2>
+          <p class="story-subtitle">When three generations of women carry the same handkerchief.</p>
+
+          <div class="story-section">
+            <p class="story-section-title">The Memory</p>
+            <p class="story-text">
+              When the Rodriguez family came to us about Richard and Elena's 50th anniversary celebration, they brought a box. Inside were fifty years of photographs, a pressed flower from their wedding bouquet, Elena's mother's embroidered handkerchief, and a collection of recipe cards in three different handwritings&mdash;grandmother, mother, daughter.
+            </p>
+            <p class="story-text">
+              "My grandmother started these recipes," Elena's daughter Maria explained. "My mother added her variations. I've added mine. This is how we've talked to each other across generations." The cards were stained with olive oil and tomato sauce. They smelled like Sunday dinners.
+            </p>
+          </div>
+
+          <div class="story-section">
+            <p class="story-section-title">The Challenge</p>
+            <p class="story-text">
+              This wasn't just a party&mdash;it was a celebration of lineage, of tradition passed down, of love expressed through food and handwriting and the quiet rituals of family. How do you honor something so intimate on a scale meant for 150 guests?
+            </p>
+          </div>
+
+          <div class="story-section">
+            <p class="story-section-title">The Environment</p>
+            <p class="story-text">
+              We designed the space as an extension of the family kitchen. The color palette drew from the handwritten recipe cards&mdash;the warm cream of aged paper, the faded red of tomato stains, the deep green of olive oil bottles. The table linens were custom embroidered with patterns inspired by Elena's mother's handkerchief.
+            </p>
+            <p class="story-text">
+              At the center of each table, instead of traditional centerpieces, we placed framed reproductions of the family recipes&mdash;enlarged so guests could read the handwriting, the corrections, the notes in the margins. The bar featured drinks named after family members. The escort cards were printed on vintage recipe card stock.
+            </p>
+            <p class="story-text">
+              And in a quiet corner of the tent, we created a small display: the original handkerchief, pressed and framed, alongside photographs of three generations of women carrying it at their own weddings.
+            </p>
+          </div>
+
+          <blockquote class="story-quote">
+            "Grandmother's been gone ten years. But when guests walked in, they said they could feel her. She was at every table. In every detail. That's the gift you gave us."
+          </blockquote>
+
+          <div class="story-section">
+            <p class="story-section-title">Design Elements</p>
+            <div class="story-elements">
+              <span class="story-element">Custom Embroidered Linens</span>
+              <span class="story-element">Warm Amber Lighting</span>
+              <span class="story-element">Recipe Card Centerpieces</span>
+              <span class="story-element">Family Archive Display</span>
+              <span class="story-element">Heritage Color Palette</span>
+              <span class="story-element">Heirloom Integration</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- STORY 3: A Founder's Journey Told Through Space -->
+      <article class="story-card" id="founders-journey">
+        <div class="story-image">
+          <div class="story-image-placeholder">
+            "I built this company from a garage. They needed to remember that."
+          </div>
+        </div>
+        <div class="story-content">
+          <div class="story-meta">
+            <span>Company Anniversary</span>
+            <span>300 Guests</span>
+            <span>La Jolla, California</span>
+          </div>
+          <h2 class="story-title">A Founder's Journey Told Through Space</h2>
+          <p class="story-subtitle">Twenty-five years of innovation, designed as a walk through time.</p>
+
+          <div class="story-section">
+            <p class="story-section-title">The Memory</p>
+            <p class="story-text">
+              When David Chen founded his biotech company in 1999, he was working out of his parents' garage with $15,000 and a conviction that science could change lives. Twenty-five years later, his company employed 400 people and had developed treatments that reached millions of patients. The anniversary celebration wasn't just a party&mdash;it was a moment to reconnect 300 employees with the purpose behind their work.
+            </p>
+            <p class="story-text">
+              "They see the corporate headquarters now," David told us. "They don't see the garage. They don't see the years of failure. They don't see why we do this."
+            </p>
+          </div>
+
+          <div class="story-section">
+            <p class="story-section-title">The Challenge</p>
+            <p class="story-text">
+              Corporate events often feel corporate&mdash;polished but impersonal, celebrating achievements without conveying meaning. How do you design an environment that reminds 300 people why they come to work every day?
+            </p>
+          </div>
+
+          <div class="story-section">
+            <p class="story-section-title">The Environment</p>
+            <p class="story-text">
+              We designed the event as a journey through space. Guests entered through a recreation of the original garage&mdash;complete with the actual workbench David still kept, his father's tools, and the whiteboard where he'd sketched his first product design. The lighting was warm, slightly dim, intimate.
+            </p>
+            <p class="story-text">
+              As guests moved through the space, the environment evolved. The materials shifted from raw and industrial to refined and modern. The lighting grew brighter. The ceiling rose. By the time they reached the main celebration space, they'd physically experienced the company's transformation.
+            </p>
+            <p class="story-text">
+              Throughout the tent, we integrated artifacts from the company's history: early prototypes, rejection letters that had been framed (David's idea), photographs of the team at different stages. And at each place setting, guests found a card with a handwritten note from a patient whose life had been changed by the company's work.
+            </p>
+          </div>
+
+          <blockquote class="story-quote">
+            "I watched our VP of Engineering, who's been with us for 20 years, stand in that garage recreation and cry. She'd forgotten why she stayed. Now she remembered."
+          </blockquote>
+
+          <div class="story-section">
+            <p class="story-section-title">Design Elements</p>
+            <div class="story-elements">
+              <span class="story-element">Journey-Based Layout</span>
+              <span class="story-element">Historical Artifact Display</span>
+              <span class="story-element">Progressive Lighting Design</span>
+              <span class="story-element">Architectural Transitions</span>
+              <span class="story-element">Personal Storytelling</span>
+              <span class="story-element">Purpose-Driven Details</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ============================================= -->
+  <!-- YOUR STORY -->
+  <!-- ============================================= -->
+  <section class="section section-alt">
+    <div class="container">
+      <div style="max-width: 700px; margin: 0 auto; text-align: center;">
+        <p class="section-subtitle">Your Story</p>
+        <h2 class="section-title">Every celebration has a story waiting to be told.</h2>
+        <p style="color: var(--color-text-light); font-size: 1.05rem; line-height: 1.8; margin-bottom: var(--spacing-md);">
+          What's the memory that started it all? The heirloom you've been waiting to honor? The journey that brought you here? We're ready to listen.
+        </p>
+        <a href="contact.html" class="btn btn-primary">Start Your Story Consultation</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================= -->
+  <!-- CTA SECTION -->
+  <!-- ============================================= -->
+  <section class="cta-section">
+    <div class="container">
+      <p style="font-size: 0.75rem; letter-spacing: 2px; color: rgba(255,255,255,0.6); margin-bottom: var(--spacing-sm);">
+        SAN DIEGO &bull; LOS ANGELES &bull; PALM SPRINGS
+      </p>
+      <h2 class="cta-title" style="font-weight: 400;">Your story deserves more than d&eacute;cor.</h2>
+      <p style="color: rgba(255,255,255,0.8); font-size: 1.05rem; margin: var(--spacing-sm) 0 var(--spacing-md);">
+        Let's create an environment that reflects your journey.
+      </p>
+      <a href="contact.html" class="btn btn-outline-white">Begin Your Consultation</a>
+    </div>
+  </section>
+
+</main>
+
+  <!-- ============================================= -->
+  <!-- FOOTER -->
+  <!-- ============================================= -->
+  <footer class="footer">
+    <div class="container">
+      <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: var(--spacing-md);">
+        <div>
+          <img src="../images/logo-white.svg" alt="Tasteful Studio" width="180" height="40" style="height: 35px; opacity: 0.9;">
+        </div>
+        <div style="display: flex; gap: var(--spacing-lg); font-size: 0.8rem;">
+          <a href="our-approach.html" style="color: rgba(255,255,255,0.7); text-decoration: none;">Our Approach</a>
+          <a href="stories.html" style="color: rgba(255,255,255,0.7); text-decoration: none;">Stories</a>
+          <a href="corporate.html" style="color: rgba(255,255,255,0.7); text-decoration: none;">Corporate</a>
+          <a href="contact.html" style="color: rgba(255,255,255,0.7); text-decoration: none;">Contact</a>
+        </div>
+        <div style="font-size: 0.8rem; color: rgba(255,255,255,0.6);">
+          <a href="tel:8582554766" style="color: rgba(255,255,255,0.7); text-decoration: none;">(858) 255-4766</a>
+        </div>
+      </div>
+      <div style="margin-top: var(--spacing-lg); padding-top: var(--spacing-md); border-top: 1px solid rgba(255,255,255,0.1); text-align: center;">
+        <p style="font-size: 0.7rem; color: rgba(255,255,255,0.4); margin: 0;">&copy; 2026 Tasteful Studio &nbsp;|&nbsp; Narrative Environment Designers</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+
+</body>
+</html>
