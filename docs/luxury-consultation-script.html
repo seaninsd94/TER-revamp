@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Luxury Consultation Script | Tasteful Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --color-primary: #1a4d3e;
+      --color-secondary: #2541b2;
+      --color-text: #1a1a1a;
+      --color-text-light: #6c757d;
+      --color-border: #e9ecef;
+      --color-bg-alt: #f8f9fa;
+      --font-primary: 'Playfair Display', Georgia, serif;
+      --font-secondary: 'Montserrat', sans-serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: var(--font-secondary);
+      font-size: 14px;
+      line-height: 1.6;
+      color: var(--color-text);
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px 30px;
+      background: #fff;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 40px;
+      padding-bottom: 30px;
+      border-bottom: 2px solid var(--color-primary);
+    }
+
+    .logo-text {
+      font-family: var(--font-primary);
+      font-size: 28px;
+      color: var(--color-primary);
+      margin-bottom: 8px;
+      letter-spacing: 2px;
+    }
+
+    .subtitle {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      color: var(--color-text-light);
+      margin-bottom: 20px;
+    }
+
+    .doc-title {
+      font-family: var(--font-primary);
+      font-size: 24px;
+      color: var(--color-primary);
+      margin-bottom: 8px;
+    }
+
+    .doc-description {
+      font-size: 13px;
+      color: var(--color-text-light);
+      font-style: italic;
+    }
+
+    .phase {
+      margin-bottom: 35px;
+      page-break-inside: avoid;
+    }
+
+    .phase-header {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 15px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .phase-number {
+      font-family: var(--font-primary);
+      font-size: 32px;
+      font-weight: 300;
+      color: var(--color-primary);
+      letter-spacing: 2px;
+      min-width: 50px;
+    }
+
+    .phase-title {
+      font-family: var(--font-primary);
+      font-size: 18px;
+      color: var(--color-primary);
+      font-weight: 500;
+    }
+
+    .phase-subtitle {
+      font-size: 12px;
+      color: var(--color-text-light);
+      font-style: italic;
+      margin-top: 2px;
+    }
+
+    .script-box {
+      background: var(--color-bg-alt);
+      border-left: 3px solid var(--color-primary);
+      padding: 20px;
+      margin: 15px 0;
+      font-style: italic;
+      color: var(--color-text);
+      line-height: 1.7;
+    }
+
+    .script-box p {
+      margin: 0;
+    }
+
+    .instruction {
+      color: var(--color-text-light);
+      font-size: 13px;
+      margin: 12px 0;
+    }
+
+    .questions-list {
+      margin: 15px 0 15px 20px;
+    }
+
+    .questions-list li {
+      margin-bottom: 10px;
+      padding-left: 10px;
+      color: var(--color-text);
+    }
+
+    .questions-list li::marker {
+      color: var(--color-secondary);
+    }
+
+    .note-box {
+      background: #fff8e6;
+      border: 1px solid #f0d78c;
+      border-radius: 4px;
+      padding: 15px;
+      margin: 15px 0;
+      font-size: 13px;
+    }
+
+    .note-box strong {
+      color: var(--color-primary);
+    }
+
+    .action-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      margin: 10px 0;
+      padding: 10px 15px;
+      background: var(--color-bg-alt);
+      border-radius: 4px;
+      font-size: 13px;
+    }
+
+    .action-item::before {
+      content: "\2713";
+      color: var(--color-primary);
+      font-weight: bold;
+    }
+
+    .divider {
+      height: 1px;
+      background: var(--color-border);
+      margin: 30px 0;
+    }
+
+    .footer {
+      margin-top: 50px;
+      padding-top: 20px;
+      border-top: 1px solid var(--color-border);
+      text-align: center;
+    }
+
+    .footer p {
+      font-size: 11px;
+      color: var(--color-text-light);
+      margin-bottom: 5px;
+    }
+
+    .purpose-box {
+      background: var(--color-primary);
+      color: white;
+      padding: 20px;
+      border-radius: 4px;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .purpose-box h3 {
+      font-family: var(--font-primary);
+      font-size: 14px;
+      margin-bottom: 8px;
+      font-weight: 500;
+      letter-spacing: 1px;
+    }
+
+    .purpose-box p {
+      font-size: 12px;
+      opacity: 0.9;
+      margin: 0;
+    }
+
+    @media print {
+      body { padding: 20px; }
+      .phase { page-break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="logo-text">TASTEFUL STUDIO</div>
+    <div class="subtitle">Narrative Environment Designers</div>
+    <h1 class="doc-title">Luxury Consultation Script</h1>
+    <p class="doc-description">A structured approach to pre-qualify and elevate client conversations</p>
+  </div>
+
+  <div class="purpose-box">
+    <h3>PURPOSE OF THIS SCRIPT</h3>
+    <p>Guide discovery conversations that reveal client stories, establish value, and position our narrative approach before discussing logistics or pricing.</p>
+  </div>
+
+  <!-- PHASE I -->
+  <div class="phase">
+    <div class="phase-header">
+      <span class="phase-number">I</span>
+      <div>
+        <div class="phase-title">Framing</div>
+        <div class="phase-subtitle">Set the tone before logistics</div>
+      </div>
+    </div>
+
+    <div class="script-box">
+      <p>"Before we discuss logistics, I'd love to understand what this celebration represents for you."</p>
+    </div>
+
+    <p class="instruction">This opener immediately signals that we are different. We lead with meaning, not inventory. Let them share openly before asking structured questions.</p>
+  </div>
+
+  <!-- PHASE II -->
+  <div class="phase">
+    <div class="phase-header">
+      <span class="phase-number">II</span>
+      <div>
+        <div class="phase-title">Memory Extraction</div>
+        <div class="phase-subtitle">Uncover the story beneath the event</div>
+      </div>
+    </div>
+
+    <p class="instruction">Ask these questions with genuine curiosity. Take notes. These details become the foundation of their environment design.</p>
+
+    <ul class="questions-list">
+      <li><strong>What season or location defines your relationship?</strong><br>
+        <span style="color: var(--color-text-light); font-size: 12px;">Listen for: first trips, meaningful places, weather/atmosphere associations</span></li>
+      <li><strong>Is there an object that holds emotional weight?</strong><br>
+        <span style="color: var(--color-text-light); font-size: 12px;">Listen for: heirlooms, photographs, letters, textiles, keepsakes</span></li>
+      <li><strong>What feeling do you want guests to experience upon arrival?</strong><br>
+        <span style="color: var(--color-text-light); font-size: 12px;">Listen for: emotional words (warmth, surprise, intimacy, grandeur)</span></li>
+      <li><strong>What part of your journey deserves honoring?</strong><br>
+        <span style="color: var(--color-text-light); font-size: 12px;">Listen for: transitions, achievements, relationships, losses, growth</span></li>
+    </ul>
+
+    <div class="note-box">
+      <strong>Key Actions:</strong> Listen actively. Take detailed notes. Repeat back themes you hear to confirm understanding and show you're genuinely engaged.
+    </div>
+  </div>
+
+  <!-- PHASE III -->
+  <div class="phase">
+    <div class="phase-header">
+      <span class="phase-number">III</span>
+      <div>
+        <div class="phase-title">Reframing Into Environment</div>
+        <div class="phase-subtitle">Translate their story into design language</div>
+      </div>
+    </div>
+
+    <p class="instruction">This is where you demonstrate your expertise. Connect their memories to tangible design elements.</p>
+
+    <div class="script-box">
+      <p>"So what I'm hearing is warmth, legacy, and transition. We would translate that into layered textures, generational details, and progressive lighting shifts throughout the evening."</p>
+    </div>
+
+    <p class="instruction">Customize this based on what they shared. Examples of translations:</p>
+
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin: 15px 0; font-size: 13px;">
+      <div style="background: var(--color-bg-alt); padding: 12px; border-radius: 4px;">
+        <strong style="color: var(--color-primary);">They say:</strong> "Coastal, peaceful"<br>
+        <strong style="color: var(--color-secondary);">You say:</strong> "Cool-toned lighting, natural textures, flowing layouts"
+      </div>
+      <div style="background: var(--color-bg-alt); padding: 12px; border-radius: 4px;">
+        <strong style="color: var(--color-primary);">They say:</strong> "Family traditions"<br>
+        <strong style="color: var(--color-secondary);">You say:</strong> "Heritage color palettes, heirloom integration, generational details"
+      </div>
+      <div style="background: var(--color-bg-alt); padding: 12px; border-radius: 4px;">
+        <strong style="color: var(--color-primary);">They say:</strong> "Our journey together"<br>
+        <strong style="color: var(--color-secondary);">You say:</strong> "Progressive spatial transitions, story arc through the evening"
+      </div>
+      <div style="background: var(--color-bg-alt); padding: 12px; border-radius: 4px;">
+        <strong style="color: var(--color-primary);">They say:</strong> "Intimate, meaningful"<br>
+        <strong style="color: var(--color-secondary);">You say:</strong> "Warm lighting, conversation-focused layouts, tactile materials"
+      </div>
+    </div>
+
+    <div class="note-box">
+      <strong>Now they see your value.</strong> You've transformed abstract feelings into concrete design direction. This is what separates us from rental catalogs.
+    </div>
+  </div>
+
+  <!-- PHASE IV -->
+  <div class="phase">
+    <div class="phase-header">
+      <span class="phase-number">IV</span>
+      <div>
+        <div class="phase-title">Investment Framing</div>
+        <div class="phase-subtitle">Position pricing within value context</div>
+      </div>
+    </div>
+
+    <p class="instruction">Only discuss investment after you've established value through the story conversation.</p>
+
+    <div class="script-box">
+      <p>"Our narrative environments typically begin in the mid-five-figure range depending on scope, production, and installation complexity. We design everything bespoke around your story."</p>
+    </div>
+
+    <p class="instruction" style="font-weight: 600; color: var(--color-primary); margin-top: 20px;">Pause.</p>
+    <p class="instruction">Let them respond. Give them space to process. Silence is powerful here.</p>
+
+    <div class="note-box">
+      <strong>If they hesitate on price:</strong> "I understand. Our approach isn't for everyone, and that's okay. For clients who value deeply personal environments, this investment reflects the research, design, sourcing, and execution that goes into translating a story into a space."
+    </div>
+  </div>
+
+  <!-- PHASE V -->
+  <div class="phase">
+    <div class="phase-header">
+      <span class="phase-number">V</span>
+      <div>
+        <div class="phase-title">Close</div>
+        <div class="phase-subtitle">Establish clear next steps</div>
+      </div>
+    </div>
+
+    <div class="script-box">
+      <p>"If this direction feels aligned, the next step is a formal design proposal. We'll craft a preliminary narrative concept and investment outline for your review."</p>
+    </div>
+
+    <p class="instruction">What happens next:</p>
+
+    <div class="action-item">Schedule follow-up within 48 hours to send proposal</div>
+    <div class="action-item">Send thank-you email within 24 hours referencing specific details from conversation</div>
+    <div class="action-item">Prepare preliminary narrative concept based on their story</div>
+    <div class="action-item">Include 2-3 visual references that align with their emotional themes</div>
+  </div>
+
+  <div class="divider"></div>
+
+  <div style="background: var(--color-bg-alt); padding: 20px; border-radius: 4px; margin-top: 30px;">
+    <h3 style="font-family: var(--font-primary); font-size: 14px; color: var(--color-primary); margin-bottom: 12px;">Key Principles to Remember</h3>
+    <ul style="font-size: 13px; margin-left: 20px; color: var(--color-text-light);">
+      <li style="margin-bottom: 8px;"><strong>Lead with story, not inventory.</strong> Never open with "what do you need?"</li>
+      <li style="margin-bottom: 8px;"><strong>Listen more than you speak.</strong> They should talk 70% of the time in Phase II.</li>
+      <li style="margin-bottom: 8px;"><strong>Use their words.</strong> Repeat back their language when reframing into design.</li>
+      <li style="margin-bottom: 8px;"><strong>Don't rush to price.</strong> Value must be established first.</li>
+      <li style="margin-bottom: 8px;"><strong>Be comfortable with silence.</strong> Let them process.</li>
+      <li><strong>Not every client is right for us.</strong> Qualify gracefully.</li>
+    </ul>
+  </div>
+
+  <div class="footer">
+    <p><strong>TASTEFUL STUDIO</strong></p>
+    <p>Narrative Environment Designers</p>
+    <p>San Diego &bull; Los Angeles &bull; Palm Springs</p>
+    <p style="margin-top: 10px;">concierge@tastefulstudio.com &bull; (858) 255-4766</p>
+    <p style="margin-top: 15px; font-style: italic;">Internal Document &bull; Not for Distribution</p>
+  </div>
+</body>
+</html>

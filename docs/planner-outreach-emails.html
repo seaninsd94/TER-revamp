@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Planner Outreach Email Sequence | Tasteful Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --color-primary: #1a4d3e;
+      --color-secondary: #2541b2;
+      --color-text: #1a1a1a;
+      --color-text-light: #6c757d;
+      --color-border: #e9ecef;
+      --color-bg-alt: #f8f9fa;
+      --font-primary: 'Playfair Display', Georgia, serif;
+      --font-secondary: 'Montserrat', sans-serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: var(--font-secondary);
+      font-size: 14px;
+      line-height: 1.6;
+      color: var(--color-text);
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px 30px;
+      background: #fff;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 40px;
+      padding-bottom: 30px;
+      border-bottom: 2px solid var(--color-primary);
+    }
+
+    .logo-text {
+      font-family: var(--font-primary);
+      font-size: 28px;
+      color: var(--color-primary);
+      margin-bottom: 8px;
+      letter-spacing: 2px;
+    }
+
+    .subtitle {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      color: var(--color-text-light);
+      margin-bottom: 20px;
+    }
+
+    .doc-title {
+      font-family: var(--font-primary);
+      font-size: 24px;
+      color: var(--color-primary);
+      margin-bottom: 8px;
+    }
+
+    .doc-description {
+      font-size: 13px;
+      color: var(--color-text-light);
+      font-style: italic;
+    }
+
+    .tone-box {
+      background: var(--color-primary);
+      color: white;
+      padding: 20px;
+      border-radius: 4px;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .tone-box h3 {
+      font-family: var(--font-primary);
+      font-size: 14px;
+      margin-bottom: 8px;
+      font-weight: 500;
+      letter-spacing: 1px;
+    }
+
+    .tone-box p {
+      font-size: 12px;
+      opacity: 0.9;
+      margin: 0;
+    }
+
+    .email-section {
+      margin-bottom: 40px;
+      page-break-inside: avoid;
+    }
+
+    .email-header {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .email-number {
+      background: var(--color-primary);
+      color: white;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 600;
+      font-size: 16px;
+    }
+
+    .email-meta {
+      flex: 1;
+    }
+
+    .email-title {
+      font-family: var(--font-primary);
+      font-size: 18px;
+      color: var(--color-primary);
+      font-weight: 500;
+      margin-bottom: 3px;
+    }
+
+    .email-timing {
+      font-size: 12px;
+      color: var(--color-text-light);
+      font-style: italic;
+    }
+
+    .email-preview {
+      background: white;
+      border: 1px solid var(--color-border);
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    .email-subject-bar {
+      background: var(--color-bg-alt);
+      padding: 12px 20px;
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .email-subject-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--color-text-light);
+      margin-bottom: 4px;
+    }
+
+    .email-subject {
+      font-weight: 600;
+      color: var(--color-text);
+    }
+
+    .email-body {
+      padding: 25px;
+      line-height: 1.8;
+    }
+
+    .email-body p {
+      margin-bottom: 15px;
+    }
+
+    .email-body .greeting {
+      margin-bottom: 20px;
+    }
+
+    .email-body .signature {
+      margin-top: 25px;
+      color: var(--color-text-light);
+    }
+
+    .placeholder {
+      background: #fff3cd;
+      padding: 2px 6px;
+      border-radius: 3px;
+      font-weight: 500;
+      color: #856404;
+    }
+
+    .note-box {
+      background: #e8f4f8;
+      border: 1px solid #b8daeb;
+      border-radius: 4px;
+      padding: 15px;
+      margin-top: 15px;
+      font-size: 13px;
+    }
+
+    .note-box strong {
+      color: var(--color-secondary);
+    }
+
+    .sequence-overview {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+      margin-bottom: 35px;
+    }
+
+    .sequence-step {
+      background: var(--color-bg-alt);
+      padding: 15px;
+      border-radius: 4px;
+      text-align: center;
+    }
+
+    .sequence-step .day {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--color-text-light);
+      margin-bottom: 5px;
+    }
+
+    .sequence-step .purpose {
+      font-size: 13px;
+      color: var(--color-primary);
+      font-weight: 500;
+    }
+
+    .divider {
+      height: 1px;
+      background: var(--color-border);
+      margin: 30px 0;
+    }
+
+    .footer {
+      margin-top: 50px;
+      padding-top: 20px;
+      border-top: 1px solid var(--color-border);
+      text-align: center;
+    }
+
+    .footer p {
+      font-size: 11px;
+      color: var(--color-text-light);
+      margin-bottom: 5px;
+    }
+
+    .tips-section {
+      background: var(--color-bg-alt);
+      padding: 25px;
+      border-radius: 4px;
+      margin-top: 30px;
+    }
+
+    .tips-section h3 {
+      font-family: var(--font-primary);
+      font-size: 14px;
+      color: var(--color-primary);
+      margin-bottom: 15px;
+    }
+
+    .tips-section ul {
+      margin-left: 20px;
+      font-size: 13px;
+      color: var(--color-text-light);
+    }
+
+    .tips-section li {
+      margin-bottom: 8px;
+    }
+
+    @media print {
+      body { padding: 20px; }
+      .email-section { page-break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="logo-text">TASTEFUL STUDIO</div>
+    <div class="subtitle">Narrative Environment Designers</div>
+    <h1 class="doc-title">Planner Outreach Email Sequence</h1>
+    <p class="doc-description">Professional email templates for building planner partnerships</p>
+  </div>
+
+  <div class="tone-box">
+    <h3>TONE GUIDANCE</h3>
+    <p>Professional, not salesy. Collaborative, not pushy. Position yourself as a resource, not a vendor seeking business.</p>
+  </div>
+
+  <h3 style="font-family: var(--font-primary); font-size: 14px; color: var(--color-primary); margin-bottom: 15px; text-transform: uppercase; letter-spacing: 1px;">Sequence Overview</h3>
+
+  <div class="sequence-overview">
+    <div class="sequence-step">
+      <div class="day">Day 1</div>
+      <div class="purpose">Introduction</div>
+    </div>
+    <div class="sequence-step">
+      <div class="day">Day 6</div>
+      <div class="purpose">Case Study</div>
+    </div>
+    <div class="sequence-step">
+      <div class="day">Day 12</div>
+      <div class="purpose">Soft Close</div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- EMAIL 1 -->
+  <div class="email-section">
+    <div class="email-header">
+      <div class="email-number">1</div>
+      <div class="email-meta">
+        <div class="email-title">Introduction Email</div>
+        <div class="email-timing">Send on Day 1 &mdash; Initial contact</div>
+      </div>
+    </div>
+
+    <div class="email-preview">
+      <div class="email-subject-bar">
+        <div class="email-subject-label">Subject Line</div>
+        <div class="email-subject">A Narrative-Driven Environment Partner for Your Clients</div>
+      </div>
+      <div class="email-body">
+        <p class="greeting">Hi <span class="placeholder">[Planner Name]</span>,</p>
+
+        <p>Tasteful Studio specializes in immersive event environments that integrate personal memories, heirlooms, and story-driven design into elevated celebrations.</p>
+
+        <p>We act as narrative environment partners &mdash; translating client journeys into spatial experiences that feel intentional and deeply personal.</p>
+
+        <p>I'd love to connect and explore how we can support your upcoming events.</p>
+
+        <p class="signature">
+          Best,<br>
+          <span class="placeholder">[Your Name]</span><br>
+          <span style="font-size: 12px; color: var(--color-text-light);">Tasteful Studio</span>
+        </p>
+      </div>
+    </div>
+
+    <div class="note-box">
+      <strong>Purpose:</strong> Establish who we are and our unique positioning. Keep it brief. No ask beyond connection.
+    </div>
+  </div>
+
+  <!-- EMAIL 2 -->
+  <div class="email-section">
+    <div class="email-header">
+      <div class="email-number">2</div>
+      <div class="email-meta">
+        <div class="email-title">Case Study Follow-Up</div>
+        <div class="email-timing">Send on Day 6 &mdash; 5 days after Email 1</div>
+      </div>
+    </div>
+
+    <div class="email-preview">
+      <div class="email-subject-bar">
+        <div class="email-subject-label">Subject Line</div>
+        <div class="email-subject">A Quick Example of Our Approach</div>
+      </div>
+      <div class="email-body">
+        <p class="greeting">Hi <span class="placeholder">[Planner Name]</span>,</p>
+
+        <p>Recently, we transformed a couple's first-date story into a fully immersive reception environment &mdash; incorporating artifacts and emotional transitions through lighting and materiality.</p>
+
+        <p>Our process is collaborative, planner-friendly, and fully managed by our team.</p>
+
+        <p>Would you be open to a 20-minute introduction call?</p>
+
+        <p class="signature">
+          Best,<br>
+          <span class="placeholder">[Your Name]</span>
+        </p>
+      </div>
+    </div>
+
+    <div class="note-box">
+      <strong>Purpose:</strong> Demonstrate value through example. Show, don't tell. First soft ask for a call.
+    </div>
+  </div>
+
+  <!-- EMAIL 3 -->
+  <div class="email-section">
+    <div class="email-header">
+      <div class="email-number">3</div>
+      <div class="email-meta">
+        <div class="email-title">Soft Close</div>
+        <div class="email-timing">Send on Day 12 &mdash; 6 days after Email 2</div>
+      </div>
+    </div>
+
+    <div class="email-preview">
+      <div class="email-subject-bar">
+        <div class="email-subject-label">Subject Line</div>
+        <div class="email-subject">Collaboration Opportunity</div>
+      </div>
+      <div class="email-body">
+        <p class="greeting">Hi <span class="placeholder">[Planner Name]</span>,</p>
+
+        <p>We're expanding partnerships in Southern California and would love to support your clients who value personalized, immersive environments.</p>
+
+        <p>If it's helpful, I can share a brief lookbook outlining our Memory Mapping Method&trade;.</p>
+
+        <p class="signature">
+          Warm regards,<br>
+          <span class="placeholder">[Your Name]</span>
+        </p>
+      </div>
+    </div>
+
+    <div class="note-box">
+      <strong>Purpose:</strong> Final touchpoint. Offer tangible value (lookbook). Give them an easy "yes" without commitment.
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="tips-section">
+    <h3>Best Practices for Planner Outreach</h3>
+    <ul>
+      <li><strong>Research first.</strong> Reference a specific event they've done or their design aesthetic.</li>
+      <li><strong>Personalize the opening.</strong> Replace generic greetings with something specific: "I loved the garden reception you designed for the Martinez wedding."</li>
+      <li><strong>Keep emails under 150 words.</strong> Planners are busy. Respect their time.</li>
+      <li><strong>Never attach files in initial emails.</strong> Offer to send materials if they're interested.</li>
+      <li><strong>Follow up thoughtfully.</strong> If no response after 3 emails, wait 30 days before re-engaging.</li>
+      <li><strong>Track everything.</strong> Note which planners open, respond, or request materials.</li>
+      <li><strong>Be patient.</strong> Partnerships develop over time. One event referral can lead to many more.</li>
+    </ul>
+  </div>
+
+  <div class="tips-section" style="margin-top: 20px; background: #fff8e6; border: 1px solid #f0d78c;">
+    <h3 style="color: #856404;">Subject Line Alternatives</h3>
+    <ul style="color: #856404;">
+      <li><strong>Email 1:</strong> "Story-Driven Environments for Your Clients" / "A Different Approach to Event Design"</li>
+      <li><strong>Email 2:</strong> "How We Turned a Memory Into an Environment" / "A Recent Collaboration Example"</li>
+      <li><strong>Email 3:</strong> "Partnership Opportunity" / "Resources for Your Upcoming Events"</li>
+    </ul>
+  </div>
+
+  <div class="footer">
+    <p><strong>TASTEFUL STUDIO</strong></p>
+    <p>Narrative Environment Designers</p>
+    <p>San Diego &bull; Los Angeles &bull; Palm Springs</p>
+    <p style="margin-top: 10px;">concierge@tastefulstudio.com &bull; (858) 255-4766</p>
+    <p style="margin-top: 15px; font-style: italic;">Internal Document &bull; Not for Distribution</p>
+  </div>
+</body>
+</html>
