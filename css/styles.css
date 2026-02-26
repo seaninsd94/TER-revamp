@@ -1047,7 +1047,7 @@ img {
 
   /* Center hero background image better on mobile */
   .hero-background {
-    object-position: 35% center;
+    object-position: 60% center;
   }
 
   .hero-title {
@@ -1149,7 +1149,7 @@ img {
 
   /* Hero image centering for small phones */
   .hero-background {
-    object-position: 30% 30%;
+    object-position: 60% center;
   }
 
   .hero-title {
