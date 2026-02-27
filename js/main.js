@@ -162,11 +162,11 @@ function initContactForm() {
         submitBtn.textContent = 'Sending...';
         submitBtn.disabled = true;
 
-        // Submit to Netlify Forms
-        fetch('/', {
+        // Submit to Formspree
+        fetch(form.action, {
           method: 'POST',
-          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-          body: new URLSearchParams(new FormData(form)).toString()
+          headers: { 'Accept': 'application/json' },
+          body: new FormData(form)
         })
         .then(response => {
           if (response.ok) {
@@ -180,7 +180,9 @@ function initContactForm() {
               submitBtn.style.background = '';
             }, 3000);
           } else {
-            throw new Error('Form submission failed');
+            return response.json().then(data => {
+              throw new Error(data.error || 'Form submission failed');
+            });
           }
         })
         .catch(error => {
