@@ -16,6 +16,135 @@
 
   <!-- Styles -->
   <link rel="stylesheet" href="../css/styles.css">
+  <style>
+    .package-card {
+      background: var(--color-white);
+      border-radius: var(--border-radius-lg);
+      box-shadow: var(--shadow-md);
+      overflow: hidden;
+      transition: transform var(--transition-base), box-shadow var(--transition-base);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .package-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .package-image {
+      height: 220px;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+
+    .package-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform var(--transition-base);
+    }
+
+    .package-card:hover .package-image img {
+      transform: scale(1.05);
+    }
+
+    .package-content {
+      padding: var(--spacing-md);
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .package-title {
+      font-size: 1.5rem;
+      margin-bottom: var(--spacing-xs);
+      color: var(--color-primary);
+    }
+
+    .package-subtitle {
+      font-size: 0.875rem;
+      color: var(--color-secondary);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: var(--spacing-sm);
+    }
+
+    .package-description {
+      color: var(--color-text-light);
+      margin-bottom: var(--spacing-sm);
+      min-height: 3em;
+    }
+
+    .package-includes {
+      list-style: none;
+      margin-bottom: var(--spacing-md);
+      padding: var(--spacing-sm);
+      background: var(--color-off-white);
+      border-radius: var(--border-radius);
+      flex-grow: 1;
+    }
+
+    .package-includes li {
+      padding: var(--spacing-xs) 0;
+      display: flex;
+      align-items: center;
+      gap: var(--spacing-xs);
+      font-size: 0.95rem;
+    }
+
+    .package-includes li::before {
+      content: "✓";
+      color: var(--color-primary);
+      font-weight: bold;
+    }
+
+    .package-footer {
+      margin-top: auto;
+    }
+
+    .packages-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: var(--spacing-md);
+      align-items: stretch;
+    }
+
+    .packages-grid-3 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media (max-width: 1024px) {
+      .packages-grid-3 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .packages-grid-3 {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .package-featured {
+      border: 3px solid var(--color-secondary);
+      position: relative;
+    }
+
+    .package-badge {
+      position: absolute;
+      top: var(--spacing-sm);
+      right: var(--spacing-sm);
+      background: var(--color-secondary);
+      color: var(--color-white);
+      padding: 0.25rem 0.75rem;
+      border-radius: var(--border-radius);
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+  </style>
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="../images/logo.svg">
@@ -155,117 +284,104 @@
   <section class="section section-alt">
     <div class="container">
       <div class="section-header">
-        <p class="section-subtitle">Curated Packages</p>
-        <h2 class="section-title">Wedding Rental Packages</h2>
+        <p class="section-subtitle">Wedding Environments</p>
+        <h2 class="section-title">Complete Wedding Experiences</h2>
         <p class="section-description">
-          Our wedding packages are designed to simplify your planning while ensuring every detail reflects the elegance your day deserves.
+          Our wedding environments are designed for couples investing in a complete guest experience. Each includes concierge-level service and meticulous attention to atmosphere.
         </p>
       </div>
 
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: var(--spacing-lg);">
-        <div style="background: var(--color-white); border-radius: var(--border-radius-lg); overflow: hidden; box-shadow: var(--shadow-md);">
-          <div style="background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark)); color: white; padding: var(--spacing-lg); text-align: center;">
-            <h3 style="font-family: var(--font-secondary); font-size: 1.5rem; margin-bottom: var(--spacing-xs);">Elegant Reception</h3>
-            <p style="opacity: 0.9;">Up to 100 Guests</p>
+      <div class="packages-grid packages-grid-3">
+        <!-- Elegant Reception -->
+        <div class="package-card">
+          <div class="package-image">
+            <img src="../images/package-elegant.webp" alt="Elegant Reception Environment" width="800" height="500" loading="lazy">
           </div>
-          <div style="padding: var(--spacing-lg);">
-            <p style="font-size: 2rem; font-weight: 700; color: var(--color-primary); text-align: center; margin-bottom: var(--spacing-md);">Starting at $5,499</p>
-            <ul style="list-style: none; padding: 0;">
-              <li style="padding: var(--spacing-xs) 0; display: flex; align-items: center; gap: var(--spacing-xs); font-size: 0.95rem;">
-                <span style="color: var(--color-primary);">&#10003;</span> Grand Ballroom Tent
-              </li>
-              <li style="padding: var(--spacing-xs) 0; display: flex; align-items: center; gap: var(--spacing-xs); font-size: 0.95rem;">
-                <span style="color: var(--color-primary);">&#10003;</span> 100 Chiavari Chairs
-              </li>
-              <li style="padding: var(--spacing-xs) 0; display: flex; align-items: center; gap: var(--spacing-xs); font-size: 0.95rem;">
-                <span style="color: var(--color-primary);">&#10003;</span> 12 Round Tables with Linens
-              </li>
-              <li style="padding: var(--spacing-xs) 0; display: flex; align-items: center; gap: var(--spacing-xs); font-size: 0.95rem;">
-                <span style="color: var(--color-primary);">&#10003;</span> Crystal Chandelier
-              </li>
-              <li style="padding: var(--spacing-xs) 0; display: flex; align-items: center; gap: var(--spacing-xs); font-size: 0.95rem;">
-                <span style="color: var(--color-primary);">&#10003;</span> 15' x 15' Dance Floor
-              </li>
-              <li style="padding: var(--spacing-xs) 0; display: flex; align-items: center; gap: var(--spacing-xs); font-size: 0.95rem;">
-                <span style="color: var(--color-primary);">&#10003;</span> LED Uplighting
-              </li>
+          <div class="package-content">
+            <p class="package-subtitle">Up to 100 Guests</p>
+            <h3 class="package-title">Elegant Reception</h3>
+            <p class="package-description">
+              A refined environment for weddings that demand elegance and attention to detail.
+            </p>
+            <ul class="package-includes">
+              <li>Grand Ballroom Structure</li>
+              <li>Formal Dining for 100</li>
+              <li>Chiavari Seating Collection</li>
+              <li>Premium Linen Suite</li>
+              <li>Crystal Chandelier</li>
+              <li>Ambient Uplighting Design</li>
+              <li>Dance Floor Environment</li>
+              <li>White-Glove Setup & Breakdown</li>
             </ul>
-            <a href="contact.html?package=elegant" class="btn btn-primary" style="width: 100%; margin-top: var(--spacing-md);">Request Quote</a>
+            <div class="package-footer">
+              <a href="contact.html?package=elegant" class="btn btn-primary" style="width: 100%;">Request Consultation</a>
+            </div>
           </div>
         </div>
 
-        <div style="background: var(--color-white); border-radius: var(--border-radius-lg); overflow: hidden; box-shadow: var(--shadow-md); border: 3px solid var(--color-secondary);">
-          <div style="background: linear-gradient(135deg, var(--color-secondary), var(--color-accent-dark)); color: white; padding: var(--spacing-lg); text-align: center; position: relative;">
-            <span style="position: absolute; top: var(--spacing-sm); right: var(--spacing-sm); background: white; color: var(--color-secondary); padding: 0.25rem 0.75rem; border-radius: var(--border-radius); font-size: 0.75rem; font-weight: 600;">MOST POPULAR</span>
-            <h3 style="font-family: var(--font-secondary); font-size: 1.5rem; margin-bottom: var(--spacing-xs);">Grand Celebration</h3>
-            <p style="opacity: 0.9;">Up to 200 Guests</p>
+        <!-- Grand Celebration - Featured -->
+        <div class="package-card package-featured">
+          <span class="package-badge">Most Popular</span>
+          <div class="package-image">
+            <img src="../images/package-grand.webp" alt="Grand Celebration Environment" width="800" height="500" loading="lazy">
           </div>
-          <div style="padding: var(--spacing-lg);">
-            <p style="font-size: 2rem; font-weight: 700; color: var(--color-primary); text-align: center; margin-bottom: var(--spacing-md);">Starting at $14,999</p>
-            <ul style="list-style: none; padding: 0;">
-              <li style="padding: var(--spacing-xs) 0; display: flex; align-items: center; gap: var(--spacing-xs); font-size: 0.95rem;">
-                <span style="color: var(--color-primary);">&#10003;</span> Regency Celebration Pavilion
-              </li>
-              <li style="padding: var(--spacing-xs) 0; display: flex; align-items: center; gap: var(--spacing-xs); font-size: 0.95rem;">
-                <span style="color: var(--color-primary);">&#10003;</span> 200 Chiavari Chairs
-              </li>
-              <li style="padding: var(--spacing-xs) 0; display: flex; align-items: center; gap: var(--spacing-xs); font-size: 0.95rem;">
-                <span style="color: var(--color-primary);">&#10003;</span> 25 Tables with Premium Linens
-              </li>
-              <li style="padding: var(--spacing-xs) 0; display: flex; align-items: center; gap: var(--spacing-xs); font-size: 0.95rem;">
-                <span style="color: var(--color-primary);">&#10003;</span> 3 Crystal Chandeliers
-              </li>
-              <li style="padding: var(--spacing-xs) 0; display: flex; align-items: center; gap: var(--spacing-xs); font-size: 0.95rem;">
-                <span style="color: var(--color-primary);">&#10003;</span> 21' x 21' Dance Floor
-              </li>
-              <li style="padding: var(--spacing-xs) 0; display: flex; align-items: center; gap: var(--spacing-xs); font-size: 0.95rem;">
-                <span style="color: var(--color-primary);">&#10003;</span> Full Lighting Package
-              </li>
-              <li style="padding: var(--spacing-xs) 0; display: flex; align-items: center; gap: var(--spacing-xs); font-size: 0.95rem;">
-                <span style="color: var(--color-primary);">&#10003;</span> Classic Cocktail Hour Experience
-              </li>
+          <div class="package-content">
+            <p class="package-subtitle">Up to 200 Guests</p>
+            <h3 class="package-title">Grand Celebration</h3>
+            <p class="package-description">
+              A complete environment for large weddings that demand exceptional presence.
+            </p>
+            <ul class="package-includes">
+              <li>The Regency Celebration Pavilion</li>
+              <li>Formal Dining for 200</li>
+              <li>Chiavari Seating Collection</li>
+              <li>Premium Linen & Napkin Suite</li>
+              <li>Crystal Chandelier Trio</li>
+              <li>Full Lighting Environment</li>
+              <li>Grand Dance Floor</li>
+              <li>Classic Cocktail Hour Experience</li>
+              <li>Event Planning Consultation</li>
+              <li>White-Glove Setup & Breakdown</li>
             </ul>
-            <a href="contact.html?package=grand" class="btn btn-secondary" style="width: 100%; margin-top: var(--spacing-md);">Request Quote</a>
+            <div class="package-footer">
+              <a href="contact.html?package=grand" class="btn btn-secondary" style="width: 100%;">Request Consultation</a>
+            </div>
           </div>
         </div>
 
-        <div style="background: var(--color-white); border-radius: var(--border-radius-lg); overflow: hidden; box-shadow: var(--shadow-md);">
-          <div style="background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark)); color: white; padding: var(--spacing-lg); text-align: center;">
-            <h3 style="font-family: var(--font-secondary); font-size: 1.5rem; margin-bottom: var(--spacing-xs);">Estate Affair</h3>
-            <p style="opacity: 0.9;">Up to 250 Guests</p>
+        <!-- Estate Affair -->
+        <div class="package-card">
+          <div class="package-image">
+            <img src="../images/package-estate.webp" alt="Estate Affair Environment" width="800" height="500" loading="lazy">
           </div>
-          <div style="padding: var(--spacing-lg);">
-            <p style="font-size: 2rem; font-weight: 700; color: var(--color-primary); text-align: center; margin-bottom: var(--spacing-md);">Starting at $29,999</p>
-            <ul style="list-style: none; padding: 0;">
-              <li style="padding: var(--spacing-xs) 0; display: flex; align-items: center; gap: var(--spacing-xs); font-size: 0.95rem;">
-                <span style="color: var(--color-primary);">&#10003;</span> Heritage Grand Pavilion
-              </li>
-              <li style="padding: var(--spacing-xs) 0; display: flex; align-items: center; gap: var(--spacing-xs); font-size: 0.95rem;">
-                <span style="color: var(--color-primary);">&#10003;</span> 250 Gold Chiavari Chairs
-              </li>
-              <li style="padding: var(--spacing-xs) 0; display: flex; align-items: center; gap: var(--spacing-xs); font-size: 0.95rem;">
-                <span style="color: var(--color-primary);">&#10003;</span> 30 Tables with Bespoke Linens
-              </li>
-              <li style="padding: var(--spacing-xs) 0; display: flex; align-items: center; gap: var(--spacing-xs); font-size: 0.95rem;">
-                <span style="color: var(--color-primary);">&#10003;</span> 5 Crystal Chandeliers
-              </li>
-              <li style="padding: var(--spacing-xs) 0; display: flex; align-items: center; gap: var(--spacing-xs); font-size: 0.95rem;">
-                <span style="color: var(--color-primary);">&#10003;</span> Elevated Cocktail Hour Experience
-              </li>
-              <li style="padding: var(--spacing-xs) 0; display: flex; align-items: center; gap: var(--spacing-xs); font-size: 0.95rem;">
-                <span style="color: var(--color-primary);">&#10003;</span> Personal Concierge Service
-              </li>
-              <li style="padding: var(--spacing-xs) 0; display: flex; align-items: center; gap: var(--spacing-xs); font-size: 0.95rem;">
-                <span style="color: var(--color-primary);">&#10003;</span> Event Planning Consultation
-              </li>
+          <div class="package-content">
+            <p class="package-subtitle">Up to 250 Guests</p>
+            <h3 class="package-title">Estate Affair</h3>
+            <p class="package-description">
+              Our most comprehensive environment for grand weddings that demand the finest.
+            </p>
+            <ul class="package-includes">
+              <li>The Heritage Grand Pavilion</li>
+              <li>Formal Dining for 250</li>
+              <li>Gold Chiavari Collection</li>
+              <li>Bespoke Linen & Napkin Suite</li>
+              <li>Crystal Chandelier Quintet</li>
+              <li>Designer Lighting Environment</li>
+              <li>Grand Dance Floor</li>
+              <li>Elevated Cocktail Hour Experience</li>
+              <li>Personal Concierge Service</li>
+              <li>Event Planning Consultation</li>
+              <li>White-Glove Setup & Breakdown</li>
             </ul>
-            <a href="contact.html?package=estate-affair" class="btn btn-primary" style="width: 100%; margin-top: var(--spacing-md);">Request Quote</a>
+            <div class="package-footer">
+              <a href="contact.html?package=estate-affair" class="btn btn-primary" style="width: 100%;">Request Consultation</a>
+            </div>
           </div>
         </div>
       </div>
 
-      <p style="text-align: center; margin-top: var(--spacing-lg); color: var(--color-text-light);">
-        Every package includes white-glove delivery, professional setup, and complete breakdown. <a href="packages.html" style="color: var(--color-primary); font-weight: 600;">View all packages</a>
+      <p style="text-align: center; margin-top: var(--spacing-md); font-size: 0.9rem; color: var(--color-text-light);">
+        <strong>Optional Enhancements:</strong> Signature Cocktail Hour Upgrade • Designer Lounge Environments • Premium Bar Display • Champagne Feature Station
       </p>
     </div>
   </section>
