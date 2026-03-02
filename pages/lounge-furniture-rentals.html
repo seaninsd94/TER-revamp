@@ -16,6 +16,142 @@
 
   <!-- Styles -->
   <link rel="stylesheet" href="../css/styles.css">
+  <style>
+    .package-card {
+      background: var(--color-white);
+      border-radius: var(--border-radius-lg);
+      box-shadow: var(--shadow-md);
+      overflow: hidden;
+      transition: transform var(--transition-base), box-shadow var(--transition-base);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .package-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .package-image {
+      height: 220px;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+
+    .package-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform var(--transition-base);
+    }
+
+    .package-card:hover .package-image img {
+      transform: scale(1.05);
+    }
+
+    .package-content {
+      padding: var(--spacing-md);
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .package-title {
+      font-size: 1.5rem;
+      margin-bottom: var(--spacing-xs);
+      color: var(--color-primary);
+    }
+
+    .package-subtitle {
+      font-size: 0.875rem;
+      color: var(--color-secondary);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: var(--spacing-sm);
+    }
+
+    .package-description {
+      color: var(--color-text-light);
+      margin-bottom: var(--spacing-sm);
+      min-height: 3em;
+    }
+
+    .package-includes {
+      list-style: none;
+      margin-bottom: var(--spacing-md);
+      padding: var(--spacing-sm);
+      background: var(--color-off-white);
+      border-radius: var(--border-radius);
+      flex-grow: 1;
+    }
+
+    .package-includes li {
+      padding: var(--spacing-xs) 0;
+      display: flex;
+      align-items: center;
+      gap: var(--spacing-xs);
+      font-size: 0.95rem;
+    }
+
+    .package-includes li::before {
+      content: "✓";
+      color: var(--color-primary);
+      font-weight: bold;
+    }
+
+    .package-footer {
+      margin-top: auto;
+    }
+
+    .packages-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: var(--spacing-md);
+      align-items: stretch;
+    }
+
+    .packages-grid-3 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .packages-grid-2 {
+      grid-template-columns: repeat(2, 1fr);
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 1024px) {
+      .packages-grid-3 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .packages-grid-3,
+      .packages-grid-2 {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .package-featured {
+      border: 3px solid var(--color-secondary);
+      position: relative;
+    }
+
+    .package-badge {
+      position: absolute;
+      top: var(--spacing-sm);
+      right: var(--spacing-sm);
+      background: var(--color-secondary);
+      color: var(--color-white);
+      padding: 0.25rem 0.75rem;
+      border-radius: var(--border-radius);
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+  </style>
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="../images/logo.svg">
@@ -212,33 +348,69 @@
   <section class="section">
     <div class="container">
       <div class="section-header">
-        <p class="section-subtitle">Design Made Simple</p>
+        <p class="section-subtitle">Lounge Environments</p>
         <h2 class="section-title">Curated Lounge Vignettes</h2>
         <p class="section-description">
-          Our design team has assembled expertly curated lounge vignettes that take the guesswork out of event design. Each vignette includes complementary pieces selected to create a cohesive, sophisticated aesthetic.
+          Our design team has assembled expertly curated lounge vignettes for clients investing in atmosphere and guest comfort. Each vignette includes complementary pieces selected to create a cohesive, sophisticated aesthetic.
         </p>
       </div>
 
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: var(--spacing-lg); max-width: 1000px; margin: 0 auto;">
-        <div style="background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark)); padding: var(--spacing-lg); border-radius: var(--border-radius-lg); color: white; text-align: center;">
-          <h3 style="color: white; margin-bottom: var(--spacing-sm); font-size: 1.5rem;">Classic Vignette</h3>
-          <p style="opacity: 0.9; margin-bottom: var(--spacing-md); font-size: 0.95rem;">
-            One plush settee, two accent chairs, one cocktail table, two side tables. Perfect for 8-10 guests.
-          </p>
-          <p style="font-size: 0.85rem; opacity: 0.8;">Ideal for cocktail hours and intimate receptions</p>
+      <div class="packages-grid packages-grid-2">
+        <!-- Classic Vignette -->
+        <div class="package-card">
+          <div class="package-image">
+            <img src="../images/lounge-classic.webp" alt="Classic Lounge Vignette" width="800" height="500" loading="lazy">
+          </div>
+          <div class="package-content">
+            <p class="package-subtitle">8-10 Guests</p>
+            <h3 class="package-title">Classic Vignette</h3>
+            <p class="package-description">
+              An elegant lounge arrangement perfect for cocktail hours and intimate receptions.
+            </p>
+            <ul class="package-includes">
+              <li>Plush Velvet Settee</li>
+              <li>Two Sculptural Accent Chairs</li>
+              <li>Statement Cocktail Table</li>
+              <li>Two Artisan Side Tables</li>
+              <li>Coordinated Styling</li>
+              <li>White-Glove Setup & Breakdown</li>
+            </ul>
+            <div class="package-footer">
+              <a href="contact.html?interest=lounge-classic" class="btn btn-primary" style="width: 100%;">Request Consultation</a>
+            </div>
+          </div>
         </div>
 
-        <div style="background: linear-gradient(135deg, var(--color-secondary), var(--color-secondary-dark)); padding: var(--spacing-lg); border-radius: var(--border-radius-lg); color: white; text-align: center;">
-          <h3 style="color: white; margin-bottom: var(--spacing-sm); font-size: 1.5rem;">Grand Vignette</h3>
-          <p style="opacity: 0.9; margin-bottom: var(--spacing-md); font-size: 0.95rem;">
-            Two settees, four accent chairs, two cocktail tables, four side tables. Perfect for 20+ guests.
-          </p>
-          <p style="font-size: 0.85rem; opacity: 0.8;">Ideal for grand celebrations and estate affairs</p>
+        <!-- Grand Vignette - Featured -->
+        <div class="package-card package-featured">
+          <span class="package-badge">Most Popular</span>
+          <div class="package-image">
+            <img src="../images/lounge-grand.webp" alt="Grand Lounge Vignette" width="800" height="500" loading="lazy">
+          </div>
+          <div class="package-content">
+            <p class="package-subtitle">20+ Guests</p>
+            <h3 class="package-title">Grand Vignette</h3>
+            <p class="package-description">
+              A complete lounge environment for grand celebrations and estate affairs.
+            </p>
+            <ul class="package-includes">
+              <li>Two Designer Settees</li>
+              <li>Four Accent Chairs</li>
+              <li>Two Statement Cocktail Tables</li>
+              <li>Four Artisan Side Tables</li>
+              <li>Ottoman Collection</li>
+              <li>Designer Styling & Arrangement</li>
+              <li>White-Glove Setup & Breakdown</li>
+            </ul>
+            <div class="package-footer">
+              <a href="contact.html?interest=lounge-grand" class="btn btn-secondary" style="width: 100%;">Request Consultation</a>
+            </div>
+          </div>
         </div>
       </div>
 
-      <p style="text-align: center; margin-top: var(--spacing-lg); color: var(--color-text-light);">
-        Custom vignettes available upon request. <a href="contact.html?interest=lounge" style="color: var(--color-primary); font-weight: 600;">Contact our design team</a> for a personalized consultation.
+      <p style="text-align: center; margin-top: var(--spacing-md); font-size: 0.9rem; color: var(--color-text-light);">
+        <strong>Optional Enhancements:</strong> Custom Upholstery Selection &bull; Additional Accent Pieces &bull; Coordinating Rugs &bull; Throw Pillows & Textiles
       </p>
     </div>
   </section>
