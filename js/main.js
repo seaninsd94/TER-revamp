@@ -1,5 +1,5 @@
 /**
- * Tasteful Environments - Main JavaScript
+ * Tasteful Studio - Main JavaScript
  * Handles navigation, animations, and interactivity
  */
 
