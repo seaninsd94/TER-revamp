@@ -30,6 +30,147 @@
 
   <!-- Styles -->
   <link rel="stylesheet" href="../css/styles.css">
+  <style>
+    .package-card {
+      background: var(--color-white);
+      border-radius: var(--border-radius-lg);
+      overflow: hidden;
+      transition: transform var(--transition-base), box-shadow var(--transition-base);
+      display: flex;
+      flex-direction: column;
+      border: 1px solid var(--color-gray-light);
+    }
+
+    .package-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--color-primary);
+    }
+
+    .package-image {
+      height: 240px;
+      overflow: hidden;
+      flex-shrink: 0;
+      position: relative;
+    }
+
+    .package-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .package-card:hover .package-image img {
+      transform: scale(1.03);
+    }
+
+    .package-header {
+      padding: var(--spacing-md) var(--spacing-md) 0;
+      border-bottom: 1px solid var(--color-gray-light);
+      margin-bottom: var(--spacing-sm);
+      padding-bottom: var(--spacing-sm);
+    }
+
+    .package-content {
+      padding: var(--spacing-md);
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .package-subtitle {
+      font-size: 0.8rem;
+      color: var(--color-secondary);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-weight: 500;
+      margin-bottom: var(--spacing-sm);
+      display: inline-block;
+      padding: 0.3rem 0;
+      border-top: 1px solid var(--color-gray-light);
+      border-bottom: 1px solid var(--color-gray-light);
+    }
+
+    .package-title {
+      font-size: 1.5rem;
+      margin-bottom: 0.25rem;
+      color: var(--color-primary);
+      font-weight: 600;
+    }
+
+    .package-description {
+      color: var(--color-text-light);
+      margin-bottom: var(--spacing-sm);
+      font-size: 0.95rem;
+      line-height: 1.6;
+      min-height: 3em;
+    }
+
+    .package-includes {
+      list-style: none;
+      margin-bottom: var(--spacing-md);
+      padding: 0;
+      flex-grow: 1;
+    }
+
+    .package-includes li {
+      padding: 0.5rem 0;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      font-size: 0.9rem;
+      color: var(--color-text);
+      border-bottom: 1px solid rgba(0,0,0,0.05);
+    }
+
+    .package-includes li:last-child {
+      border-bottom: none;
+    }
+
+    .package-includes li::before {
+      content: "";
+      width: 6px;
+      height: 6px;
+      background: var(--color-primary);
+      border-radius: 50%;
+      margin-top: 0.5rem;
+      flex-shrink: 0;
+    }
+
+    .package-footer {
+      margin-top: auto;
+      padding-top: var(--spacing-sm);
+      border-top: 1px solid var(--color-gray-light);
+    }
+
+    .packages-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: var(--spacing-lg);
+      align-items: stretch;
+    }
+
+    .packages-grid-3 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media (max-width: 1024px) {
+      .packages-grid-3 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .packages-grid-3 {
+        grid-template-columns: 1fr;
+      }
+
+      .packages-grid {
+        gap: var(--spacing-md);
+      }
+    }
+  </style>
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="../images/logo.svg">
@@ -236,252 +377,93 @@
     <div class="container">
       <div class="section-header">
         <p class="section-subtitle">Turnkey Environments</p>
-        <h2 class="section-title">Corporate Galas & Tented Event Installations</h2>
+        <h2 class="section-title">Corporate Event Environments</h2>
         <p class="section-description">
           Production-ready environments designed to support speakers, sponsors, and executive gatherings. Each solution includes VIP networking zones and concierge-level event execution.
         </p>
       </div>
 
-      <style>
-        .corporate-packages-grid {
-          display: grid;
-          grid-template-columns: repeat(3, 1fr);
-          gap: var(--spacing-md);
-        }
-        @media (max-width: 992px) {
-          .corporate-packages-grid {
-            grid-template-columns: repeat(2, 1fr);
-          }
-        }
-        @media (max-width: 768px) {
-          .corporate-packages-grid {
-            grid-template-columns: 1fr;
-          }
-        }
-        .corporate-package-card {
-          background: var(--color-white);
-          border-radius: var(--border-radius-lg);
-          overflow: hidden;
-          border: 1px solid var(--color-gray-light);
-          display: flex;
-          flex-direction: column;
-          transition: transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base);
-        }
-        .corporate-package-card:hover {
-          transform: translateY(-4px);
-          box-shadow: var(--shadow-lg);
-          border-color: var(--color-primary);
-        }
-        .corporate-package-header {
-          background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
-          color: var(--color-white);
-          padding: var(--spacing-md);
-          text-align: center;
-        }
-        .corporate-package-header h3 {
-          font-family: var(--font-secondary);
-          font-size: 1.25rem;
-          margin-bottom: 0;
-        }
-        .corporate-package-guests {
-          font-size: 2rem;
-          font-weight: 700;
-          margin: var(--spacing-xs) 0 0 0;
-        }
-        .corporate-package-guests span {
-          font-size: 0.875rem;
-          font-weight: 400;
-          opacity: 0.9;
-        }
-        .corporate-package-content {
-          padding: var(--spacing-md);
-          display: flex;
-          flex-direction: column;
-          flex-grow: 1;
-        }
-        .corporate-package-includes {
-          flex-grow: 1;
-        }
-        .corporate-package-includes h4 {
-          font-size: 0.75rem;
-          text-transform: uppercase;
-          letter-spacing: 0.1em;
-          color: var(--color-text-light);
-          margin-bottom: var(--spacing-xs);
-        }
-        .corporate-package-includes ul {
-          list-style: none;
-          padding: 0;
-          margin: 0;
-        }
-        .corporate-package-includes li {
-          padding: 0.5rem 0;
-          border-bottom: 1px solid rgba(0,0,0,0.05);
-          display: flex;
-          align-items: flex-start;
-          gap: 0.75rem;
-          font-size: 0.875rem;
-          color: var(--color-text);
-        }
-        .corporate-package-includes li:last-child {
-          border-bottom: none;
-        }
-        .corporate-package-includes li::before {
-          content: "";
-          width: 6px;
-          height: 6px;
-          background: var(--color-primary);
-          border-radius: 50%;
-          margin-top: 0.5rem;
-          flex-shrink: 0;
-        }
-        .corporate-package-includes li svg {
-          display: none;
-        }
-        .corporate-package-footer {
-          margin-top: auto;
-          padding-top: var(--spacing-sm);
-          text-align: center;
-          border-top: 1px solid var(--color-gray-light);
-        }
-        .corporate-package-price {
-          font-size: 1.5rem;
-          font-weight: 700;
-          color: var(--color-primary);
-          margin-bottom: var(--spacing-xs);
-        }
-        .corporate-package-price span {
-          font-size: 0.75rem;
-          font-weight: 400;
-          color: var(--color-text-light);
-        }
-      </style>
-
-      <div class="corporate-packages-grid">
+      <div class="packages-grid packages-grid-3">
         <!-- Executive Session -->
-        <div class="corporate-package-card">
-          <div class="corporate-package-header">
-            <h3>Executive Session</h3>
-            <div class="corporate-package-guests">100 <span>attendees</span></div>
+        <div class="package-card">
+          <div class="package-image">
+            <img src="../images/package-corporate-executive.webp" alt="Executive Session Corporate Event Environment" width="800" height="500" loading="lazy">
           </div>
-          <div class="corporate-package-content">
-            <div class="corporate-package-includes">
-              <h4>Environment Includes</h4>
-              <ul>
-                <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                  Weather-Controlled Frame Structure
-                </li>
-                <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                  Banquet Seating for 100
-                </li>
-                <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                  VIP Networking Lounge
-                </li>
-                <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                  Ambient Event Lighting
-                </li>
-                <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                  Professional Installation & Teardown
-                </li>
-              </ul>
-            </div>
-            <div class="corporate-package-footer">
-              <a href="corporate-contact.html?package=executive-session" class="btn btn-primary" style="width: 100%; font-size: 0.875rem;">Request Proposal</a>
+          <div class="package-content">
+            <p class="package-subtitle">Up to 100 Attendees</p>
+            <h3 class="package-title">Executive Session</h3>
+            <p class="package-description">
+              A refined environment for board meetings, executive retreats, and intimate corporate gatherings.
+            </p>
+            <ul class="package-includes">
+              <li>Weather-Controlled Frame Structure</li>
+              <li>Banquet Seating for 100</li>
+              <li>VIP Networking Lounge</li>
+              <li>Ambient Event Lighting</li>
+              <li>Power Distribution & Cable Management</li>
+              <li>White-Glove Setup & Breakdown</li>
+            </ul>
+            <div class="package-footer">
+              <a href="corporate-contact.html?package=executive-session" class="btn btn-primary" style="width: 100%;">Request Proposal</a>
             </div>
           </div>
         </div>
 
         <!-- Corporate Showcase -->
-        <div class="corporate-package-card">
-          <div class="corporate-package-header" style="background: linear-gradient(135deg, var(--color-accent), var(--color-accent-dark));">
-            <h3>Corporate Showcase</h3>
-            <div class="corporate-package-guests">250 <span>attendees</span></div>
+        <div class="package-card">
+          <div class="package-image">
+            <img src="../images/package-corporate-showcase.webp" alt="Corporate Showcase Event Environment" width="800" height="500" loading="lazy">
           </div>
-          <div class="corporate-package-content">
-            <div class="corporate-package-includes">
-              <h4>Environment Includes</h4>
-              <ul>
-                <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                  Climate-Controlled Grand Pavilion
-                </li>
-                <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                  Formal Event Seating for 250
-                </li>
-                <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                  Executive Lounge Zones (2)
-                </li>
-                <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                  Brand-Ready Uplighting
-                </li>
-                <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                  Layout Planning & Flow Design
-                </li>
-                <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                  Professional Installation & Teardown
-                </li>
-              </ul>
-            </div>
-            <div class="corporate-package-footer">
-              <a href="corporate-contact.html?package=corporate-showcase" class="btn btn-primary" style="width: 100%; font-size: 0.875rem;">Request Proposal</a>
+          <div class="package-content">
+            <p class="package-subtitle">Up to 250 Attendees</p>
+            <h3 class="package-title">Corporate Showcase</h3>
+            <p class="package-description">
+              A complete environment for product launches, brand activations, and mid-scale corporate celebrations.
+            </p>
+            <ul class="package-includes">
+              <li>Climate-Controlled Grand Pavilion</li>
+              <li>Formal Event Seating for 250</li>
+              <li>Executive Lounge Zones (2)</li>
+              <li>Brand-Ready Uplighting</li>
+              <li>Layout Planning & Flow Design</li>
+              <li>Full Power & AV Infrastructure</li>
+              <li>White-Glove Setup & Breakdown</li>
+            </ul>
+            <div class="package-footer">
+              <a href="corporate-contact.html?package=corporate-showcase" class="btn btn-primary" style="width: 100%;">Request Proposal</a>
             </div>
           </div>
         </div>
 
         <!-- Grand Gala -->
-        <div class="corporate-package-card">
-          <div class="corporate-package-header">
-            <h3>Grand Gala</h3>
-            <div class="corporate-package-guests">400 <span>attendees</span></div>
+        <div class="package-card">
+          <div class="package-image">
+            <img src="../images/package-corporate-gala.webp" alt="Grand Gala Corporate Event Environment" width="800" height="500" loading="lazy">
           </div>
-          <div class="corporate-package-content">
-            <div class="corporate-package-includes">
-              <h4>Environment Includes</h4>
-              <ul>
-                <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                  Estate Pavilion with HVAC
-                </li>
-                <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                  Formal Event Seating for 400
-                </li>
-                <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                  Executive Reception Experience
-                </li>
-                <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                  Presentation Stage & Sightlines
-                </li>
-                <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                  Designer Production Lighting
-                </li>
-                <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                  Professional Installation & Teardown
-                </li>
-              </ul>
-            </div>
-            <div class="corporate-package-footer">
-              <a href="corporate-contact.html?package=grand-gala" class="btn btn-primary" style="width: 100%; font-size: 0.875rem;">Request Proposal</a>
+          <div class="package-content">
+            <p class="package-subtitle">Up to 400 Attendees</p>
+            <h3 class="package-title">Grand Gala</h3>
+            <p class="package-description">
+              Our most comprehensive environment for large-scale galas, awards ceremonies, and milestone events.
+            </p>
+            <ul class="package-includes">
+              <li>Estate Pavilion with HVAC</li>
+              <li>Formal Event Seating for 400</li>
+              <li>Executive Reception Experience</li>
+              <li>Presentation Stage & Sightlines</li>
+              <li>Designer Production Lighting</li>
+              <li>Complete Power Infrastructure</li>
+              <li>Senior Account Manager</li>
+              <li>White-Glove Setup & Breakdown</li>
+            </ul>
+            <div class="package-footer">
+              <a href="corporate-contact.html?package=grand-gala" class="btn btn-primary" style="width: 100%;">Request Proposal</a>
             </div>
           </div>
         </div>
       </div>
 
-      <p style="text-align: center; margin-top: var(--spacing-md); font-size: 0.875rem; color: var(--color-text-light);">
+      <p style="text-align: center; margin-top: var(--spacing-md); font-size: 0.9rem; color: var(--color-text-light);">
         <strong>Optional Enhancements:</strong> Power Distribution • Branded Signage Zones • Registration Infrastructure • AV Coordination
       </p>
 

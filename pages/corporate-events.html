@@ -356,64 +356,94 @@
       padding: var(--spacing-xl) 0;
     }
 
-    .package-preview-grid {
+    .packages-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: var(--spacing-md);
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: var(--spacing-lg);
+      align-items: stretch;
     }
 
-    .package-preview-card {
+    .packages-grid-3 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .package-card {
       background: var(--color-white);
       border-radius: var(--border-radius-lg);
       overflow: hidden;
+      transition: transform var(--transition-base), box-shadow var(--transition-base);
+      display: flex;
+      flex-direction: column;
       border: 1px solid var(--color-gray-light);
-      transition: transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base);
     }
 
-    .package-preview-card:hover {
+    .package-card:hover {
       transform: translateY(-4px);
       box-shadow: var(--shadow-lg);
       border-color: var(--color-primary);
     }
 
-    .package-preview-header {
-      background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-green-medium) 100%);
-      color: var(--color-white);
-      padding: var(--spacing-md);
-      text-align: center;
+    .package-image {
+      height: 240px;
+      overflow: hidden;
+      flex-shrink: 0;
+      position: relative;
     }
 
-
-    .package-preview-name {
-      font-family: var(--font-primary);
-      font-size: 1.35rem;
-      margin-bottom: 0.25rem;
+    .package-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
     }
 
-    .package-preview-guests {
-      font-size: 0.85rem;
-      opacity: 0.9;
+    .package-card:hover .package-image img {
+      transform: scale(1.03);
     }
 
-    .package-preview-card {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .package-preview-content {
+    .package-content {
       padding: var(--spacing-md);
       display: flex;
       flex-direction: column;
       flex-grow: 1;
     }
 
-    .package-preview-includes {
+    .package-subtitle {
+      font-size: 0.8rem;
+      color: var(--color-secondary);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-weight: 500;
+      margin-bottom: var(--spacing-sm);
+      display: inline-block;
+      padding: 0.3rem 0;
+      border-top: 1px solid var(--color-gray-light);
+      border-bottom: 1px solid var(--color-gray-light);
+    }
+
+    .package-title {
+      font-size: 1.5rem;
+      margin-bottom: 0.25rem;
+      color: var(--color-primary);
+      font-weight: 600;
+    }
+
+    .package-description {
+      color: var(--color-text-light);
+      margin-bottom: var(--spacing-sm);
+      font-size: 0.95rem;
+      line-height: 1.6;
+      min-height: 3em;
+    }
+
+    .package-includes {
       list-style: none;
       margin-bottom: var(--spacing-md);
+      padding: 0;
       flex-grow: 1;
     }
 
-    .package-preview-includes li {
+    .package-includes li {
       padding: 0.5rem 0;
       display: flex;
       align-items: flex-start;
@@ -423,11 +453,11 @@
       border-bottom: 1px solid rgba(0,0,0,0.05);
     }
 
-    .package-preview-includes li:last-child {
+    .package-includes li:last-child {
       border-bottom: none;
     }
 
-    .package-preview-includes li::before {
+    .package-includes li::before {
       content: "";
       width: 6px;
       height: 6px;
@@ -435,6 +465,12 @@
       border-radius: 50%;
       margin-top: 0.5rem;
       flex-shrink: 0;
+    }
+
+    .package-footer {
+      margin-top: auto;
+      padding-top: var(--spacing-sm);
+      border-top: 1px solid var(--color-gray-light);
     }
 
     .credentials-section {
@@ -559,7 +595,7 @@
         grid-template-columns: repeat(2, 1fr);
       }
 
-      .package-preview-grid {
+      .packages-grid-3 {
         grid-template-columns: repeat(2, 1fr);
       }
     }
@@ -576,8 +612,12 @@
       .advantage-grid,
       .event-types-grid,
       .credentials-grid,
-      .package-preview-grid {
+      .packages-grid-3 {
         grid-template-columns: 1fr;
+      }
+
+      .packages-grid {
+        gap: var(--spacing-md);
       }
 
       .pain-points-grid {
@@ -1014,66 +1054,82 @@
         </p>
       </div>
 
-      <div class="package-preview-grid">
+      <div class="packages-grid packages-grid-3">
         <!-- Executive Session -->
-        <div class="package-preview-card">
-          <div class="package-preview-header">
-            <div class="package-preview-name">Executive Session</div>
-            <div class="package-preview-guests">Up to 100 Attendees</div>
+        <div class="package-card">
+          <div class="package-image">
+            <img src="../images/package-corporate-executive.webp" alt="Executive Session Corporate Event Environment" width="800" height="500" loading="lazy">
           </div>
-          <div class="package-preview-content">
-            <ul class="package-preview-includes">
+          <div class="package-content">
+            <p class="package-subtitle">Up to 100 Attendees</p>
+            <h3 class="package-title">Executive Session</h3>
+            <p class="package-description">
+              A refined environment for board meetings, executive retreats, and intimate corporate gatherings.
+            </p>
+            <ul class="package-includes">
               <li>Weather-Controlled Frame Structure</li>
               <li>Banquet Seating for 100</li>
               <li>VIP Networking Lounge</li>
               <li>Ambient Event Lighting</li>
               <li>Power Distribution & Cable Management</li>
-              <li>Professional Installation & Breakdown</li>
-              <li>Dedicated Account Manager</li>
+              <li>White-Glove Setup & Breakdown</li>
             </ul>
-            <a href="corporate-contact.html?package=executive-session&source=corporate-landing" class="btn btn-primary" style="width: 100%;">Request Proposal</a>
+            <div class="package-footer">
+              <a href="corporate-contact.html?package=executive-session&source=corporate-landing" class="btn btn-primary" style="width: 100%;">Request Proposal</a>
+            </div>
           </div>
         </div>
 
         <!-- Corporate Showcase -->
-        <div class="package-preview-card">
-          <div class="package-preview-header">
-            <div class="package-preview-name">Corporate Showcase</div>
-            <div class="package-preview-guests">Up to 250 Attendees</div>
+        <div class="package-card">
+          <div class="package-image">
+            <img src="../images/package-corporate-showcase.webp" alt="Corporate Showcase Event Environment" width="800" height="500" loading="lazy">
           </div>
-          <div class="package-preview-content">
-            <ul class="package-preview-includes">
+          <div class="package-content">
+            <p class="package-subtitle">Up to 250 Attendees</p>
+            <h3 class="package-title">Corporate Showcase</h3>
+            <p class="package-description">
+              A complete environment for product launches, brand activations, and mid-scale corporate celebrations.
+            </p>
+            <ul class="package-includes">
               <li>Climate-Controlled Grand Pavilion</li>
               <li>Formal Event Seating for 250</li>
               <li>Executive Lounge Zones (2)</li>
               <li>Brand-Ready Uplighting</li>
               <li>Layout Planning & Flow Design</li>
               <li>Full Power & AV Infrastructure</li>
-              <li>Professional Installation & Breakdown</li>
-              <li>Dedicated Account Manager</li>
+              <li>White-Glove Setup & Breakdown</li>
             </ul>
-            <a href="corporate-contact.html?package=corporate-showcase&source=corporate-landing" class="btn btn-secondary" style="width: 100%;">Request Proposal</a>
+            <div class="package-footer">
+              <a href="corporate-contact.html?package=corporate-showcase&source=corporate-landing" class="btn btn-primary" style="width: 100%;">Request Proposal</a>
+            </div>
           </div>
         </div>
 
         <!-- Grand Gala -->
-        <div class="package-preview-card">
-          <div class="package-preview-header">
-            <div class="package-preview-name">Grand Gala</div>
-            <div class="package-preview-guests">Up to 400 Attendees</div>
+        <div class="package-card">
+          <div class="package-image">
+            <img src="../images/package-corporate-gala.webp" alt="Grand Gala Corporate Event Environment" width="800" height="500" loading="lazy">
           </div>
-          <div class="package-preview-content">
-            <ul class="package-preview-includes">
+          <div class="package-content">
+            <p class="package-subtitle">Up to 400 Attendees</p>
+            <h3 class="package-title">Grand Gala</h3>
+            <p class="package-description">
+              Our most comprehensive environment for large-scale galas, awards ceremonies, and milestone events.
+            </p>
+            <ul class="package-includes">
               <li>Estate Pavilion with HVAC</li>
               <li>Formal Event Seating for 400</li>
               <li>Executive Reception Experience</li>
               <li>Presentation Stage & Sightlines</li>
               <li>Designer Production Lighting</li>
               <li>Complete Power Infrastructure</li>
-              <li>Professional Installation & Breakdown</li>
               <li>Senior Account Manager</li>
+              <li>White-Glove Setup & Breakdown</li>
             </ul>
-            <a href="corporate-contact.html?package=grand-gala&source=corporate-landing" class="btn btn-primary" style="width: 100%;">Request Proposal</a>
+            <div class="package-footer">
+              <a href="corporate-contact.html?package=grand-gala&source=corporate-landing" class="btn btn-primary" style="width: 100%;">Request Proposal</a>
+            </div>
           </div>
         </div>
       </div>
