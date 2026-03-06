@@ -262,9 +262,15 @@
           background: var(--color-white);
           border-radius: var(--border-radius-lg);
           overflow: hidden;
-          box-shadow: var(--shadow-md);
+          border: 1px solid var(--color-gray-light);
           display: flex;
           flex-direction: column;
+          transition: transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base);
+        }
+        .corporate-package-card:hover {
+          transform: translateY(-4px);
+          box-shadow: var(--shadow-lg);
+          border-color: var(--color-primary);
         }
         .corporate-package-header {
           background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
@@ -309,27 +315,34 @@
           margin: 0;
         }
         .corporate-package-includes li {
-          padding: 0.35rem 0;
-          border-bottom: 1px solid var(--color-border);
+          padding: 0.5rem 0;
+          border-bottom: 1px solid rgba(0,0,0,0.05);
           display: flex;
           align-items: flex-start;
-          gap: 0.5rem;
+          gap: 0.75rem;
           font-size: 0.875rem;
+          color: var(--color-text);
         }
         .corporate-package-includes li:last-child {
           border-bottom: none;
         }
-        .corporate-package-includes li svg {
-          width: 14px;
-          height: 14px;
-          color: var(--color-primary);
+        .corporate-package-includes li::before {
+          content: "";
+          width: 6px;
+          height: 6px;
+          background: var(--color-primary);
+          border-radius: 50%;
+          margin-top: 0.5rem;
           flex-shrink: 0;
-          margin-top: 3px;
+        }
+        .corporate-package-includes li svg {
+          display: none;
         }
         .corporate-package-footer {
           margin-top: auto;
           padding-top: var(--spacing-sm);
           text-align: center;
+          border-top: 1px solid var(--color-gray-light);
         }
         .corporate-package-price {
           font-size: 1.5rem;
