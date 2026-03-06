@@ -382,17 +382,19 @@
 
     .package-preview-badge {
       position: absolute;
-      top: var(--spacing-sm);
-      right: var(--spacing-sm);
+      top: -12px;
+      left: 50%;
+      transform: translateX(-50%);
       background: var(--color-secondary);
       color: var(--color-white);
-      padding: 0.25rem 0.75rem;
+      padding: 0.35rem 1rem;
       border-radius: var(--border-radius);
       font-size: 0.7rem;
       font-weight: 600;
       text-transform: uppercase;
       letter-spacing: 1px;
-      z-index: 1;
+      z-index: 10;
+      white-space: nowrap;
     }
 
     .package-preview-header {
@@ -417,13 +419,22 @@
       opacity: 0.9;
     }
 
+    .package-preview-card {
+      display: flex;
+      flex-direction: column;
+    }
+
     .package-preview-content {
       padding: var(--spacing-md);
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
     }
 
     .package-preview-includes {
       list-style: none;
       margin-bottom: var(--spacing-md);
+      flex-grow: 1;
     }
 
     .package-preview-includes li {
@@ -728,7 +739,7 @@
       </p>
       <div class="hero-buttons">
         <a href="#packages" class="btn btn-outline-white">View Solutions</a>
-        <a href="contact.html?source=corporate-landing" class="btn btn-secondary">Request Proposal</a>
+        <a href="corporate-contact.html?source=corporate-landing" class="btn btn-secondary">Request Proposal</a>
       </div>
 
       <div class="trust-bar">
@@ -1036,7 +1047,7 @@
               <li>Professional Installation & Breakdown</li>
               <li>Dedicated Account Manager</li>
             </ul>
-            <a href="contact.html?package=executive-session&source=corporate-landing" class="btn btn-primary" style="width: 100%;">Request Proposal</a>
+            <a href="corporate-contact.html?package=executive-session&source=corporate-landing" class="btn btn-primary" style="width: 100%;">Request Proposal</a>
           </div>
         </div>
 
@@ -1058,7 +1069,7 @@
               <li>Professional Installation & Breakdown</li>
               <li>Dedicated Account Manager</li>
             </ul>
-            <a href="contact.html?package=corporate-showcase&source=corporate-landing" class="btn btn-secondary" style="width: 100%;">Request Proposal</a>
+            <a href="corporate-contact.html?package=corporate-showcase&source=corporate-landing" class="btn btn-secondary" style="width: 100%;">Request Proposal</a>
           </div>
         </div>
 
@@ -1079,7 +1090,7 @@
               <li>Professional Installation & Breakdown</li>
               <li>Senior Account Manager</li>
             </ul>
-            <a href="contact.html?package=grand-gala&source=corporate-landing" class="btn btn-primary" style="width: 100%;">Request Proposal</a>
+            <a href="corporate-contact.html?package=grand-gala&source=corporate-landing" class="btn btn-primary" style="width: 100%;">Request Proposal</a>
           </div>
         </div>
       </div>
@@ -1195,7 +1206,7 @@
       </p>
 
       <div class="cta-form">
-        <form action="contact.html" method="get">
+        <form action="corporate-contact.html" method="get">
           <input type="hidden" name="source" value="corporate-landing-form">
           <input type="hidden" name="type" value="corporate">
           <div class="cta-form-row">
