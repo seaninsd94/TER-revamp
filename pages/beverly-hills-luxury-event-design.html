@@ -30,6 +30,82 @@
 
   <!-- Styles -->
   <link rel="stylesheet" href="../css/styles.css">
+
+  <!-- Breadcrumb Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.tastefulstudio.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Beverly Hills Event Design",
+        "item": "https://www.tastefulstudio.com/pages/beverly-hills-luxury-event-design.html"
+      }
+    ]
+  }
+  </script>
+
+  <!-- LocalBusiness + Service Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Tasteful Studio - Beverly Hills",
+    "description": "Luxury event design in Beverly Hills, Bel Air, and the LA Westside. Creating immersive estate event environments for weddings, private celebrations, and exclusive gatherings.",
+    "url": "https://www.tastefulstudio.com/pages/beverly-hills-luxury-event-design.html",
+    "telephone": "+1-858-255-4766",
+    "email": "concierge@tastefulstudio.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "San Diego",
+      "addressRegion": "CA",
+      "addressCountry": "US"
+    },
+    "areaServed": [
+      { "@type": "City", "name": "Beverly Hills", "containedInPlace": { "@type": "State", "name": "California" } },
+      { "@type": "City", "name": "Bel Air", "containedInPlace": { "@type": "State", "name": "California" } },
+      { "@type": "City", "name": "Holmby Hills", "containedInPlace": { "@type": "State", "name": "California" } },
+      { "@type": "City", "name": "Pacific Palisades", "containedInPlace": { "@type": "State", "name": "California" } },
+      { "@type": "City", "name": "Brentwood", "containedInPlace": { "@type": "State", "name": "California" } },
+      { "@type": "City", "name": "Malibu", "containedInPlace": { "@type": "State", "name": "California" } }
+    ],
+    "makesOffer": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Estate Transformations",
+          "description": "Custom tent structures, production design, and environmental elements for private properties"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Architectural Lighting",
+          "description": "Sophisticated lighting design that enhances architecture and creates atmosphere"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Curated Collections",
+          "description": "Designer furniture, custom tabletop, and lounge pieces for elevated events"
+        }
+      }
+    ],
+    "priceRange": "$$$"
+  }
+  </script>
 </head>
 <body>
   <!-- Skip Link -->
@@ -222,6 +298,16 @@
             <li><a href="mailto:concierge@tastefulstudio.com">concierge@tastefulstudio.com</a></li>
             <li>San Diego, CA</li>
             <li>Serving San Diego, LA &amp; Palm Springs</li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4 class="footer-title">Locations</h4>
+          <ul class="footer-links">
+            <li><a href="rancho-santa-fe-luxury-event-design.html">Rancho Santa Fe</a></li>
+            <li><a href="beverly-hills-luxury-event-design.html">Beverly Hills</a></li>
+            <li><a href="palm-springs-luxury-event-design.html">Palm Springs</a></li>
+            <li><a href="san-diego-luxury-wedding-design.html">San Diego</a></li>
           </ul>
         </div>
       </div>

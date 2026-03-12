@@ -61,6 +61,69 @@
   }
   </script>
 
+  <!-- Case Study / Article Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Event Design Case Studies",
+    "description": "Real events where personal memories became immersive environments",
+    "itemListElement": [
+      {
+        "@type": "Article",
+        "position": 1,
+        "name": "From Winter in Chicago to a Coastal Celebration",
+        "description": "A wedding design case study where the memory of meeting on a frozen pier was translated into a coastal California celebration with mirrored surfaces and cool blue lighting.",
+        "author": {
+          "@type": "Organization",
+          "name": "Tasteful Studio"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Tasteful Studio",
+          "url": "https://www.tastefulstudio.com"
+        },
+        "articleSection": "Wedding Design",
+        "keywords": ["luxury wedding design", "Del Mar wedding", "narrative event design", "coastal wedding"]
+      },
+      {
+        "@type": "Article",
+        "position": 2,
+        "name": "A Grandmother's Legacy Reimagined",
+        "description": "A 50th anniversary celebration case study featuring custom embroidered linens, recipe card centerpieces, and heirloom integration honoring three generations of family tradition.",
+        "author": {
+          "@type": "Organization",
+          "name": "Tasteful Studio"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Tasteful Studio",
+          "url": "https://www.tastefulstudio.com"
+        },
+        "articleSection": "Anniversary Celebration",
+        "keywords": ["anniversary celebration", "Rancho Santa Fe event", "heirloom integration", "family celebration"]
+      },
+      {
+        "@type": "Article",
+        "position": 3,
+        "name": "A Founder's Journey Told Through Space",
+        "description": "A corporate anniversary event case study featuring journey-based layout design, historical artifact displays, and progressive lighting to tell a 25-year company story.",
+        "author": {
+          "@type": "Organization",
+          "name": "Tasteful Studio"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Tasteful Studio",
+          "url": "https://www.tastefulstudio.com"
+        },
+        "articleSection": "Corporate Event",
+        "keywords": ["corporate event design", "La Jolla corporate event", "company anniversary", "narrative corporate design"]
+      }
+    ]
+  }
+  </script>
+
   <style>
     .story-card {
       background: var(--color-white);
@@ -283,6 +346,14 @@
               <span class="story-element">Harvest Tables</span>
             </div>
           </div>
+
+          <div style="margin-top: var(--spacing-md); padding-top: var(--spacing-md); border-top: 1px solid var(--color-gray-light);">
+            <p style="font-size: 0.85rem; color: var(--color-text-light); margin-bottom: var(--spacing-sm);">Interested in similar environments?</p>
+            <div style="display: flex; gap: var(--spacing-sm); flex-wrap: wrap;">
+              <a href="packages.html" class="btn btn-outline" style="font-size: 0.8rem; padding: 0.5rem 1rem;">View Environments</a>
+              <a href="san-diego-luxury-wedding-design.html" class="btn btn-outline" style="font-size: 0.8rem; padding: 0.5rem 1rem;">San Diego Weddings</a>
+            </div>
+          </div>
         </div>
       </article>
 
@@ -345,6 +416,14 @@
               <span class="story-element">Family Archive Display</span>
               <span class="story-element">Heritage Color Palette</span>
               <span class="story-element">Heirloom Integration</span>
+            </div>
+          </div>
+
+          <div style="margin-top: var(--spacing-md); padding-top: var(--spacing-md); border-top: 1px solid var(--color-gray-light);">
+            <p style="font-size: 0.85rem; color: var(--color-text-light); margin-bottom: var(--spacing-sm);">Interested in similar environments?</p>
+            <div style="display: flex; gap: var(--spacing-sm); flex-wrap: wrap;">
+              <a href="our-approach.html" class="btn btn-outline" style="font-size: 0.8rem; padding: 0.5rem 1rem;">Our Approach</a>
+              <a href="rancho-santa-fe-luxury-event-design.html" class="btn btn-outline" style="font-size: 0.8rem; padding: 0.5rem 1rem;">Rancho Santa Fe Events</a>
             </div>
           </div>
         </div>
@@ -411,6 +490,14 @@
               <span class="story-element">Purpose-Driven Details</span>
             </div>
           </div>
+
+          <div style="margin-top: var(--spacing-md); padding-top: var(--spacing-md); border-top: 1px solid var(--color-gray-light);">
+            <p style="font-size: 0.85rem; color: var(--color-text-light); margin-bottom: var(--spacing-sm);">Planning a corporate event?</p>
+            <div style="display: flex; gap: var(--spacing-sm); flex-wrap: wrap;">
+              <a href="corporate.html" class="btn btn-outline" style="font-size: 0.8rem; padding: 0.5rem 1rem;">Corporate Events</a>
+              <a href="beverly-hills-luxury-event-design.html" class="btn btn-outline" style="font-size: 0.8rem; padding: 0.5rem 1rem;">LA & Beverly Hills</a>
+            </div>
+          </div>
         </div>
       </article>
 
@@ -460,12 +547,17 @@
         <div>
           <img src="../images/logo-white.svg" alt="Tasteful Studio" width="180" height="40" style="height: 35px; opacity: 0.9;">
         </div>
-        <div style="display: flex; gap: var(--spacing-lg); font-size: 0.8rem;">
+        <div style="display: flex; gap: var(--spacing-lg); font-size: 0.8rem; flex-wrap: wrap;">
           <a href="our-approach.html" style="color: rgba(255,255,255,0.7); text-decoration: none;">Our Approach</a>
           <a href="packages.html" style="color: rgba(255,255,255,0.7); text-decoration: none;">Environments</a>
           <a href="stories.html" style="color: rgba(255,255,255,0.7); text-decoration: none;">Stories</a>
           <a href="corporate.html" style="color: rgba(255,255,255,0.7); text-decoration: none;">Corporate</a>
           <a href="contact.html" style="color: rgba(255,255,255,0.7); text-decoration: none;">Contact</a>
+        </div>
+        <div style="display: flex; gap: var(--spacing-md); font-size: 0.75rem; flex-wrap: wrap;">
+          <a href="rancho-santa-fe-luxury-event-design.html" style="color: rgba(255,255,255,0.5); text-decoration: none;">Rancho Santa Fe</a>
+          <a href="beverly-hills-luxury-event-design.html" style="color: rgba(255,255,255,0.5); text-decoration: none;">Beverly Hills</a>
+          <a href="palm-springs-luxury-event-design.html" style="color: rgba(255,255,255,0.5); text-decoration: none;">Palm Springs</a>
         </div>
         <div style="font-size: 0.8rem; color: rgba(255,255,255,0.6);">
           <a href="tel:8582554766" style="color: rgba(255,255,255,0.7); text-decoration: none;">(858) 255-4766</a>
