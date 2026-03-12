@@ -1,33 +1,132 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Homepage -->
   <url>
-    <loc>https://tastefulstudio.com/</loc>
-    <lastmod>2026-02-12</lastmod>
+    <loc>https://www.tastefulstudio.com/</loc>
+    <lastmod>2026-03-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
+
+  <!-- Main Navigation Pages -->
   <url>
-    <loc>https://tastefulstudio.com/pages/packages.html</loc>
-    <lastmod>2026-02-12</lastmod>
+    <loc>https://www.tastefulstudio.com/pages/our-approach.html</loc>
+    <lastmod>2026-03-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.tastefulstudio.com/pages/packages.html</loc>
+    <lastmod>2026-03-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://tastefulstudio.com/pages/corporate.html</loc>
-    <lastmod>2026-02-12</lastmod>
-    <changefreq>weekly</changefreq>
+    <loc>https://www.tastefulstudio.com/pages/stories.html</loc>
+    <lastmod>2026-03-12</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://tastefulstudio.com/pages/experiences.html</loc>
-    <lastmod>2026-02-12</lastmod>
+    <loc>https://www.tastefulstudio.com/pages/corporate.html</loc>
+    <lastmod>2026-03-12</lastmod>
     <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.tastefulstudio.com/pages/contact.html</loc>
+    <lastmod>2026-03-12</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://tastefulstudio.com/pages/contact.html</loc>
-    <lastmod>2026-02-12</lastmod>
+    <loc>https://www.tastefulstudio.com/pages/experiences.html</loc>
+    <lastmod>2026-03-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.tastefulstudio.com/pages/about.html</loc>
+    <lastmod>2026-03-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+
+  <!-- Location-Specific Landing Pages (SEO) -->
+  <url>
+    <loc>https://www.tastefulstudio.com/pages/san-diego-luxury-wedding-design.html</loc>
+    <lastmod>2026-03-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.tastefulstudio.com/pages/san-diego-corporate-event-production.html</loc>
+    <lastmod>2026-03-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.tastefulstudio.com/pages/southern-california-estate-weddings.html</loc>
+    <lastmod>2026-03-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.tastefulstudio.com/pages/orange-county-corporate-event-design.html</loc>
+    <lastmod>2026-03-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.tastefulstudio.com/pages/newport-beach-corporate-gala-production.html</loc>
+    <lastmod>2026-03-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Service/Rental Category Pages -->
+  <url>
+    <loc>https://www.tastefulstudio.com/pages/wedding-rentals.html</loc>
+    <lastmod>2026-03-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.tastefulstudio.com/pages/corporate-events.html</loc>
+    <lastmod>2026-03-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.tastefulstudio.com/pages/tent-rentals.html</loc>
+    <lastmod>2026-03-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.tastefulstudio.com/pages/table-chair-rentals.html</loc>
+    <lastmod>2026-03-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.tastefulstudio.com/pages/lighting-rentals.html</loc>
+    <lastmod>2026-03-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.tastefulstudio.com/pages/lounge-furniture-rentals.html</loc>
+    <lastmod>2026-03-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Contact Pages -->
+  <url>
+    <loc>https://www.tastefulstudio.com/pages/corporate-contact.html</loc>
+    <lastmod>2026-03-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
 </urlset>
