@@ -188,6 +188,102 @@
         gap: var(--spacing-md);
       }
     }
+
+    /* Experiences styles */
+    .experiences-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--spacing-lg);
+    }
+    @media (max-width: 992px) {
+      .experiences-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (max-width: 768px) {
+      .experiences-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    .experience-card {
+      background: var(--color-white);
+      border-radius: var(--border-radius-lg);
+      padding: var(--spacing-lg);
+      box-shadow: var(--shadow-md);
+      text-align: center;
+      transition: transform var(--transition-base), box-shadow var(--transition-base);
+    }
+    .experience-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-lg);
+    }
+    .experience-icon {
+      width: 64px;
+      height: 64px;
+      background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto var(--spacing-md);
+    }
+    .experience-icon svg {
+      width: 28px;
+      height: 28px;
+    }
+    .experience-card h3 {
+      font-family: var(--font-secondary);
+      font-size: 1.25rem;
+      color: var(--color-primary);
+      margin-bottom: var(--spacing-sm);
+    }
+    .experience-card p {
+      color: var(--color-text-light);
+      font-size: 0.95rem;
+      line-height: 1.7;
+    }
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: var(--spacing-md);
+      margin-top: var(--spacing-lg);
+    }
+    @media (max-width: 992px) {
+      .process-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (max-width: 768px) {
+      .process-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    .process-step {
+      text-align: center;
+      position: relative;
+    }
+    .process-number {
+      width: 48px;
+      height: 48px;
+      background: var(--color-primary);
+      color: var(--color-white);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-secondary);
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin: 0 auto var(--spacing-sm);
+    }
+    .process-step h4 {
+      color: var(--color-primary);
+      margin-bottom: var(--spacing-xs);
+    }
+    .process-step p {
+      color: var(--color-text-light);
+      font-size: 0.9rem;
+    }
   </style>
 
   <!-- Favicon -->
@@ -545,6 +641,238 @@
       <p style="text-align: center; margin-top: var(--spacing-lg); font-size: 0.9rem; color: var(--color-text-light);">
         <strong>Experience Enhancements:</strong> Guest Comfort Package • Premium Bar Display • Catering Support • VIP Experience Setup
       </p>
+    </div>
+  </section>
+
+  <!-- ============================================= -->
+  <!-- PREMIUM SERVICES -->
+  <!-- ============================================= -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-subtitle">The Complete Experience</p>
+        <h2 class="section-title">What Makes Us Different</h2>
+        <p class="section-description">
+          Beyond curated collections&mdash;we offer a complete luxury event experience. Our premium services ensure every detail is handled with care and sophistication.
+        </p>
+      </div>
+
+      <div class="experiences-grid">
+        <!-- Event Planning -->
+        <div class="experience-card">
+          <div class="experience-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+              <line x1="16" y1="2" x2="16" y2="6"/>
+              <line x1="8" y1="2" x2="8" y2="6"/>
+              <line x1="3" y1="10" x2="21" y2="10"/>
+            </svg>
+          </div>
+          <h3>Event Planning & Coordination</h3>
+          <p>
+            Our experienced planners work alongside you from concept to completion. We manage timelines, vendor coordination, and day-of logistics.
+          </p>
+        </div>
+
+        <!-- Personal Concierge -->
+        <div class="experience-card">
+          <div class="experience-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+              <circle cx="12" cy="7" r="4"/>
+            </svg>
+          </div>
+          <h3>Personal Concierge Service</h3>
+          <p>
+            A dedicated concierge assigned to your event, serving as your single point of contact from first consultation through final breakdown.
+          </p>
+        </div>
+
+        <!-- Custom Design -->
+        <div class="experience-card">
+          <div class="experience-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+              <path d="M12 19l7-7 3 3-7 7-3-3z"/>
+              <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/>
+              <path d="M2 2l7.586 7.586"/>
+              <circle cx="11" cy="11" r="2"/>
+            </svg>
+          </div>
+          <h3>Custom Event Design</h3>
+          <p>
+            Bespoke floor plans, curated color palettes, and styling concepts tailored to your vision. We transform spaces into immersive environments.
+          </p>
+        </div>
+
+        <!-- White-Glove Setup -->
+        <div class="experience-card">
+          <div class="experience-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+            </svg>
+          </div>
+          <h3>White-Glove Delivery & Styling</h3>
+          <p>
+            Professional installation with meticulous attention to detail. We arrive early and stay until every piece is positioned to perfection.
+          </p>
+        </div>
+
+        <!-- Lounge Design -->
+        <div class="experience-card">
+          <div class="experience-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+              <path d="M20 9V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v3"/>
+              <path d="M2 11v5a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-5a2 2 0 0 0-4 0v2H6v-2a2 2 0 0 0-4 0z"/>
+              <path d="M4 18v2"/>
+              <path d="M20 18v2"/>
+            </svg>
+          </div>
+          <h3>Curated Lounge Vignettes</h3>
+          <p>
+            Designed lounging environments with plush settees, sculptural chairs, and statement cocktail tables&mdash;creating intimate gathering spaces.
+          </p>
+        </div>
+
+        <!-- Lighting Design -->
+        <div class="experience-card">
+          <div class="experience-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+              <line x1="9" y1="18" x2="15" y2="18"/>
+              <line x1="10" y1="22" x2="14" y2="22"/>
+              <path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5A4.61 4.61 0 0 1 8.91 14"/>
+            </svg>
+          </div>
+          <h3>Ambient Lighting Design</h3>
+          <p>
+            From crystal chandeliers to dramatic uplighting&mdash;our lighting designers craft the perfect atmosphere to elevate the mood throughout the evening.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================= -->
+  <!-- COCKTAIL HOUR EXPERIENCES -->
+  <!-- ============================================= -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-subtitle">Designed Guest Experiences</p>
+        <h2 class="section-title">Cocktail Hour Collections</h2>
+        <p class="section-description">
+          Cocktail hour is where luxury is first felt. Our curated experiences enhance guest flow, create atmosphere, and set the tone for an unforgettable celebration.
+        </p>
+      </div>
+
+      <div class="experiences-grid">
+        <!-- Classic Cocktail Hour -->
+        <div class="experience-card" style="text-align: left;">
+          <h3 style="text-align: center;">Classic Cocktail Hour</h3>
+          <p style="text-align: center; font-size: 0.85rem; color: var(--color-secondary); margin-bottom: var(--spacing-md);">Up to 200 Guests</p>
+          <ul style="list-style: none; padding: 0; margin-bottom: var(--spacing-md);">
+            <li style="padding: var(--spacing-xs) 0; display: flex; align-items: flex-start; gap: var(--spacing-xs); font-size: 0.9rem;">
+              <span style="color: var(--color-primary); font-weight: bold;">&#10003;</span> 12 Cocktail Tables with Premium Linens
+            </li>
+            <li style="padding: var(--spacing-xs) 0; display: flex; align-items: flex-start; gap: var(--spacing-xs); font-size: 0.9rem;">
+              <span style="color: var(--color-primary); font-weight: bold;">&#10003;</span> Soft Ambient Lighting
+            </li>
+            <li style="padding: var(--spacing-xs) 0; display: flex; align-items: flex-start; gap: var(--spacing-xs); font-size: 0.9rem;">
+              <span style="color: var(--color-primary); font-weight: bold;">&#10003;</span> Defined Bar & Beverage Zones
+            </li>
+            <li style="padding: var(--spacing-xs) 0; display: flex; align-items: flex-start; gap: var(--spacing-xs); font-size: 0.9rem;">
+              <span style="color: var(--color-primary); font-weight: bold;">&#10003;</span> Guest Flow & Transition Planning
+            </li>
+          </ul>
+          <p style="font-size: 0.85rem; color: var(--color-text-light); font-style: italic;">Included with Grand Celebration</p>
+        </div>
+
+        <!-- Elevated Cocktail Hour -->
+        <div class="experience-card" style="text-align: left; border: 2px solid var(--color-secondary);">
+          <p style="text-align: center; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--color-secondary); margin-bottom: var(--spacing-xs);">Most Popular</p>
+          <h3 style="text-align: center;">Elevated Cocktail Hour</h3>
+          <p style="text-align: center; font-size: 0.85rem; color: var(--color-secondary); margin-bottom: var(--spacing-md);">Luxury Weddings & Galas</p>
+          <ul style="list-style: none; padding: 0; margin-bottom: var(--spacing-md);">
+            <li style="padding: var(--spacing-xs) 0; display: flex; align-items: flex-start; gap: var(--spacing-xs); font-size: 0.9rem;">
+              <span style="color: var(--color-primary); font-weight: bold;">&#10003;</span> 16 Cocktail Tables with Upgraded Linens
+            </li>
+            <li style="padding: var(--spacing-xs) 0; display: flex; align-items: flex-start; gap: var(--spacing-xs); font-size: 0.9rem;">
+              <span style="color: var(--color-primary); font-weight: bold;">&#10003;</span> 2 Curated Lounge Vignettes
+            </li>
+            <li style="padding: var(--spacing-xs) 0; display: flex; align-items: flex-start; gap: var(--spacing-xs); font-size: 0.9rem;">
+              <span style="color: var(--color-primary); font-weight: bold;">&#10003;</span> Focused Accent Lighting
+            </li>
+            <li style="padding: var(--spacing-xs) 0; display: flex; align-items: flex-start; gap: var(--spacing-xs); font-size: 0.9rem;">
+              <span style="color: var(--color-primary); font-weight: bold;">&#10003;</span> Photo-Moment Styling Zones
+            </li>
+            <li style="padding: var(--spacing-xs) 0; display: flex; align-items: flex-start; gap: var(--spacing-xs); font-size: 0.9rem;">
+              <span style="color: var(--color-primary); font-weight: bold;">&#10003;</span> Bar Front Illumination
+            </li>
+          </ul>
+          <p style="font-size: 0.85rem; color: var(--color-text-light); font-style: italic;">Included with Estate Affair</p>
+        </div>
+
+        <!-- Signature Cocktail Hour -->
+        <div class="experience-card" style="text-align: left;">
+          <h3 style="text-align: center;">Signature Cocktail Hour</h3>
+          <p style="text-align: center; font-size: 0.85rem; color: var(--color-secondary); margin-bottom: var(--spacing-md);">Statement Weddings & VIP Events</p>
+          <ul style="list-style: none; padding: 0; margin-bottom: var(--spacing-md);">
+            <li style="padding: var(--spacing-xs) 0; display: flex; align-items: flex-start; gap: var(--spacing-xs); font-size: 0.9rem;">
+              <span style="color: var(--color-primary); font-weight: bold;">&#10003;</span> 20 Cocktail Tables with Specialty Linens
+            </li>
+            <li style="padding: var(--spacing-xs) 0; display: flex; align-items: flex-start; gap: var(--spacing-xs); font-size: 0.9rem;">
+              <span style="color: var(--color-primary); font-weight: bold;">&#10003;</span> 3–4 Designer Lounge Environments
+            </li>
+            <li style="padding: var(--spacing-xs) 0; display: flex; align-items: flex-start; gap: var(--spacing-xs); font-size: 0.9rem;">
+              <span style="color: var(--color-primary); font-weight: bold;">&#10003;</span> Architectural Lighting Design
+            </li>
+            <li style="padding: var(--spacing-xs) 0; display: flex; align-items: flex-start; gap: var(--spacing-xs); font-size: 0.9rem;">
+              <span style="color: var(--color-primary); font-weight: bold;">&#10003;</span> Dedicated Feature Zones
+            </li>
+            <li style="padding: var(--spacing-xs) 0; display: flex; align-items: flex-start; gap: var(--spacing-xs); font-size: 0.9rem;">
+              <span style="color: var(--color-primary); font-weight: bold;">&#10003;</span> Spatial Reveal Choreography
+            </li>
+          </ul>
+          <p style="font-size: 0.85rem; color: var(--color-text-light); font-style: italic;">Available as upgrade to any environment</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================= -->
+  <!-- OUR PROCESS -->
+  <!-- ============================================= -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-subtitle">How It Works</p>
+        <h2 class="section-title">Your Journey With Us</h2>
+      </div>
+
+      <div class="process-grid">
+        <div class="process-step">
+          <div class="process-number">1</div>
+          <h4>Consultation</h4>
+          <p>Share your vision, venue details, and event goals. We listen, ask the right questions, and begin crafting your experience.</p>
+        </div>
+
+        <div class="process-step">
+          <div class="process-number">2</div>
+          <h4>Design & Proposal</h4>
+          <p>Receive a detailed proposal with curated selections, custom floor plans, and transparent pricing tailored to your event.</p>
+        </div>
+
+        <div class="process-step">
+          <div class="process-number">3</div>
+          <h4>Preparation</h4>
+          <p>Every item is inspected, cleaned, and staged. Your concierge coordinates logistics and confirms every detail.</p>
+        </div>
+
+        <div class="process-step">
+          <div class="process-number">4</div>
+          <h4>Flawless Execution</h4>
+          <p>Our team arrives, installs, and styles everything to perfection. After your event, we handle the complete breakdown.</p>
+        </div>
+      </div>
     </div>
   </section>
 
