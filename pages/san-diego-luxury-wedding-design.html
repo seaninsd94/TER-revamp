@@ -38,6 +38,10 @@
 
   <!-- Styles -->
   <link rel="stylesheet" href="../css/styles.css">
+
+  <!-- Preload hero video (desktop) and image (mobile fallback) -->
+  <link rel="preload" as="video" href="../images/san-diego-wedding-video.mp4" type="video/mp4" media="(min-width: 769px)">
+  <link rel="preload" as="image" href="../images/hero-bg-mobile.webp" type="image/webp" media="(max-width: 768px)">
 </head>
 <body>
   <!-- Skip Link -->
@@ -72,7 +76,17 @@
 
 <main id="main-content">
   <!-- Hero Section -->
-  <section class="location-hero" style="--hero-bg-image: url('../images/hero-bg.webp');">
+  <section class="location-hero">
+    <!-- Hero video (desktop only, hidden on mobile via CSS) -->
+    <video class="location-hero-video" autoplay muted loop playsinline poster="../images/hero-bg.webp">
+      <source src="../images/san-diego-wedding-video.mp4" type="video/mp4">
+    </video>
+    <!-- Fallback image (shown on mobile or if video fails) -->
+    <picture>
+      <source media="(max-width: 768px)" srcset="../images/hero-bg-mobile.webp" type="image/webp">
+      <source media="(min-width: 769px)" srcset="../images/hero-bg.webp" type="image/webp">
+      <img src="../images/hero-bg.webp" alt="Luxury wedding environment in San Diego with elegant tent and lighting design" class="location-hero-background" width="1920" height="1280">
+    </picture>
     <div class="container">
       <div class="trust-badge">
         <div class="star-rating">
