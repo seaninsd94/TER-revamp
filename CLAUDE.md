@@ -100,7 +100,21 @@ To change colors site-wide, edit these variables in `css/styles.css` (lines 5-25
 
 ---
 
-## Image Guide
+## Image & Video Guide
+
+### Hero Video (Desktop)
+
+The homepage hero section supports an MP4 video background on desktop:
+
+| File Path | Recommended Specs | Used On |
+|-----------|-------------------|---------|
+| `images/hero-video.mp4` | 1920x1080px, 10-30 sec loop, <10MB | Homepage hero (desktop only) |
+
+**Video Tips:**
+- Keep video short (10-30 seconds) and seamlessly loopable
+- Compress to keep file size under 10MB for fast loading
+- Video auto-plays muted with loop enabled
+- On mobile, the static image fallback is shown instead
 
 ### Required Images
 
@@ -108,7 +122,8 @@ Replace these placeholder images with actual photos:
 
 | File Path | Recommended Size | Used On |
 |-----------|------------------|---------|
-| `images/hero-bg.jpg` | 1920x1080px | Homepage hero background |
+| `images/hero-bg.webp` | 1920x1080px | Homepage hero poster/fallback |
+| `images/hero-bg-mobile.webp` | 768x1024px | Homepage hero (mobile) |
 | `images/category-tents.jpg` | 600x800px | Homepage categories |
 | `images/category-tables.jpg` | 600x800px | Homepage categories |
 | `images/category-lighting.jpg` | 600x800px | Homepage categories |

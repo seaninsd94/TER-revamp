@@ -44,8 +44,8 @@
   <!-- Styles -->
   <link rel="stylesheet" href="css/styles.css">
 
-  <!-- Preload hero image -->
-  <link rel="preload" as="image" href="images/hero-bg.webp" type="image/webp" media="(min-width: 769px)">
+  <!-- Preload hero video (desktop) and image (mobile fallback) -->
+  <link rel="preload" as="video" href="images/hero-video.mp4" type="video/mp4" media="(min-width: 769px)">
   <link rel="preload" as="image" href="images/hero-bg-mobile.webp" type="image/webp" media="(max-width: 768px)">
 
   <!-- Favicon -->
@@ -175,6 +175,11 @@
   <!-- HERO SECTION -->
   <!-- ============================================= -->
   <section class="hero">
+    <!-- Hero video (desktop only, hidden on mobile via CSS) -->
+    <video class="hero-video" autoplay muted loop playsinline poster="images/hero-bg.webp">
+      <source src="images/hero-video.mp4" type="video/mp4">
+    </video>
+    <!-- Fallback image (shown on mobile or if video fails) -->
     <picture>
       <source media="(max-width: 768px)" srcset="images/hero-bg-mobile.webp" type="image/webp">
       <source media="(min-width: 769px)" srcset="images/hero-bg.webp" type="image/webp">

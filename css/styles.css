@@ -366,6 +366,7 @@ img {
   left: 0;
   width: 100%;
   height: 100%;
+  display: none; /* Hidden on desktop when video is present */
 }
 
 .hero-background {
@@ -1285,9 +1286,13 @@ img {
     display: flex;
   }
 
-  /* Hide video on mobile, show static fallback */
+  /* Hide video on mobile, show static image fallback */
   .hero-video {
     display: none;
+  }
+
+  .hero picture {
+    display: block;
   }
 
   /* Center hero background image better on mobile */
