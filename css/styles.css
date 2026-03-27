@@ -1782,6 +1782,79 @@ img {
 }
 
 /* =============================================
+   MOBILE GRID FIXES
+   ============================================= */
+
+/* Force inline grids to single column on mobile */
+@media (max-width: 480px) {
+  /* Photo gallery and similar 3-column grids */
+  [style*="repeat(3, 1fr)"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* 2-column form grids */
+  form[style*="1fr 1fr"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Reduce minmax minimums that cause overflow */
+  [style*="minmax(350px"],
+  [style*="minmax(320px"],
+  [style*="minmax(300px"],
+  [style*="minmax(280px"] {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+@media (max-width: 600px) {
+  /* Testimonials and cards with 300px minimum */
+  [style*="minmax(300px"] {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Gallery images responsive height */
+  [style*="height: 280px"] {
+    height: 220px !important;
+  }
+
+  /* Experience cards less padding */
+  .experience-card {
+    padding: var(--spacing-md) !important;
+  }
+
+  /* Footer location bullets - hide on mobile */
+  footer nav span[style*="color: rgba(255,255,255,0.2)"] {
+    display: none;
+  }
+
+  /* Footer location links - add spacing when bullets hidden */
+  footer nav[style*="gap: var(--spacing-xs)"] {
+    gap: var(--spacing-sm) !important;
+    justify-content: center;
+  }
+
+  /* CTA section bullet separators */
+  .cta-section p[style*="letter-spacing: 2px"] {
+    font-size: 0.65rem !important;
+    letter-spacing: 1px !important;
+  }
+}
+
+/* Touch target minimum size */
+.btn {
+  min-height: 44px;
+  min-width: 44px;
+}
+
+/* FAQ touch targets */
+details summary {
+  min-height: 48px;
+  padding: var(--spacing-xs) 0;
+}
+
+/* =============================================
    UTILITY CLASSES
    ============================================= */
 .text-center { text-align: center; }
