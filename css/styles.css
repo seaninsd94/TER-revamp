@@ -1679,3 +1679,83 @@ img {
   padding-bottom: var(--spacing-xs);
   border-bottom: 2px solid var(--color-gray-light);
 }
+
+/* =============================================
+   STICKY FLOATING CTA BUTTON
+   ============================================= */
+.sticky-cta {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--color-primary);
+  color: var(--color-white);
+  padding: 14px 24px;
+  border-radius: 50px;
+  box-shadow: 0 4px 20px rgba(26, 77, 62, 0.4);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  z-index: 999;
+  transition: all 0.3s ease;
+  opacity: 0;
+  transform: translateY(20px);
+  pointer-events: none;
+}
+
+.sticky-cta.visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.sticky-cta:hover {
+  background: var(--color-green-medium);
+  color: var(--color-white);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(26, 77, 62, 0.5);
+}
+
+.sticky-cta svg {
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .sticky-cta {
+    bottom: 16px;
+    right: 16px;
+    padding: 12px 20px;
+    font-size: 0.85rem;
+  }
+  
+  .sticky-cta span {
+    display: none;
+  }
+  
+  .sticky-cta {
+    padding: 14px;
+    border-radius: 50%;
+  }
+}
+
+/* FAQ Details/Summary Styling */
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item[open] summary span:last-child {
+  transform: rotate(45deg);
+}
+
+.faq-item summary span:last-child {
+  transition: transform 0.3s ease;
+}
+
+/* Inline Form Responsive */
+@media (max-width: 600px) {
+  form[style*="grid-template-columns: 1fr 1fr"] {
+    grid-template-columns: 1fr !important;
+  }
+}

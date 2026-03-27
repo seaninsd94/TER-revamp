@@ -272,3 +272,25 @@ function initFaqAccordion() {
 
 // Run on page load
 setActiveNavLink();
+
+
+/**
+ * Sticky CTA Button Visibility
+ */
+function initStickyCta() {
+  const stickyCta = document.getElementById("stickyCta");
+  
+  if (stickyCta) {
+    window.addEventListener("scroll", function() {
+      // Show after scrolling 500px
+      if (window.scrollY > 500) {
+        stickyCta.classList.add("visible");
+      } else {
+        stickyCta.classList.remove("visible");
+      }
+    });
+  }
+}
+
+// Initialize sticky CTA on page load
+document.addEventListener("DOMContentLoaded", initStickyCta);
