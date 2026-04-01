@@ -1316,6 +1316,25 @@ img {
     display: flex;
   }
 
+  /* Mobile Click-to-Call CTA */
+  .mobile-call-cta {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1.5rem;
+    background: rgba(255,255,255,0.15);
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 30px;
+    backdrop-filter: blur(4px);
+    transition: all var(--transition-fast);
+  }
+
+  .mobile-call-cta:hover,
+  .mobile-call-cta:active {
+    background: rgba(255,255,255,0.25);
+    border-color: rgba(255,255,255,0.5);
+  }
+
   /* Hide video on mobile, show static image fallback */
   .hero-video {
     display: none;

@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GA4 Setup & Configuration Guide | Tasteful Studio</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Segoe UI', system-ui, sans-serif; line-height: 1.6; color: #333; max-width: 900px; margin: 0 auto; padding: 2rem; }
+    h1 { color: #1a4d3e; margin-bottom: 0.5rem; }
+    h2 { color: #1a4d3e; margin: 2rem 0 1rem; border-bottom: 2px solid #1a4d3e; padding-bottom: 0.5rem; }
+    h3 { color: #2d6a4f; margin: 1.5rem 0 0.75rem; }
+    p { margin-bottom: 1rem; }
+    .status { background: #d4edda; color: #155724; padding: 1rem; border-radius: 8px; margin-bottom: 2rem; }
+    .section { background: #fff; border: 1px solid #e0e0e0; border-radius: 8px; padding: 1.5rem; margin-bottom: 1.5rem; }
+    .priority { display: inline-block; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.75rem; font-weight: 600; margin-bottom: 1rem; }
+    .priority-critical { background: #f8d7da; color: #721c24; }
+    .priority-high { background: #fff3cd; color: #856404; }
+    .priority-medium { background: #cce5ff; color: #004085; }
+    code { background: #f4f4f4; padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.9rem; }
+    pre { background: #2d2d2d; color: #f8f8f2; padding: 1rem; border-radius: 8px; overflow-x: auto; margin: 1rem 0; }
+    ol, ul { margin-left: 1.5rem; margin-bottom: 1rem; }
+    li { margin-bottom: 0.5rem; }
+    table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
+    th, td { padding: 0.75rem; text-align: left; border-bottom: 1px solid #e0e0e0; }
+    th { background: #1a4d3e; color: white; }
+    .tip { background: #e7f5ff; padding: 1rem; border-radius: 8px; margin: 1rem 0; border-left: 4px solid #2541b2; }
+    .warning { background: #fff3cd; padding: 1rem; border-radius: 8px; margin: 1rem 0; border-left: 4px solid #856404; }
+  </style>
+</head>
+<body>
+
+<h1>Google Analytics 4 (GA4) Setup Guide</h1>
+<p style="color: #666; margin-bottom: 2rem;">Tasteful Studio | April 2026</p>
+
+<div class="status">
+  <strong>Current Status:</strong> GA4 is already installed on your site (Property ID: G-ZC8TN9VZC9). This guide covers configuration and optimization to get actionable insights from your data.
+</div>
+
+<h2>Why GA4 Matters for Your Business</h2>
+
+<p>As a luxury event design company with long booking cycles (6-18 months), you need to understand:</p>
+<ul>
+  <li><strong>Which channels drive your best leads</strong> - Google Ads vs organic vs referrals</li>
+  <li><strong>Which pages convert visitors to inquiries</strong> - so you can improve underperformers</li>
+  <li><strong>How users navigate your site</strong> - to optimize the journey to contact</li>
+  <li><strong>What content resonates</strong> - to inform your content strategy</li>
+</ul>
+
+<h2>Immediate Setup Actions</h2>
+
+<div class="section">
+  <span class="priority priority-critical">Critical</span>
+  <h3>1. Configure Conversion Events</h3>
+  <p>You need to track when visitors complete important actions. Here's what to set up:</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Event Name</th>
+        <th>Trigger</th>
+        <th>Value</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>form_submission</td>
+        <td>Contact form submitted</td>
+        <td>High (Primary Conversion)</td>
+      </tr>
+      <tr>
+        <td>corporate_form_submission</td>
+        <td>Corporate form submitted</td>
+        <td>High (Primary Conversion)</td>
+      </tr>
+      <tr>
+        <td>phone_click</td>
+        <td>Click on phone number</td>
+        <td>Medium (Secondary Conversion)</td>
+      </tr>
+      <tr>
+        <td>email_click</td>
+        <td>Click on email link</td>
+        <td>Medium (Secondary Conversion)</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p><strong>How to set up in GA4:</strong></p>
+  <ol>
+    <li>Go to GA4 > Admin > Events</li>
+    <li>Click "Create event"</li>
+    <li>Configure based on existing events (form_submit, click events)</li>
+    <li>Go to Admin > Conversions and mark the events as conversions</li>
+  </ol>
+
+  <div class="tip">
+    <strong>Note:</strong> Your contact form already sends a <code>Santa_Form_Submissions</code> event. Make sure this is marked as a conversion in GA4 Admin > Conversions.
+  </div>
+</div>
+
+<div class="section">
+  <span class="priority priority-critical">Critical</span>
+  <h3>2. Link Google Ads to GA4</h3>
+  <p>Since you're running Google Ads, linking accounts is essential for:</p>
+  <ul>
+    <li>Seeing which ads drive form submissions</li>
+    <li>Creating remarketing audiences</li>
+    <li>Importing conversions back to Google Ads</li>
+  </ul>
+
+  <p><strong>Steps:</strong></p>
+  <ol>
+    <li>In GA4, go to Admin > Product Links > Google Ads Links</li>
+    <li>Click "Link" and select your Google Ads account</li>
+    <li>Enable "Auto-tagging" in Google Ads if not already on</li>
+    <li>In Google Ads, import GA4 conversions: Tools > Conversions > New > Import from GA4</li>
+  </ol>
+</div>
+
+<div class="section">
+  <span class="priority priority-high">High Priority</span>
+  <h3>3. Set Up Enhanced Measurement</h3>
+  <p>GA4 has built-in tracking for common actions. Verify these are enabled:</p>
+
+  <ol>
+    <li>Go to Admin > Data Streams > [Your Web Stream]</li>
+    <li>Click "Enhanced measurement"</li>
+    <li>Ensure these are ON:
+      <ul>
+        <li>Page views</li>
+        <li>Scrolls (reaches 90% depth)</li>
+        <li>Outbound clicks</li>
+        <li>Site search (if applicable)</li>
+        <li>Form interactions</li>
+        <li>Video engagement (if you add video testimonials)</li>
+      </ul>
+    </li>
+  </ol>
+</div>
+
+<div class="section">
+  <span class="priority priority-high">High Priority</span>
+  <h3>4. Create Key Audiences</h3>
+  <p>Build audiences for remarketing and analysis:</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Audience</th>
+        <th>Definition</th>
+        <th>Use Case</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>High-Intent Visitors</td>
+        <td>Visited contact OR packages page</td>
+        <td>Remarketing ads</td>
+      </tr>
+      <tr>
+        <td>Form Starters</td>
+        <td>Started but didn't submit form</td>
+        <td>Abandoned form follow-up</td>
+      </tr>
+      <tr>
+        <td>Corporate Prospects</td>
+        <td>Visited corporate pages</td>
+        <td>B2B remarketing</td>
+      </tr>
+      <tr>
+        <td>Wedding Prospects</td>
+        <td>Visited wedding/packages pages</td>
+        <td>Wedding remarketing</td>
+      </tr>
+      <tr>
+        <td>Engaged Users</td>
+        <td>3+ pages, 2+ min on site</td>
+        <td>Lookalike audiences</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p><strong>To create:</strong> Go to Admin > Audiences > New Audience</p>
+</div>
+
+<div class="section">
+  <span class="priority priority-medium">Medium Priority</span>
+  <h3>5. Custom Dimensions</h3>
+  <p>Track additional context about your visitors:</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Dimension</th>
+        <th>Scope</th>
+        <th>Example Values</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>event_type_interest</td>
+        <td>Event</td>
+        <td>wedding, corporate, birthday</td>
+      </tr>
+      <tr>
+        <td>package_interest</td>
+        <td>Event</td>
+        <td>elegant-reception, estate-affair</td>
+      </tr>
+      <tr>
+        <td>how_heard</td>
+        <td>User</td>
+        <td>referral, google, social-media</td>
+      </tr>
+      <tr>
+        <td>landing_page_type</td>
+        <td>Session</td>
+        <td>homepage, location-page, service-page</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<h2>Key Reports to Monitor</h2>
+
+<div class="section">
+  <h3>Weekly Check (5 minutes)</h3>
+  <ul>
+    <li><strong>Realtime:</strong> Verify tracking is working</li>
+    <li><strong>Acquisition Overview:</strong> Where are visitors coming from?</li>
+    <li><strong>Conversions:</strong> How many form submissions this week?</li>
+  </ul>
+</div>
+
+<div class="section">
+  <h3>Monthly Analysis (30 minutes)</h3>
+  <ul>
+    <li><strong>Traffic Acquisition:</strong> Compare channels month-over-month</li>
+    <li><strong>Pages and Screens:</strong> Which pages get the most views?</li>
+    <li><strong>Conversion Paths:</strong> What pages do converters visit before submitting?</li>
+    <li><strong>Landing Page Performance:</strong> Which pages bring in converting traffic?</li>
+    <li><strong>Tech > Browser/Device:</strong> Are mobile users converting?</li>
+  </ul>
+</div>
+
+<div class="section">
+  <h3>Quarterly Deep Dive (1-2 hours)</h3>
+  <ul>
+    <li>Compare conversion rates by traffic source</li>
+    <li>Identify high-value pages (time on page, scroll depth)</li>
+    <li>Analyze form abandonment</li>
+    <li>Review Google Ads performance in GA4</li>
+    <li>Adjust remarketing audiences</li>
+  </ul>
+</div>
+
+<h2>Recommended Dashboard</h2>
+
+<p>Create a custom Looker Studio dashboard (free) with these widgets:</p>
+
+<ol>
+  <li><strong>Total Sessions</strong> (with trend)</li>
+  <li><strong>Total Conversions</strong> (form submissions + phone clicks)</li>
+  <li><strong>Conversion Rate</strong> (conversions / sessions)</li>
+  <li><strong>Sessions by Source</strong> (pie chart: Organic, Paid, Direct, Referral)</li>
+  <li><strong>Top Landing Pages</strong> (table with sessions + bounce rate)</li>
+  <li><strong>Conversions by Source</strong> (bar chart)</li>
+  <li><strong>Mobile vs Desktop</strong> (sessions + conversion rate)</li>
+  <li><strong>Geographic Distribution</strong> (map of California)</li>
+</ol>
+
+<div class="tip">
+  <strong>Template:</strong> Search "GA4 Lead Generation Dashboard" in Looker Studio gallery for a starting template.
+</div>
+
+<h2>Google Ads Integration</h2>
+
+<p>Since you're running ads to your landing pages, here's how to optimize:</p>
+
+<div class="section">
+  <h3>1. Import Conversions to Google Ads</h3>
+  <ol>
+    <li>In Google Ads: Tools & Settings > Conversions</li>
+    <li>Click "+ New conversion action" > Import > Google Analytics 4</li>
+    <li>Select your form_submission and phone_click events</li>
+    <li>Set appropriate conversion windows (30-90 days for luxury)</li>
+  </ol>
+</div>
+
+<div class="section">
+  <h3>2. Create Remarketing Campaigns</h3>
+  <p>Target visitors who didn't convert:</p>
+  <ul>
+    <li>Visited contact page but didn't submit</li>
+    <li>Spent 60+ seconds on packages page</li>
+    <li>Viewed 3+ pages</li>
+  </ul>
+  <p>Show them display ads reminding them to inquire.</p>
+</div>
+
+<div class="section">
+  <h3>3. Analyze Landing Page Performance</h3>
+  <p>For your current landing pages:</p>
+  <ul>
+    <li><code>/pages/rancho-santa-fe-luxury-event-design.html</code></li>
+    <li><code>/pages/san-diego-luxury-wedding-design.html</code></li>
+  </ul>
+  <p>Check in GA4: Reports > Engagement > Landing page. Compare:</p>
+  <ul>
+    <li>Bounce rate (lower is better)</li>
+    <li>Avg. engagement time (higher is better)</li>
+    <li>Conversions (form submissions)</li>
+  </ul>
+</div>
+
+<h2>Search Console Integration</h2>
+
+<p>You mentioned you have Search Console access. Here's how to use that data:</p>
+
+<div class="section">
+  <h3>Connect to GA4</h3>
+  <ol>
+    <li>In GA4: Admin > Product Links > Search Console Links</li>
+    <li>Click "Link" and select your Search Console property</li>
+    <li>New reports will appear under Acquisition > Search Console</li>
+  </ol>
+</div>
+
+<div class="section">
+  <h3>Your Search Data Analysis</h3>
+  <p>Based on your current Search Console data, here are opportunities:</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Query</th>
+        <th>Impressions</th>
+        <th>Opportunity</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>corporate event planner orange county</td>
+        <td>33</td>
+        <td>Create Orange County corporate landing page</td>
+      </tr>
+      <tr>
+        <td>corporate event venue in orange county</td>
+        <td>30</td>
+        <td>Add venue partnership content</td>
+      </tr>
+      <tr>
+        <td>luxury event productions</td>
+        <td>16</td>
+        <td>Use this phrase in homepage copy</td>
+      </tr>
+      <tr>
+        <td>table and chair rentals san diego</td>
+        <td>4+</td>
+        <td>Optimize rental pages for these terms</td>
+      </tr>
+      <tr>
+        <td>san diego tent rentals</td>
+        <td>4+</td>
+        <td>Optimize tent-rentals.html</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="tip">
+    <strong>Quick Win:</strong> Your "corporate event" queries have high impressions but 0 clicks. This means you're ranking on page 2-3. Strengthen your corporate pages with more content and backlinks to move to page 1.
+  </div>
+</div>
+
+<h2>Privacy & Compliance</h2>
+
+<div class="warning">
+  <strong>California Privacy (CCPA):</strong> Since you serve California clients, ensure your privacy policy mentions GA4 data collection. Consider adding a cookie consent banner for European visitors (GDPR).
+</div>
+
+<h2>Next Steps Checklist</h2>
+
+<ol>
+  <li><input type="checkbox"> Verify GA4 is receiving data (Admin > Property > Data Display)</li>
+  <li><input type="checkbox"> Mark form_submission as a conversion</li>
+  <li><input type="checkbox"> Link Google Ads account</li>
+  <li><input type="checkbox"> Link Search Console</li>
+  <li><input type="checkbox"> Enable all Enhanced Measurement options</li>
+  <li><input type="checkbox"> Create High-Intent Visitors audience</li>
+  <li><input type="checkbox"> Import conversions to Google Ads</li>
+  <li><input type="checkbox"> Set up weekly calendar reminder to check GA4</li>
+  <li><input type="checkbox"> Create Looker Studio dashboard (optional but recommended)</li>
+</ol>
+
+<h2>Getting Help</h2>
+
+<ul>
+  <li><strong>GA4 Help Center:</strong> support.google.com/analytics</li>
+  <li><strong>GA4 Community:</strong> support.google.com/analytics/community</li>
+  <li><strong>YouTube:</strong> Search "GA4 setup 2026" for current tutorials</li>
+</ul>
+
+<hr style="margin: 3rem 0;">
+<p style="color: #666; font-size: 0.9rem;">Document prepared April 2026. GA4 interface may change; refer to current Google documentation for exact steps.</p>
+
+</body>
+</html>
