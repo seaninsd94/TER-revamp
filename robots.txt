@@ -3,4 +3,4 @@ User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://tastefulstudio.com/sitemap.xml
+Sitemap: https://www.tastefulstudio.com/sitemap.xml
