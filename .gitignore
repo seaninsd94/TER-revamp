@@ -1,0 +1,7 @@
+# Sensitive tax / PII working files — must NOT be committed.
+# These may contain worker SSNs, addresses, and other personal information.
+# Keep them local and send them only through the CPA's secure portal.
+worker-info-to-collect.xlsx
+*Employee_Payment_Log*.xlsx
+*payroll*.xlsx
+*-ssn*.xlsx
