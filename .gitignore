@@ -5,3 +5,9 @@ worker-info-to-collect.xlsx
 *Employee_Payment_Log*.xlsx
 *payroll*.xlsx
 *-ssn*.xlsx
+
+# Bank/financial working files — keep local, don't publish to the repo.
+*expense-categorization*.xlsx
+*bank*.xlsx
+*statement*.xlsx
+*.pdf
