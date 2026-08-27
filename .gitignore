@@ -7,7 +7,8 @@ worker-info-to-collect.xlsx
 *-ssn*.xlsx
 
 # Bank/financial working files — keep local, don't publish to the repo.
-*expense-categorization*.xlsx
+*expense*.xlsx
+*ledger*.xlsx
 *bank*.xlsx
 *statement*.xlsx
 *.pdf
