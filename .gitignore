@@ -12,3 +12,5 @@ worker-info-to-collect.xlsx
 *bank*.xlsx
 *statement*.xlsx
 *.pdf
+*reconciliation*.xlsx
+*revenue*.xlsx
